@@ -8,7 +8,7 @@ const loginRouter = require('./login');
 const usersRouter = require('./painelUsuario');
 const routes = express.Router();
 
-routes.use('/', homeRouter);
+routes.get('/', homeRouter);
 
 routes.get('/carrinho', carrinhoRouter);
 
