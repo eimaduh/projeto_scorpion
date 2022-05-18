@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css">
-    <title>Scorpion Tabacaria</title>
+    <%- include('./partials/head')%>
+        <!-- <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/stylesheet/home.css">
+  <title>Scorpion Tabacaria</title> -->
 </head>
+<header>
+     <%- include('./partials/hearde-navbar')%>
+   <!--  <nav class="navbar">
+        <img src="./public/img/img-logo.jpg" alt="Imagem Scorpion">
+        <ul>
+            <li><a href="/login" class="ps-bar-item ps-button">Acessar Minha conta</a></li>
+            <li><a href="/carrinho" class="ps-bar-item ps-button">Meus Padidos</a></li>
+        </ul>
+        <form class="nav-search" method="GET" action="#">
+            <imput type="text" name="barraDePesquisa" placeholder="Digite aqui"></imput>
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </nav> -->
+</header>
+
 <body>
-    <h1>Bem vindo a Home Page</h1>
+    <section class="imagem-home">
+        <img class="banner" src="./public/img.jpg" alt="Banner Home">
+    </section>
+    <section class="vitrine-produtos">
+        <div class="" id="produto">
+            <div class="">
+                <h1 class="">Produtos Home</h1>
+                <br />
+                <% for(let produto of produtos) { %>
+                    <h4><a href="/detalheprodutos/<%= produto.id %>">
+                            <%= produto.name %>
+                        </a></h4>
+                    <p class="ps-text-grey">
+                        <%= produto.description %>
+                    </p>
+                    <p>
+                        R$ <%= produto.price.toFixed(2) %>
+                    </p>
+                    <br />
+                    <% } %>
+            </div>
+    </section>
 </body>
+<footer>
+    <%- include('./partials/footer')%>
+</footer>
+
 </html>
