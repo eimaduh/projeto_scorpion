@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    top: 0px;
+    background-color: brown;
+    padding: 40px;
+  }
+  
+  /* img {
+    top: 0px;
+    padding: 40px;
+    align-items: center;
+  
+  } *//* Futuro Carrosel  */
+
+imageBanner {
+  position: absolute;
+  width: 1211px;
+  height: 424px;
+  left: 35px;
+  top: 251px;
+  
+  background: url(image.png);
+  
+}
+  
