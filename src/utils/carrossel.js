@@ -24,5 +24,5 @@ function start() {
         nextImage()
     }, time)
 }
-
+console.log('foi?')
 window.addEventListener("load", start)
