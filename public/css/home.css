@@ -77,15 +77,6 @@ header .links-acessaveis .cart a {
   color: white;
 }
 
-section .carrossel{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  justify-content: center;
-  overflow: hidden;
-}
-
 .bx-chevron-left {
   margin-right: -5vmax;
   color: white;
@@ -116,6 +107,23 @@ zsection img {
   width: 100%;
 }
 
-section .vitrine-produtos {
+section #carrossel  {
   display: flex;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  overflow: hidden;
+}
+
+section #produto {
+  display: flex;
+  justify-content:space-evenly;
+  margin-top: 70px;
+}
+
+.vitrine-produtos #produto img {
+  height: 150px;
+  width: 150px;
+
 }

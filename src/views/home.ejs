@@ -2,73 +2,81 @@
 <html lang="en">
 
 <head>
-   <%- include('./partials/head')%>
-
+  <%- include('./partials/head')%>
 </head>
 
 <body>
-   <header>
-      <%- include('./partials/header-navbar')%>
-   </header>
+  <header>
+    <%- include('./partials/header-navbar')%>
+  </header>
 
-   <section id="carrossel">
-      <i  class='bx bx-chevron-left'></i>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCqG7UIvuSAtT-BG6AyR9n-qVJavjYVxrSQ&usqp=CAU"
-         alt="" id="imagem">
-      <i  class='bx bx-chevron-right'></i>
-   </section>
+  <section class="carrossel">
+    <i class='bx bx-chevron-left'></i>
+    <img class="slide" src="/img/images.jfif" alt="" id="imagem">
+    <!-- <img class="slide" src="/img/images (1).jfif" alt="" id="imagem">
+    <img class="slide" src="/img/images (2).jfif" alt="" id="imagem">
+    <img class="slide" src="/img/images(3).png" alt="" id="imagem"> -->
+    <i class='bx bx-chevron-right'></i>
+  </section>
 
-   <section class="imagem-home">
-      <img class="banner" src="/img/banner-home.jpg" alt="Banner Home">
-   </section>
-   <section class="vitrine-produtos">
-      <div class="" id="produto">
-         <div class="">
-            <img src="/img/default_poduct.png"" alt="vitrine-produtos">
-            <h1>R$ 97484,00</h1>
-            <br />
-            <p>Até -20% de desconto</p>
-            <br />
-            <p><strong>Algum produto</strong></p>
-         </div>
-         <div class="">
-            <img src="/img/default_poduct.png"" alt="vitrine-produtos">
-            <h1>R$ 97484,00</h1>
-            <br />
-            <p>Até -20% de desconto</p>
-            <br />
-            <p><strong>Algum produto</strong></p>
-         </div>
-         <div class="">
-            <img src="/img/default_poduct.png"" alt="vitrine-produtos">
-            <h1>R$ 97484,00</h1>
-            <br />
-            <p>Até -20% de desconto</p>
-            <br />
-            <p><strong>Algum produto</strong></p>
-         </div>
-         <div class="">
-            <img src="/img/default_poduct.png"" alt="vitrine-produtos">
-            <h1>R$ 97484,00</h1>
-            <br />
-            <p>Até -20% de desconto</p>
-            <br />
-            <p><strong>Algum produto</strong></p>
-         </div>
-         <div class="">
-            <img src="/img/default_poduct.png"" alt="vitrine-produtos">
-            <h1>R$ 97484,00</h1>
-            <br />
-            <p>Até -20% de desconto</p>
-            <br />
-            <p><strong>Algum produto</strong></p>
-         </div>
+  <section class="vitrine-produtos">
+    <div id="produto">
+
+      <div>
+        <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Algum produto</strong></p>
       </div>
-   </section>
-   <footer>
-      <%- include('./partials/footer')%>
-   </footer>
-   <script src="/carrossel.js"></script>
+
+
+      <div>
+        <img src="/img/forninho-narguile.jpg" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Algum produto</strong></p>
+      </div>
+
+      <div>
+        <img src="/img/rosh.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Algum produto</strong></p>
+      </div>
+
+      <div>
+        <img src="/img/zomo-gum.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Algum produto</strong></p>
+      </div>
+
+      <div>
+        <img src="img/carvao-fumax.jpg" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Algum produto</strong></p>
+      </div>
+      
+      </script>
+    </div>
+  </section>
+
+  <footer>
+    <%- include('./partials/footer')%>
+  </footer>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../utils/slick.js"></script>
 </body>
 
 </html>
