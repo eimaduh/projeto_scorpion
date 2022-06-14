@@ -1,13 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home.css">
-    <title>Scorpion Tabacaria</title>
+  <%- include('./partials/head')%>
 </head>
+
 <body>
-    <h1>Bem vindo a Home Page</h1>
+  <header>
+    <%- include('./partials/header-navbar')%>
+  </header>
+
+  <section class="carrossel">
+    <i class='bx bx-chevron-left'></i>
+    <img class="slide" src="/img/images.jfif" alt="" id="imagem">
+    <!-- <img class="slide" src="/img/images (1).jfif" alt="" id="imagem"> -->
+    <!-- <img class="slide" src="/img/images (2).jfif" alt="" id="imagem"> -->
+    <!-- <img class="slide" src="/img/images(3).png" alt="" id="imagem"> -->
+    <i class='bx bx-chevron-right'></i>
+  </section>
+
+  <section class="vitrine-produtos">
+    <div id="produto">
+
+      <div id="protudinho">
+        <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Pegador-carvao</strong></p>
+        <br />
+        <div id="botao">
+          <p> Compre Aqui</p>
+        </div>
+      </div>
+
+
+      <div id="produtinho">
+        <img src="/img/forninho-narguile.jpg" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Forninho</strong></p>
+        <br />
+        <div id="botao">
+          <p> Compre Aqui</p>
+        </div>
+      </div>
+
+      <div id="produtinho">
+        <img src="/img/rosh.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Rosh</strong></p>
+        <br />
+        <div id="botao">
+          <p> Compre Aqui</p>
+        </div>
+      </div>
+
+      <div id="produtinho">
+        <img src="/img/zomo-gum.jfif" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Essecia Zomo Gum </strong></p>
+        <br />
+        <div id="botao">
+          <p> Compre Aqui</p>
+        </div>
+      </div>
+
+      <div id="produtinho">
+        <img src="img/carvao-fumax.jpg" alt=" vitrine-produtos">
+        <h1>R$ 97484,00</h1>
+        <br />
+        <p>Até -20% de desconto</p>
+        <br />
+        <p><strong>Carvão Fumax</strong></p>
+        <br />
+        <div id="botao">
+          <p> Compre Aqui</p>
+        </div>
+      </div>
+
+      </script>
+    </div>
+  </section>
+
+  <section class="promocoes">
+    <div id="quadradopromocoes">
+      <div id="imgagem-esquerda">
+        <img src="/img/promocao1.webp" alt="imagem seila">
+      </div>
+      <div id="imagens-direita">
+        <div id="test2">
+          <img src="/img/promocao2.webp" alt="uma das 4">
+          <img src="/img/promocao3.webp" alt="uma das 4">
+        </div>
+        <div id="test1">
+          <img src="/img/promocao4.webp" alt="uma das 4">
+          <img src="/img/promocao5.webp" alt="uma das 4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topicos">
+    <div id="filtros">
+      <img src="/img/topicos-linhacarvoes.webp" alt="">
+      <img src="/img/topicos-linhafogareiros.webp" alt="">
+      <img src="/img/topicos-linhaheadshops.webp" alt="">
+      <img src="/img/topicos-linhaherois.webp" alt="">
+      <img src="/img/topicos-linhaimportados.webp" alt="">
+      <img src="/img/topicos-linhakiteconomicos.webp" alt="">
+    </div>
+
+  </section>
+
+
+
+
+
+  <footer>
+    <%- include('./partials/footer')%>
+  </footer>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../utils/slick.js"></script>
 </body>
+
 </html>
