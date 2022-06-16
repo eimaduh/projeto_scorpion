@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,104 @@
     <link rel="stylesheet" href="/css/painelUsuario.css">
     <title>ScorpionTabacaria</title>
 </head>
+
 <body>
-    <h1>Bem vindo ao Painel de usuario</h1>
+    <%- include('partials/header') %>
+    <main>
+        <section class="background">
+            <section class="account">
+                <div class="purchases">
+                    <h2>MINHA CONTA</h2>
+                </div>
+            </section>
+            <section class="user-account">
+            <div class="userData">
+                <div class="hello">
+                    <h5>Olá,
+                        <!-- código para identificar user -->
+                    </h5>
+                    <p>Bem vindo(a) a sua área</p>
+                </div>
+                <div class="line"></div>
+                <article class="user-panel">
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/users.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Meus dados</a>
+                                <h6>Dados cadastrais</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/address.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Endereços</a>
+                                <h6>Endereços cadastrados</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/box.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Pedidos</a>
+                                <h6>Histórico de pedidos</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/wallet.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Créditos</a>
+                                <h6>Meu saldo</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <article class="user-credits-container">
+                <h2>Créditos</h2>
+                    <p>Saldo de créditos e valores disponíveis para estorno</p>
+
+                <div class="user-credits">
+                    <img src="/img/wallet.png" alt="ícone carteira">
+                <h5>Crédito disponível</h5>
+                <div class="total">
+                    <p>R$ 0,00</p>
+                </div>
+                </div>  
+                <div class="value">
+                    <h2>Extrato</h2>
+                </div>
+               <div class="total-amount">
+                <div class="balance">
+                    <h4>Saldo disponibilizado</h4>
+                </div>
+                <div class="balance-user">
+                    <p>R$ 0,00</p>
+                </div>
+               </div>
+            </article>
+            </section>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
 </body>
+
 </html>
