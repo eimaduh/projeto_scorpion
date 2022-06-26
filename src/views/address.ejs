@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/address.css">
+    <script src="https://kit.fontawesome.com/abd81b9a83.js" crossorigin="anonymous"></script>
+    <title>ScorpionTabacaria</title>
+</head>
+
+<body>
+    <%- include('partials/header-navbar') %>
+    <main>
+        <section class="background">
+            <section class="account">
+                <div class="purchases">
+                    <h2>MINHA CONTA</h2>
+                </div>
+                </section>
+            <section class="user-account">
+            <div class="userData">
+                <div class="hello">
+                    <h5>Olá,
+                        <!-- código para identificar user -->
+                    </h5>
+                    <p>Bem vindo(a) a sua área</p>
+                </div>
+                <div class="line"></div>
+                <article class="user-panel">
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/users.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="/users/data">Meus dados</a>
+                                <h6>Dados cadastrais</h6>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/address.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Endereços</a>
+                                <h6>Endereços cadastrados</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/box.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Pedidos</a>
+                                <h6>Histórico de pedidos</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel-data">
+                            <div class="data">
+                                <img src="/img/wallet.png">
+                            </div>
+                            <div class="my-data">
+                                <a href="#">Créditos</a>
+                               
+                                <h6>Meu saldo</h6>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+            <article class="user-credits-container">
+                
+                <div class="user-credits-box">
+                    <div class="user-credits-box-inner">
+                        <a href="/users">
+                            <i class="fa-solid fa-circle-arrow-left"></i>
+                            Voltar
+                        </a>
+                        <h2>Endereços Cadastrados</h2>
+                        <div class="line"></div>
+                        </div>
+                    </div>                    
+                    <div class="address-user">
+                        <div class="address-one">
+                            <div class="address-btn">
+                            <input type="radio" name="select" id="select">
+                            <label for="selected">Selecionar endereço</label>
+                            </div>
+                        </div>
+                        <div class="address-one">
+                            <div class="address-btn">
+                            <input type="radio" name="select" id="select">
+                            <label for="selected">Selecionar endereço</label>
+                        </div>
+                        </div>
+                    </div>
+                </article>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>
