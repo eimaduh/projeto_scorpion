@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/painelUsuario.css">
-    <script src="https://kit.fontawesome.com/abd81b9a83.js" crossorigin="anonymous"></script>
-    <title>ScorpionTabacaria</title>
-</head>
-
+<!-- <%- include('../partials/head')%> -->
+    <link rel="stylesheet" href="/css/usersPanel.css">
 <body>
-    <%- include('partials/header') %>
     <main>
         <section class="background">
             <section class="account">
@@ -25,7 +14,7 @@
                     <h5>Olá,
                         <!-- código para identificar user -->
                     </h5>
-                    <p>Bem vindo(a) a sua área</p>
+                    <p>Bem vindo(a)</p>
                 </div>
                 <div class="line"></div>
                 <article class="user-panel">
@@ -35,7 +24,7 @@
                                 <img src="/img/users.png">
                             </div>
                             <div class="my-data">
-                                <a href="/user/userData">Meus dados</a>
+                                <a href="/users/data">Meus dados</a>
                                 <h6>Dados cadastrais</h6>
                             </div>
 
@@ -48,7 +37,7 @@
                                 <img src="/img/address.png">
                             </div>
                             <div class="my-data">
-                                <a href="#">Endereços</a>
+                                <a href="/users/address">Endereços</a>
                                 <h6>Endereços cadastrados</h6>
                             </div>
 
@@ -60,7 +49,7 @@
                                 <img src="/img/box.png">
                             </div>
                             <div class="my-data">
-                                <a href="#">Pedidos</a>
+                                <a href="/users/requests">Pedidos</a>
                                 <h6>Histórico de pedidos</h6>
                             </div>
 
@@ -72,7 +61,7 @@
                                 <img src="/img/wallet.png">
                             </div>
                             <div class="my-data">
-                                <a href="#">Créditos</a>
+                                <a href="/users/credits">Créditos</a>
                                
                                 <h6>Meu saldo</h6>
                                 
@@ -90,44 +79,3 @@
                             Voltar
                         </a>
                     </div>
-                    <h2>Créditos</h2>
-                    <div class="line"></div>
-                    <p>Saldo de créditos e valores disponíveis para estorno</p>
-                    </div>
-                <div class="user-credits">
-                    <div class="image-credits">
-                        <i class="fa-solid fa-wallet fa-2xl"></i>
-                    </div>
-                <div class="user-credits-total">
-                    <span class="user-total">Crédito disponível</span>
-                    <div class="user-credits-total-money">
-                        <span class="user-credits-total-one">R$</span>
-                        <span class="user-credits-total-two">0,00</span>
-                    </div>
-                </div>
-               
-                </div>  
-                <div class="value">
-                    <h2>Extrato</h2>
-              
-                </div>
-                
-               <div class="total-amount">
-                
-                <div class="balance">
-                    <h4>Saldo disponibilizado</h4>
-                </div>
-                <div class="balance-user">
-                    <span class="balance-user-total">R$ 0,00</span>
-                    <a href="/categoria"><button type="submit" class="btn btn-balance">Usar crédito <i class="  "></i></i></i></button></a>
-
-                </div>
-               </div>
-            </article>
-            </section>
-        </section>
-    </main>
-    <%- include('partials/footer') %>
-</body>
-
-</html>
