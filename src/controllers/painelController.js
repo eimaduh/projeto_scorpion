@@ -1,6 +1,6 @@
 const usersController = {
     getUsersPage: (req, res) => {
-        res.render('painelUsuario')
+        res.render('usersPanel')
     },
     getUsersData: (req, res) => {
         res.render('data')
@@ -10,6 +10,9 @@ const usersController = {
     },
     editAddress: (req, res) => {
         res.render('editAddress')
+    },
+    usersCredits: (req, res) => {
+        res.render('usersCredits')
     }
 }
 

@@ -17,7 +17,7 @@ body {
     justify-content: space-around;
     background-image: linear-gradient( rgba(255,0,0,0), rgb(255, 221, 0));
     align-content: center;
-    padding-top:20px;
+    padding:20px;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     text-align: center;
@@ -36,11 +36,17 @@ body {
 
 .content {
     text-align:left;
+    margin: 10px;
+
 }
 
 .content ul li{
     margin: 10px 0;
     list-style: none;
+}
+
+.content ul li i{
+    padding: 0 5px;
 }
 
 .contact {
@@ -49,6 +55,7 @@ body {
     text-align:left;
     width: 200px;
     height: 100px;
+    margin: 10px;
 }
 
 .contact img {
@@ -70,14 +77,89 @@ body {
 .payment-methods {
     width: 200px;
     text-align: left;
+    margin: 10px;
 }
 
+.social-media {
+    margin: 10px;
+}
 .fa-brands {
     padding: 5px;
-    margin: 20px;
+    margin: 10px;
     transition: 500ms;
 }
 
 .fa-brands:hover  {
     transform: translateY(-20px);
+}
+
+@media (max-width:700px) {
+   
+    .footer-container {
+        flex-wrap: wrap;
+        font-size: 40%;
+        padding: 10px;
+
+    }
+    .payment-icon {
+        width: 30px;
+        height: 30px;
+        
+    }
+    .social-media {
+        margin: 5px;
+    }
+    .payment-methods {
+        width: 80px;
+        margin: 5px;
+    }
+    .fa-brands {
+        width: 30px;
+        padding: 5px;
+        margin: 10px;
+        transition: 500ms;
+    }
+}
+
+@media (max-width:530px) {
+    .footer-container {
+        flex-wrap: wrap;
+        font-size: 70%;
+        padding: 10px;
+        height: 300px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .content {
+        margin: 5px;
+    }
+    .content h2 {
+        display: none;
+    }
+    .content ul li {
+        display: inline-block;
+        padding: 10px;
+        font-weight: 700;
+    }
+    .content ul li a {
+        font-weight: 600;
+    }
+    .contact {
+     
+    flex-direction: column;
+    text-align: center;
+    margin: 5px;
+    
+    }
+    .payment-methods {
+        width: 100%;
+        margin: 5px;
+        text-align: center;
+
+    }
+    .social-media h2 {
+        display: none;
+    }
 }

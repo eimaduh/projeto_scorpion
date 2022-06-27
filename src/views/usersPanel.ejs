@@ -1,6 +1,7 @@
-<!-- <%- include('../partials/head')%> -->
-    <link rel="stylesheet" href="/css/usersPanel.css">
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/usersPanel.css">
 <body>
+  <%- include('partials/header-navbar') %>
     <main>
         <section class="background">
             <section class="account">
@@ -71,11 +72,9 @@
                     </div>
                 </article>
             </div>
-            <article class="user-credits-container">
-                <div class="user-credits-box">
-                    <div class="user-credits-box-inner">
-                        <a href="/users">
-                            <i class="fa-solid fa-circle-arrow-left"></i>
-                            Voltar
-                        </a>
-                    </div>
+            </section>
+            </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
