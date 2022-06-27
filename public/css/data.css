@@ -12,53 +12,60 @@ html, body {
 
 
 .form-user {
+    width: 80%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 20px;
     margin: 10px;
     justify-content: space-between;
     gap: 10px;
     background-color: #fff;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+   
 }
 
 
 input {
         width: 300px;
         height: 30px;
-        
         display: flex; 
         flex-direction: column;
         border: none;
         border-bottom: 2px solid #8b8484;
+
+    
 }
 
-.input-user {
-    position: relative;
-}
 
 .form-data {
-    /* width: 100%;
-    height: 300px; */
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     border: none;
-    margin: 20px;
+    margin: 10px;
 
 }
 
+.data-container {
+  width: 100%;
+  height: 80%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
 fieldset {
     border-radius: 10px;
-    width: 100%;
-    height: 500px;
+    width: 50%;
+    height: 100%;
+    margin: 10px;
     box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
     background-color: #fff;
     border: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-
+    flex-direction: column;
 }
 
 legend {
@@ -68,79 +75,49 @@ legend {
     border: none;
 }
 
-.btn-edit {
-    width: 150px;
-    height: 50px;
-    border-radius: 30px;
-    font-size: 1.8rem;
-    font-weight: 600;
-    background-color: #edcb17;
-    box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
-    border: none;
-    transition: 300ms;
-}
 
-.btn-edit:hover {
-    cursor: pointer;
-    font-size: 2.0rem;
-    color: #edcb17;
-    background-color: #000;
-}
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .user-credits {
       background-color:   #f9f9f9;
 
 
       justify-content: space-between;
   }
-}
-
-@media (max-width: 900px) {
-  .user-credits-text {
-      height: 60px;
+  .form-user {
+    padding: 10px;
+    gap: 0;
+    margin: 5px;
   }
-}
-
-@media (max-width: 900px) {
-  .user-credits-text {
-      height: 60px;
+  input {
+    width: 120%;
   }
-}
-
-@media (max-width: 900px) {
-  .user-credits-container p {
-      display: none;
+  .data-container {
+    height: 100%;
+    margin: 5px;
+    padding: 5px;
+   
   }
+  fieldset {
+    margin: 5px;
+  }
+  
 }
 
-@media (max-width: 900px) {
+
+@media (max-width: 560px) {
+  .data-container {
+    height: 100%;
+    flex-direction: column;
+  }
+  fieldset {
+    width: 100%;
+  }
+  input {
+    width: 150%;
+  }
   .user-credits-container {
-    width: 90%;
+    width: 100%;
     flex-direction: row;
   }
-}
-
-
-@media (max-width: 900px) {
-  .user-account {
-      flex-direction: column;
-  }
-}
-
-@media (max-width: 900px) {
-  .userData {
-      width: 90%;
-      margin-top: 10px;
-  }
-}
-
-@media (max-width: 900px) {
-  .total-amount {
-      width: 50%;
-      height: 150px;
-      padding: 20px;
-      margin: 5px;
-      justify-content: space-between;
-      
-  }
+ 
 }

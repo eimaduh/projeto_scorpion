@@ -35,7 +35,7 @@ html, body {
 }
 
 .user-account {
-  width: 80%;
+  width: 90%;
   height: 600px;
   display: flex;
   justify-content: space-between;
@@ -44,8 +44,9 @@ html, body {
 }
 .userData {
   width: 20%;
-  height: 400px;
+  height: 40%px;
   padding: 20px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -70,8 +71,11 @@ html, body {
 }
 
 .panel-data {
+  width: 90%;
   display: flex;
   align-items: center;
+  margin: 5px;
+  padding: 5px;
 }
 
 .data {
@@ -109,21 +113,24 @@ html, body {
 }
 
 .data img {
-  width: 45px;
-  height: 40px;
+  width: 40px;
+  height: 35px;
 
 }
 
-@media (min-width: 900px) {
+@media (max-width: 1000px) {
   .user-credits {
       margin: 20px;
       display: flex;
       justify-content: center;
   }
+  .background {
+    height: 800px;
+  }
 }
 .user-credits-container {
   width: 75%;
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -250,53 +257,31 @@ html, body {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .user-credits {
       background-color:   #f9f9f9;
       box-shadow: none;
-
       justify-content: space-between;
   }
-}
-
-@media (max-width: 900px) {
-  .user-credits-text {
-      height: 60px;
+  .user-credits-box {
+    display: none;
   }
-}
-
-@media (max-width: 900px) {
-  .user-credits-text {
-      height: 60px;
-  }
-}
-
-@media (max-width: 900px) {
   .user-credits-container p {
-      display: none;
-  }
+    display: none;
+}
+.user-credits-container {
+  width: 90%;
+  flex-direction: row;
+}
+.user-account {
+  flex-direction: column;
+}
+.userData {
+  width: 90%;
+  margin-top: 10px;
+}
 }
 
-@media (max-width: 900px) {
-  .user-credits-container {
-    width: 90%;
-    flex-direction: row;
-  }
-}
-
-
-@media (max-width: 900px) {
-  .user-account {
-      flex-direction: column;
-  }
-}
-
-@media (max-width: 900px) {
-  .userData {
-      width: 90%;
-      margin-top: 10px;
-  }
-}
 
 @media (max-width: 900px) {
   .total-amount {
@@ -307,6 +292,12 @@ html, body {
       justify-content: space-between;
       
   }
+}
+
+@media (max-width: 560px) {
+  .background {
+    height: 1000px;
+}
 }
 
 
