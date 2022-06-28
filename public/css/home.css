@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -9,9 +9,7 @@
 
 header {
   display: flex;
-  /* background-color: #fff74c; */
   background-color: #edcb17;
-  /* background-color: #f0ca00; */
   width: 100%;
   justify-content: space-around;
   align-items: center;
@@ -81,7 +79,7 @@ header .links-acessaveis .cart {
 
 header .links-acessaveis .cart a {
   color: white;
-}
+} */
 
 .bx-chevron-left {
   margin-right: -5vmax;
@@ -133,6 +131,7 @@ zsection img {
 
 section #produto {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 70px;
   margin-bottom: 100px;
@@ -178,8 +177,8 @@ section #quadradopromocoes {
 
 section #imagens-direita {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  flex-direction: column;
 }
 
 section .topicos {
@@ -190,6 +189,7 @@ section .topicos {
 
 #filtros{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 70px;
 }
