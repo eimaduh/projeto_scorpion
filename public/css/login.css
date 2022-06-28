@@ -11,9 +11,74 @@ h1 {
 
 @media (min-width: 700px) {
     .container-login {
-        margin: 20px;
+        margin: 20px 20px 50px;
         display: flex;
         justify-content: center;
+    }
+
+    .left {
+        width: 38%;
+        height: 420px;
+        background-color: white;
+        color: black;
+        margin: 30px;
+        padding: 20px;
+        line-height: 35px;
+        border-radius: 10px;
+        border-style: ridge;
+    
+        display: flex;
+    }
+
+    .rigth {
+        width: 38%;
+        height: 420px;
+        background-color: white;
+        color: black;
+        margin: 30px;
+        padding: 20px;
+        line-height: 35px;
+        border-radius: 10px;
+        border-style: ridge;
+    
+        display: flex;
+    }
+}
+
+@media (max-width:700px) {
+    h1 {
+        text-align: center;
+    }
+
+
+    .left {
+        width: 85%;
+        height: 420px;
+        background-color: white;
+        color: black;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        line-height: 35px;
+        border-radius: 10px;
+        border-style: ridge;
+    
+        display: flex;
+    }
+
+    .rigth {
+        width: 85%;
+        height: 420px;
+        background-color: white;
+        color: black;
+        margin: auto;
+        margin-top: 30px;
+        padding: 20px;
+        line-height: 35px;
+        border-radius: 10px;
+        border-style: ridge;
+    
+        display: flex;
     }
 }
 
@@ -30,40 +95,6 @@ h1 {
 }
 
 
-@media (min-width:700px) {
-    .left {
-        width: 35%;
-        height: 400px;
-        background-color: white;
-        color: black;
-        margin: 30px;
-        padding: 20px;
-        line-height: 35px;
-        border-radius: 10px;
-        border-style: ridge;
-    
-        display: flex;
-    }
-}
-
-
-
-@media (min-width:700px) {
-    .rigth {
-        width: 35%;
-        height: 400px;
-        background-color: white;
-        color: black;
-        margin: 30px;
-        padding: 20px;
-        line-height: 35px;
-        border-radius: 10px;
-        border-style: ridge;
-    
-        display: flex;
-    }
-}
-
 
 form {
     width: 100%;
@@ -79,7 +110,7 @@ input {
 .real-button {
     width: 40%;
     height: 35px;
-    margin: 20px 100px;
+    margin-top: 20px;
     background-color: rgb(245, 190, 9);
     border-style: none;
     border-radius: 10px;
@@ -89,6 +120,13 @@ input {
 button a {
     text-decoration: none;
     color: black;
+}
+
+.center {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .esqueceu-senha {
