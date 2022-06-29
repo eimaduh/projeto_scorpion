@@ -1,110 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-/* * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
-
-header {
-  display: flex;
-  background-color: #edcb17;
-  width: 100%;
-  justify-content: space-around;
-  align-items: center;
-  height: 10vw;
-}
-
-header img {
-  width: 25vw;
-}
-
-.inputs {
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  padding: 3px 8px;
-}
-
-.inputs input {
-
-  border: none;
-  padding: 3px 8px;
-  height: 30px;
-  width: 30vw;
-  border-radius: 15px;
-}
-
-.inputs input:focus {
-  outline: none;
-
-}
-
-.inputs span {
-  cursor: pointer;
-}
-
-header .links-acessaveis .links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 10vw;
-  border-right: 1px solid rgb(0, 0, 0);
-
-}
-
-header .links-acessaveis .links a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-}
-
-header .links-acessaveis {
-  display: flex;
-  justify-content: space-between;
-  width: 20%;
-}
-
-header .links-acessaveis .cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-  font-size: 2.5vw;
-  border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
-}
-
-header .links-acessaveis .cart a {
-  color: white;
-} */
-
-.bx-chevron-left {
-  margin-right: -5vmax;
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  font-size: 50px;
-  z-index: 5;
-  cursor: pointer;
-}
-
-.bx-chevron-right {
-  margin-left: -5vmax;
-  color: white;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  font-size: 50px;
-  z-index: 5;
-  cursor: pointer;
+.swiper {
+  width: 90%;
+  height: 300px;
+  margin-top: 26px;
 }
 
 zsection img {
@@ -129,27 +29,37 @@ zsection img {
   height: 400px;
 }
 
-section #produto {
+.produtinho-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+
+}
+
+.produto {
+  /* section .produto { */
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* justify-content: space-evenly; */
+  width: 90%;
+  height: 300px;
   margin-top: 70px;
   margin-bottom: 100px;
 }
 
-.vitrine-produtos #produto img {
+.produto img {
+  /* .vitrine-produtos .produto img { */
   height: 150px;
   width: 150px;
 }
 
-#produtinho {
+.produtinho {
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#botao{
+.botao {
   width: 115px;
   height: 30px;
   border-radius: 15px;
@@ -164,10 +74,15 @@ section #produto {
 .promocoes {
   display: flex;
   justify-content: center;
-
   background-color: #000000;
   padding: 50px;
 
+}
+
+@media (max-width: 768px) {
+  .promocoes {
+    display: none;
+  }
 }
 
 section #quadradopromocoes {
@@ -179,6 +94,25 @@ section #imagens-direita {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  align-content: space-around;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  section #imagens-direita img {
+    display: none;
+  }
+}
+
+
+section #mobile-promo {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  section #mobile-promo {
+    display: none;
+  }
 }
 
 section .topicos {
@@ -187,10 +121,9 @@ section .topicos {
   width: 100%;
 }
 
-#filtros{
+#filtros {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding: 70px;
 }
-
