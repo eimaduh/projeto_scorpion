@@ -98,7 +98,7 @@ section #imagens-direita {
   justify-content: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1324px) {
   section #imagens-direita img {
     display: none;
   }
