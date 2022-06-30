@@ -1,104 +1,157 @@
   <%- include('./partials/head')%>
+
+
   <link rel="stylesheet" href="/css/home.css">
+
 <body>
     <%- include('./partials/header-navbar')%>
-  <section class="carrossel">
-    <i class='bx bx-chevron-left'></i>
-    <img class="slide" src="/img/images.jfif" alt="" id="imagem">
-    <!-- <img class="slide" src="/img/images (1).jfif" alt="" id="imagem"> -->
-    <!-- <img class="slide" src="/img/images (2).jfif" alt="" id="imagem"> -->
-    <!-- <img class="slide" src="/img/images(3).png" alt="" id="imagem"> -->
-    <i class='bx bx-chevron-right'></i>
-  </section>
 
-  <section class="vitrine-produtos">
-    <div id="produto">
+  </header>
 
-      <div id="protudinho">
-        <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
-        <h1>R$ 97484,00</h1>
-        <br />
-        <p>Até -20% de desconto</p>
-        <br />
-        <p><strong>Pegador-carvao</strong></p>
-        <br />
-        <div id="botao">
-          <p> Compre Aqui</p>
-        </div>
-      </div>
+  <div class="swiper banner-swipe">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <img class="swiper-slide" src="/img/images.jfif" alt="" id="imagem">
+      <img class="swiper-slide" src="/img/images (1).jfif" alt="" id="imagem">
+      <img class="swiper-slide" src="/img/images (2).jfif" alt="" id="imagem">
+      <img class="swiper-slide" src="/img/images(3).png" alt="" id="imagem">
 
 
-      <div id="produtinho">
-        <img src="/img/forninho-narguile.jpg" alt=" vitrine-produtos">
-        <h1>R$ 97484,00</h1>
-        <br />
-        <p>Até -20% de desconto</p>
-        <br />
-        <p><strong>Forninho</strong></p>
-        <br />
-        <div id="botao">
-          <p> Compre Aqui</p>
-        </div>
-      </div>
-
-      <div id="produtinho">
-        <img src="/img/rosh.jfif" alt=" vitrine-produtos">
-        <h1>R$ 97484,00</h1>
-        <br />
-        <p>Até -20% de desconto</p>
-        <br />
-        <p><strong>Rosh</strong></p>
-        <br />
-        <div id="botao">
-          <p> Compre Aqui</p>
-        </div>
-      </div>
-
-      <div id="produtinho">
-        <img src="/img/zomo-gum.jfif" alt=" vitrine-produtos">
-        <h1>R$ 97484,00</h1>
-        <br />
-        <p>Até -20% de desconto</p>
-        <br />
-        <p><strong>Essecia Zomo Gum </strong></p>
-        <br />
-        <div id="botao">
-          <p> Compre Aqui</p>
-        </div>
-      </div>
-
-      <div id="produtinho">
-        <img src="img/carvao-fumax.jpg" alt=" vitrine-produtos">
-        <h1>R$ 97484,00</h1>
-        <br />
-        <p>Até -20% de desconto</p>
-        <br />
-        <p><strong>Carvão Fumax</strong></p>
-        <br />
-        <div id="botao">
-          <p> Compre Aqui</p>
-        </div>
-      </div>
-
-      </script>
     </div>
-  </section>
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+
+  <!-- <section class="vitrine-produtos"> -->
+  <div class="swiper produto">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide produtinho-wrapper">
+
+        <div class="produtinho">
+          <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Pegador-carvao</strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+
+        <div class="produtinho">
+          <img src="/img/forninho-narguile.jpg" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Forninho</strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+        <div class="produtinho">
+          <img src="/img/rosh.jfif" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Rosh</strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+        <div class="produtinho">
+          <img src="/img/zomo-gum.jfif" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Essecia Zomo Gum </strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-slide produtinho-wrapper">
+        <div class="produtinho">
+          <img src="img/carvao-fumax.jpg" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Carvão Fumax</strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+        <div class="produtinho">
+          <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
+          <h1>R$ 97484,00</h1>
+          <br />
+          <p>Até -20% de desconto</p>
+          <br />
+          <p><strong>Pegador-carvao</strong></p>
+          <br />
+          <div class="botao">
+            <p> Compre Aqui</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+
+  <!-- </section> -->
 
   <section class="promocoes">
     <div id="quadradopromocoes">
-      <div id="imgagem-esquerda">
+
+      <div id="imagem-esquerda">
         <img src="/img/promocao1.webp" alt="imagem seila">
       </div>
+
       <div id="imagens-direita">
-        <div id="test2">
-          <img src="/img/promocao2.webp" alt="uma das 4">
-          <img src="/img/promocao3.webp" alt="uma das 4">
-        </div>
-        <div id="test1">
-          <img src="/img/promocao4.webp" alt="uma das 4">
-          <img src="/img/promocao5.webp" alt="uma das 4">
-        </div>
+
+        <img src="/img/promocao2.webp" alt="uma das 4">
+        <img src="/img/promocao3.webp" alt="uma das 4">
+        <img src="/img/promocao4.webp" alt="uma das 4">
+        <img src="/img/promocao5.webp" alt="uma das 4">
+
       </div>
+
+    </div>
+  </section>
+
+  <section class="promo-mobile">
+    <div id="mobile-promo">
+      <img src="/img/promo-mobile1.webp" alt="promo-mobile">
+      <img src="/img/promo-mobile2.webp" alt="promo-mobile">
+      <!-- <img src="/img/promo-mobile3.webp" alt="promo-mobile"> -->
     </div>
   </section>
 
@@ -109,20 +162,82 @@
       <img src="/img/topicos-linhaheadshops.webp" alt="">
       <img src="/img/topicos-linhaherois.webp" alt="">
       <img src="/img/topicos-linhaimportados.webp" alt="">
-      <img src="/img/topicos-linhakiteconomicos.webp" alt="">
+      <!-- <img src="/img/topicos-linhakiteconomicos.webp" alt=""> -->
     </div>
 
   </section>
 
 
-
-
-
   <footer>
     <%- include('./partials/footer.ejs')%>
   </footer>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="../utils/slick.js"></script>
+
+
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+    var banner = new Swiper(".banner-swipe", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    // const banner = new Swiper('.banner-swipe', {
+    //   // Optional parameters
+    //   direction: 'horizontal',
+    //   loop: true,
+
+    //   // If we need pagination
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //   },
+
+    //   // Navigation arrows
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+
+    //   // And if we need scrollbar
+    //   scrollbar: {
+    //     el: '.swiper-scrollbar',
+    //   },
+    // });
+
+    const produtos = new Swiper('.produto', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  </script>
 </body>
 
 </html>

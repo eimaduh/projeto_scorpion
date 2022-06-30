@@ -6,12 +6,9 @@
   box-sizing: border-box;
 }
 
-
 header {
   display: flex;
-  /* background-color: #fff74c; */
   background-color: #edcb17;
-  /* background-color: #f0ca00; */
   width: 100%;
   justify-content: space-around;
   align-items: center;
