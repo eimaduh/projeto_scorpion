@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('./partials/head')%>
     <link rel="stylesheet" href="/css/carrinho.css">
-    <title>Scorpion Tabacaria</title>
-</head>
 <body>
-   <header></header>
-   
+
    <nav>
        <a class="link-img" href="/"><img src="/img/arrow-white.png" alt="seta"></a>
        <h1>Meu carrinho</h1>
@@ -17,7 +9,9 @@
     </nav>
     
 <div class="container">
-
+<header>
+    
+</header>
 
         <div class="left"> 
            <section class="CEP">
@@ -26,6 +20,7 @@
                     <input type="text" name="cep" id="cep" >
                     <button class="ok" type="submit">OK</button>
                 </form>
+                <br>
                 <p>Valor do frete: R$ 00,00 </p>
             </section>
 
@@ -47,20 +42,20 @@
                         
                     
                     
-                    
-
-
-    <div class="right">
+     <div class="right">
             <section class="resumo">
+                
                 <div class="img-resumo">
                     <img src="/img/resume-icon.png" alt="resumo">
                     <h2>RESUMO</h2>
                 </div>
 
-                <p>Valor dos produtos: R$00,00</p>
-                <p>Frete: R$00,00</p>
-                <p>Total a prazo: R$00,00</p>
-                <p>(Em até 12x de R$ 00,00 sem juros)</p>
+                <div class="resumo-info">
+                    <p>Valor dos produtos: R$00,00</p>
+                    <p>Frete: R$00,00</p>
+                    <p>Total a prazo: R$00,00</p>
+                    <p>(Em até 12x de R$ 00,00 sem juros)</p>
+                </div>
                 <br><br>
 
             <button class="botao-pagamento" type="button"><a href="/finalizacao">Ir para o pagamento</a></button>
@@ -74,10 +69,9 @@
 
 
 </div>
-
-    <footer> 
-        <h5>SCORPION TABACARIA</h5>
-    </footer>
+            <footer>
+                Scorpion Tabacaria
+            </footer>
     
 </body>
 </html>

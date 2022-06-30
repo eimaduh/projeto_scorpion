@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/login.css">
-    <title>ScorpionTabacaria</title>
-</head>
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/login.css">
 <body>
-
-    <header>
-           
-    </header>
+    <%- include('partials/header-navbar') %>
 
     <h1>Cadastre-se ou Acesse sua conta!</h1>
 
@@ -29,9 +19,11 @@
                     <input type="email" name="email" placeholder="email@email.com" required><br>
 
                     <label for="senha">Senha</label><br>
-                    <input type="password" name="senha" placeholder="Criar senha" required><br>
+                    <input type="password" name="senha" required><br>
 
-                    <button class="real-button" type="submit">Criar conta</button>
+                    <div class="center">
+                        <button class="real-button" type="submit">CRIAR CONTA</button>
+                    </div>
 
                 </form>
             </div>
@@ -42,22 +34,18 @@
                     <button class="ornament-button" type="button">Já sou cliente!</button><br><br>
 
                     <label for="email">E-mail</label><br>
-                    <input type="email" name="email" placeholder="seu email" required><br>
+                    <input type="email" name="email" required><br>
 
                     <label for="senha">Senha</label><br>
-                    <input type="password" name="senha" placeholder="sua senha" required><br>
+                    <input type="password" name="senha" required><br>
                     <a class="esqueceu-senha" href="">Esqueceu sua senha?</a>
 
-                    <button class="real-button" type="submit">Entrar</button>
+                    <div class="center">
+                        <button class="real-button" type="submit">ENTRAR</button>
+                    </div>
                 </form>
             </div>
     </div>
-
-    <footer>
-
-    </footer>
-
-
-
+    <%- include('partials/footer') %>
 </body>
 </html>
