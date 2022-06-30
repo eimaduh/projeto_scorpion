@@ -19,33 +19,42 @@ h1 {
     justify-content: center;
 }
 
-@media (min-width:860px) {
-    section {
+@media (min-width:800px) {
+    .container-categoria {
         width: 80%;
         margin: auto;
+        margin-bottom: 40px;
         padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
         display: flex;
         flex-direction: row;
     }
 }
 
-@media (max-width:859px) {
-    section {
+@media (max-width:799px) {
+    .container-categoria {
         width: 80%;
         margin: auto;
+        display: flex;
+        flex-direction: column;
     }
 }
 
 
-div img {
+.descricao img {
     width: 50%;
     border-radius: 10px;
 }
 
-div {
+.descricao {
     width: 100%;
     margin: 10px;
     padding: 10px;
+    border: #edcb17 solid 2px;
     line-height: 30px;
     border-radius: 10px;
     display: flex;
@@ -53,11 +62,7 @@ div {
     align-items: center;
 }
 
-.descricao {
-    background-color: rgb(248, 248, 147);
-}
-
-div a {
+.descricao a {
     text-decoration: none;
     margin: 5px;
     color: red;
