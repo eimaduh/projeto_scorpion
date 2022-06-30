@@ -106,6 +106,7 @@ section #imagens-direita {
 
 section #mobile-promo {
   display: flex;
+  justify-content: space-around;
 }
 
 @media (min-width: 769px) {
@@ -126,3 +127,16 @@ section .topicos {
   justify-content: center;
   padding: 70px;
 }
+
+.nossas-marcas{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.swiper-wrapper img {
+  display: flex;
+
+  max-height: 100px;
+}
+
