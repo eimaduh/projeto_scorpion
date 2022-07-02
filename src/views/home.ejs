@@ -1,8 +1,5 @@
 <%- include('./partials/head')%>
 
-
-  <link rel="stylesheet" href="/css/home.css">
-
   <body>
     <%- include('./partials/header-navbar')%>
 
@@ -19,18 +16,17 @@
 
 
         </div>
-        <!-- If we need pagination -->
+        <!-- Adicione paginação aqui -->
         <!-- <div class="swiper-pagination"></div> -->
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
 
-        <!-- If we need scrollbar -->
+        <!-- Adicione Scroll bar aqui -->
         <!-- <div class="swiper-scrollbar"></div> -->
       </div>
 
-      <!-- <section class="vitrine-produtos"> -->
       <div class="swiper produto">
         <div class="swiper-wrapper">
           <div class="swiper-slide produtinho-wrapper">
@@ -119,14 +115,12 @@
           </div>
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
 
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </div>
-
-      <!-- </section> -->
 
       <section class="promocoes">
         <div id="quadradopromocoes">
@@ -150,57 +144,60 @@
       <section class="promo-mobile">
         <div id="mobile-promo">
           <img src="/img/promo-mobile1.webp" alt="promo-mobile">
-          <img src="/img/promo-mobile2.webp" alt="promo-mobile">
+          <img id="mobile1" src="/img/promo-mobile2.webp" alt="promo-mobile">
           <!-- <img src="/img/promo-mobile3.webp" alt="promo-mobile"> -->
         </div>
       </section>
 
-      <section class="topicos">
-        <div id="filtros">
-          <img src="/img/topicos-linhacarvoes.webp" alt="">
-          <img src="/img/topicos-linhafogareiros.webp" alt="">
-          <img src="/img/topicos-linhaheadshops.webp" alt="">
-          <img src="/img/topicos-linhaherois.webp" alt="">
-          <img src="/img/topicos-linhaimportados.webp" alt="">
-          <!-- <img src="/img/topicos-linhakiteconomicos.webp" alt=""> -->
+      <section class=" swiper topicos">
+        <div class="swiper-wrapper">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhacarvoes.webp" alt="">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhafogareiros.webp" alt="">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhaheadshops.webp" alt="">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhaherois.webp" alt="">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhaimportados.webp" alt="">
+          <img class="swiper-slide swiper-topicos" src="/img/topicos-linhakiteconomicos.webp" alt="">
         </div>
 
       </section>
 
-      <div class="nossas-marcas"><h1>Nossas Marcas</h1></div>
+      <div class="nossas-marcas">
+        <a style="background: #fff; color: #fff;">a</a>
+        <h2 style="color: #2e2c2d; width: auto !important;">NOSSAS MARCAS</h2>
+        <a style="background: #fff; color: #fff;">a</a>
+      </div>
 
+      <!-- Carrossel Marcas -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <img class="swiper-slide" src="/img/logos_bf21_.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_2.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_4.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_8.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_9.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_10.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_11.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_12.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_13.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_14.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_15.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_16.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_17.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_19.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_20.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_21.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_22.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_23.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_24.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_25.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_26.png" alt="">
-          <img class="swiper-slide" src="/img/logos_bf21_28.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_2.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_4.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_8.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_9.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_10.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_11.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_12.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_13.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_14.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_15.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_16.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_17.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_19.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_20.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_21.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_22.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_23.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_24.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_25.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_26.png" alt="">
+          <img class="swiper-slide swiper-marcasimg" src="/img/logos_bf21_28.png" alt="">
         </div>
       </div>
 
       <footer>
         <%- include('./partials/footer.ejs')%>
       </footer>
-
-
 
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script>
@@ -221,33 +218,6 @@
             prevEl: ".swiper-button-prev",
           },
         });
-
-        var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        autoplay: {
-            delay: 1500,
-            disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        },
-      });
 
         // const banner = new Swiper('.banner-swipe', {
         //   // Optional parameters
@@ -290,6 +260,60 @@
           // And if we need scrollbar
           scrollbar: {
             el: '.swiper-scrollbar',
+          },
+        });
+
+        var marcas = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          },
+        });
+
+        var topicos = new Swiper(".topicos", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
           },
         });
       </script>
