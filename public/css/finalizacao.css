@@ -8,7 +8,8 @@ body {
 }
 
 a img {
-    width: 4%;
+    width: 5%;
+    padding: 5px;
 }
 
 .imagem-finalizacao {
@@ -37,6 +38,7 @@ a img {
         background-color: black;
         color: aliceblue;
         display: flex;
+        align-items: center;
     }
 
 
