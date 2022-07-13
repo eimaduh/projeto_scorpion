@@ -54,7 +54,8 @@ h1 {
 .rigth {
     width: 90%;
     height: 480px;
-    border: #edcb17 solid 2px;
+    /* border: #edcb17 solid 2px; */
+    box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     margin: 30px 15px;
     line-height: 1px;
