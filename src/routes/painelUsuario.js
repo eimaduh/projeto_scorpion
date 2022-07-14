@@ -10,5 +10,7 @@ usersRouter.get('/users/address/edit', usersController.editAddress)
 
 usersRouter.get('/users/credits', usersController.usersCredits)
 
+usersRouter.get('/users/requests', usersController.usersRequests)
+
 
 module.exports = usersRouter

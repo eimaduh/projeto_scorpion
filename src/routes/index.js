@@ -21,6 +21,7 @@ routes.get('/users/data', usersRouter)
 routes.get('/users/credits', usersRouter)
 routes.get('/users/address', usersRouter)
 routes.get('/users/address/edit', usersRouter)
+routes.get('/users/requests', usersRouter)
 
 routes.get('/categoria', categoriaRouter)
 

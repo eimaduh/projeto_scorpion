@@ -95,10 +95,9 @@ legend {
     margin: 10px;
 }
 .address-one {
-    width: 48%;
-    height: 300px;
+    width: 50%;
+    height: 355px;
     display: flex;
-
     border-radius: 10px;
     box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
     padding: 10px;
@@ -174,5 +173,12 @@ legend {
       margin: 5px;
       justify-content: space-between;
       
+  }
+}
+
+@media (max-width: 900px) {
+  .address-one {
+      width: 100%;
+      height: 270px;
   }
 }

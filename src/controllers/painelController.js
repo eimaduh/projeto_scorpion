@@ -13,6 +13,9 @@ const usersController = {
     },
     usersCredits: (req, res) => {
         res.render('usersCredits')
+    },
+    usersRequests: (req, res) => {
+        res.render('usersRequests')
     }
 }
 
