@@ -1,0 +1,49 @@
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/usersRequests.css">
+<body>
+  <%- include('partials/header-navbar') %>
+  <main>
+
+    <%- include('partials/userAccount') %>
+    <h2>Pedidos</h2>
+    <div class="line"></div>
+    </div>
+</div>     
+<div class="requests-container">               
+<div class="requests">
+  <div class="requests-user">
+    <h5>Pedido nº</h5>
+    
+    <button id="see-more"><i class="fa-solid fa-caret-down"></i> Ver detalhes</button>
+  </div>
+</div>
+  <div class="requests-status">
+    <h5>Status</h5>
+    <br/>
+    <h5 class="requests-details">Detalhes</h5>
+  </div>
+</div>
+  </article>
+</section>
+</main>
+<%- include('partials/footer') %>
+</body>
+
+</html>
+  </main>
+</body>
+<script>
+  window.addEventListener('load', function() {
+    let button = document.querySelector('#see-more');
+    let requests = document.querySelector('.requests-status');
+    
+    button.addEventListener('click', () => {
+        if(requests.style.display === 'block'){
+            requests.style.display = 'none';
+        }else {
+            requests.style.display = 'block'
+        }
+    })
+});
+</script>
+</html>
