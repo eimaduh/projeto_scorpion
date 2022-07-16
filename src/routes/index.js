@@ -17,6 +17,7 @@ routes.get('/finalizacao', finalizacaoRouter);
 routes.get('/login', loginRouter)
 
 routes.get('/users', usersRouter)
+routes.post('/users', usersRouter)
 routes.get('/users/data', usersRouter)
 routes.get('/users/credits', usersRouter)
 routes.get('/users/address', usersRouter)
