@@ -3,7 +3,6 @@ const usersRouter = express.Router()
 const usersController = require('../controllers/painelController')
 
 usersRouter.get('/users', usersController.getUsersPage)
-usersRouter.post('/users', usersController.usersStore)
 
 usersRouter.get('/users/data', usersController.getUsersData)
 
