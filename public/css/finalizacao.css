@@ -7,8 +7,9 @@ body {
     background-color: rgb(252, 214, 2);
 }
 
-header img {
+a img {
     width: 5%;
+    padding: 5px;
 }
 
 .imagem-finalizacao {
@@ -18,14 +19,14 @@ header img {
 }
 
 .informacao {
-    margin: 2%;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .container-info img {
-    width: 60%;
+    width: 70%;
     display: flex;
 }
 
@@ -37,6 +38,7 @@ header img {
         background-color: black;
         color: aliceblue;
         display: flex;
+        align-items: center;
     }
 
 
@@ -45,3 +47,28 @@ header img {
      display: flex;
      justify-content: center;
  }
+
+ @media (max-width:820px) {
+    a img {
+        width: 10%;
+    }
+
+    .container-info img {
+        width: 90%;
+        display: flex;
+    }
+
+    .container {
+        width: 90%;
+        padding: 4px;
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: black;
+        color: aliceblue;
+        display: flex;
+    }
+
+    .informacao {
+        margin-top: 10px;
+    }
+}
