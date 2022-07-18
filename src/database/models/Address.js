@@ -1,39 +1,39 @@
 module.exports = (sequelize, DataTypes) => {
-  const Addresses = sequelize.define('Addresses', {
+  const Addresses = sequelize.define('Address', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    logradouro: {
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: { model: 'users', 'id' },
+      onUpdate: 'CASCADE',
+      onDelete: 'CASCADE',
+    },  
+    street: {
       type: DataTypes.STRING(1000),
       allowNull: false
     },
-    numero: {
-      type: DataTypes.INTEGER(10),
-      allowNull: false
-    },
-    complemento: {
-      type: DataTypes.STRING(45),
-      allowNull: true
-    },
-    bairro: {
+    number: {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-    cep: {
+    district: {
+      type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    zipcode: {
       type: DataTypes.INTEGER(8),
       allowNull: false
     },
-    cidade: {
+    city: {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-    cidade: {
-      type: DataTypes.STRING(45),
-      allowNull: false
-    },
+  
   }, { tablename: 'address' })
 
   Addresses.associate = (models) => {
