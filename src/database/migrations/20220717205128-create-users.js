@@ -44,6 +44,12 @@ module.exports = {
               type: Sequelize.DATE,
               allowNull: false,
             },
+            type: {
+            type: Sequelize.ENUM,
+            values: ['user', 'admin'],
+            allowNull: false,
+            defaultValue: 'user'
+      }
   });
 },
 

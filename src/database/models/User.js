@@ -34,6 +34,18 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER(11),
                 allowNull: false,
             },
+            phone_number: {
+                type: DataTypes.INTEGER(20),
+                allowNull: false,
+            },
+            avatar: {
+                type: DataTypes.STRING(100),
+                allowNull: false
+            },
+            id_photo: {
+                type: DataTypes.STRING(100),
+                allowNull: false
+            },
             type: {
             type: dataTypes.ENUM,
             values: ["user", "admin"],
@@ -47,14 +59,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
   }
     
-  //Users.associate = ({ Adresses }) => {
-   // Users.hasOne(models.Adresses, {
-    //   as: "adresses",
-  //  }),
-  //  Users.hasMany(models.Sales, {
-       as: "sales",
-   // });
-  //}
+  Users.associate = (models) => {
+   Users.hasOne(models.Adress, {
+    as: "adresses",
+  }),
+  Users.hasMany(models.Order, {
+       as: "orders",
+});
+}
 
 
     const users = sequelize.define(alias, collumns, config);
