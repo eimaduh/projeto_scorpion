@@ -38,7 +38,7 @@ module.exports = (sequelize, DataTypes) => {
                 type: DataTypes.INTEGER(20),
                 allowNull: false,
             },
-            avatar: {
+            avatar_path: {
                 type: DataTypes.STRING(100),
                 allowNull: false
             },
@@ -51,7 +51,7 @@ module.exports = (sequelize, DataTypes) => {
             values: ["user", "admin"],
             allowNull: false,
             defaultValue: "user"
-    }
+            },
 
         };
         const config = {

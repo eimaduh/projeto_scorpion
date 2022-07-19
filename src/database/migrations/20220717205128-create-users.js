@@ -35,6 +35,14 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
+            phone_number: {
+              type: Sequelize.INTEGER,
+              allowNull: false
+            },
+            avatar_path: {
+            type: Sequelize.STRING,
+            allowNull: true,
+            },
             created_at: {
             type: Sequelize.DATE,
             allowNull: false,
