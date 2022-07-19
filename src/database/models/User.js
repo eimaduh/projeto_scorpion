@@ -1,9 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
-        const alias = "Users",
+        const alias = "Users";
 
         const collumns = {
             id: {
-                type.DataTypes.Integer,
+                type:DataTypes.Integer(11),
                 primaryKey: true,
                 allowNull: false,
                 autoIncrement: true,
@@ -69,6 +69,6 @@ module.exports = (sequelize, DataTypes) => {
 }
 
 
-    const users = sequelize.define(alias, collumns, config);
+    const User = sequelize.define(alias, collumns, config);
     return User;
 }
