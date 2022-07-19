@@ -7,14 +7,15 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     user_id: {
-       references: { 
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: { 
         model: 'users',
         key: 'id' 
         },
-    },
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
-    },  
+    },
     street: {
       type: DataTypes.STRING(1000),
       allowNull: false
