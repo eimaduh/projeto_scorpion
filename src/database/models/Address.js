@@ -9,10 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: { model: 'users', 'id' },
+      references: { model: 'users', key:'id' },
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
-    },  
+    },
     street: {
       type: DataTypes.STRING(1000),
       allowNull: false
@@ -33,14 +33,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-  
+
   }, { tablename: 'address' })
 
   Address.associate = (models) => {
     Address.belongsTo(models.User, {
       constraint: true,
       foreignKey: 'id'
-    }),
+
+    })
   }
 
   return Address;
