@@ -7,9 +7,12 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: { model: 'users', key:'id' },
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: { 
+        model: 'users',
+        key: 'id' 
+        },
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
     },
@@ -33,16 +36,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(45),
       allowNull: false
     },
+   { tablename: 'address' }),
 
-  }, { tablename: 'address' })
-
-  Address.associate = (models) => {
+    Address.associate = (models) => {
     Address.belongsTo(models.User, {
       constraint: true,
       foreignKey: 'id'
-
-    })
-  }
+    }),
+ };
 
   return Address;
 }

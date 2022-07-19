@@ -17,38 +17,46 @@ module.exports = {
       surname: {
         type: Sequelize.STRING,
         allowNull: true,
+            },
+            email: {
+            type: Sequelize.STRING,
+            allowNull: false
+            },
+            birth_day: {
+            type: Sequelize.DATE,
+            allowNull: false
+            },
+            password: {
+            type: Sequelize.STRING,
+            allowNull: false    
+            },
+            cpf: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            phone_number: {
+              type: Sequelize.INTEGER,
+              allowNull: false
+            },
+            avatar_path: {
+            type: Sequelize.STRING,
+            allowNull: true,
+            },
+            created_at: {
+            type: Sequelize.DATE,
+            allowNull: false,
+            default: Sequelize.NOW
+            },
+            updated_at: { 
+              type: Sequelize.DATE,
+              allowNull: false,
+            },
+            type: {
+            type: Sequelize.ENUM,
+            values: ['user', 'admin'],
+            allowNull: false,
+            defaultValue: 'user'
 
-      },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      birth_day: {
-        type: Sequelize.DATE,
-        allowNull: false
-      },
-      password: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      cpf: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-      },
-      created_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-        default: Sequelize.NOW
-      },
-      updated_at: {
-        type: Sequelize.DATE,
-        allowNull: false,
-      },
-      type: {
-        type: Sequelize.ENUM,
-        values: ['user', 'admin'],
-        allowNull: false,
-        defaultValue: 'user'
       }
     });
   },
