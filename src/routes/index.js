@@ -15,6 +15,7 @@ routes.get('/carrinho', carrinhoRouter);
 routes.get('/finalizacao', finalizacaoRouter);
 
 routes.get('/login', loginRouter)
+routes.get('/login/register', loginRouter);
 
 routes.get('/users', usersRouter)
 routes.post('/users', usersRouter)
