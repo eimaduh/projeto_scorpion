@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 nav{
@@ -82,7 +83,7 @@ nav h3 {
 .descricao-produto{
     width: 80%;
     color: black;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 40px;
     padding: 10px;
     /* border-style: ridge; */
@@ -144,11 +145,9 @@ nav h3 {
 .botao-pagamento {
     background-color: rgb(13, 161, 230);
     color: white;
-    width: 60%;
-    height: 40px;
     border-radius: 5px;
     border-style: none;
-    
+    padding: 10px 40px;
 }
 
 .resumo-info{
@@ -157,11 +156,11 @@ nav h3 {
 }
 
 .continuar-compra {
-    width: 60%;
-    height: 40px;
     background-color: rgb(2, 43, 61);
+    color: white;
     border-style: none;
     border-radius: 5px;
+    padding: 10px 40px;
 }
 
 button {
