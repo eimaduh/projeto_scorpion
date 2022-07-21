@@ -25,7 +25,7 @@ routes.get('/users/address/edit', usersRouter)
 routes.get('/users/requests', usersRouter)
 
 routes.get('/categoria', categoriaRouter)
-
+routes.get('/categoria/admin', categoriaRouter)
 routes.get('/detalhe', detailsRouter)
 
 module.exports = routes

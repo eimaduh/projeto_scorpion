@@ -4,7 +4,7 @@ module.exports = {
     up: (queryInterface, Sequelize) => {
         return queryInterface.createTable('products_brands', {
 
-            productId: {
+            product_id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
@@ -14,7 +14,7 @@ module.exports = {
                 onUpdate: 'cascade',
                 onDelete: 'cascade'
             },
-            tagId: {
+            brand_id: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
                 references: {
