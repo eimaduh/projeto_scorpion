@@ -14,4 +14,4 @@ app.use(methodOverride('_method'));
 
 app.use('/', routes)
 
-app.listen(3010, ()=> console.log('Sevidor rodando em localhost:3010'))
+app.listen(3010, ()=> console.log('Servidor rodando em localhost:3010'))

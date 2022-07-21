@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+form {
+  font-size: 62.5%;
+}
+
+i {
+    font-size: 1.4rem;
+}
+h1 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.6rem;
+}
+
+.container-products_admin {
+        width: 100%;
+        height: 600px;
+        margin: auto;
+        margin-bottom: 40px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    }
+
+form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+}
+
+.form-edit label {
+    padding: 5px;
+}
+.form-edit input {
+    width: 80%;
+    height: 60px;
+    border-radius: 5%;
+    background-color: #ffe874;
+}
+
+.descricao {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    /* border: #edcb17 solid 2px; */
+    box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.12);
+    line-height: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.descricao a {
+    text-decoration: none;
+    margin: 5px;
+    color: red;
+}
