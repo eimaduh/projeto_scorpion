@@ -9,20 +9,13 @@ module.exports = {
                 autoIncrement: true,
                 primaryKey: true,
             },
-            addressId: {
-                type: Sequelize.INTEGER,
-                references: {
-                    model: 'addresses',
-                    key: 'id'
-                }
-            },
             order_status: {
                 type: Sequelize.STRING
             },
             total: {
                 type: Sequelize.INTEGER
             },
-            userId: {
+            user_id: {
                 type: Sequelize.INTEGER,
                 allowNull: true,
                 references: {

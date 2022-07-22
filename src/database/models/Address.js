@@ -1,5 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
-  const Address = sequelize.define('Address', {
+  const alias = "Address";
+
+  const collumns = sequelize.define('Address', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -7,12 +9,12 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: { 
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
         model: 'users',
-        key: 'id' 
-        },
+        key: 'id'
+      },
       onUpdate: 'CASCADE',
       onDelete: 'CASCADE',
     },
@@ -36,15 +38,18 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-   { tablename: 'address' }),
+  }, {
+    tablename: 'address'
+  });
 
-    Address.associate = (models) => {
+  const Address = sequelize.define(alias, collumns, config);
+
+  Address.associate = (models) => {
     Address.belongsTo(models.User, {
       constraint: true,
       foreignKey: 'id'
-    }),
- };
+    })
+  };
 
   return Address;
 }
-

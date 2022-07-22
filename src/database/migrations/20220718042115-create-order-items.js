@@ -9,32 +9,30 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-
-            name: {
-                type: Sequelize.STRING
-            },
-            price: {
-                type: Sequelize.INTEGER
+            total: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
 
-            quantity: {
-                type: Sequelize.INTEGER
-            },
-            userId: {
+            user_id: {
                 type: Sequelize.INTEGER,
                 references: {
                     model: 'users',
                     key: 'id'
                 }
             },
-            productId: {
+            product_id: {
                 type: Sequelize.INTEGER,
                 references: {
                     model: 'products',
                     key: 'id'
                 }
             },
-            orderId: {
+            quantity: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            order_id: {
                 type: Sequelize.INTEGER,
                 references: {
                     model: 'orders',

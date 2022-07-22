@@ -10,21 +10,43 @@ module.exports = {
                 type: Sequelize.INTEGER
             },
             name: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
             },
             descripcion: {
                 type: Sequelize.STRING,
                 unique: true,
+                allowNull: false,
             },
             specification: {
-                type: Sequelize.STRING
+                type: Sequelize.STRING,
+                allowNull: false,
             },
             price: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
             stock: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: false,
             },
+            sale: {
+                type: Sequelize.BOOLEAN,
+                allowNull: false,
+            },
+            image_path: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            brand: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            category: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+
             created_at: {
                 allowNull: false,
                 type: Sequelize.DATE

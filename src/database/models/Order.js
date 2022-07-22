@@ -1,5 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
-    const Order = sequelize.define('orders', {
+    const alias = "Orders";
+
+    const collumns = sequelize.define('orders', {
 
         id: {
             type: INTEGER(11),
@@ -7,26 +9,15 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
             autoIncrement: true,
         },
-
-        userId: {
+        user_id: {
             type: INTEGER(11),
             allowNull: true,
             field: 'userId',
         },
-
-        addressId: {
-            type: DataTypes.INTEGER(11),
-            field: 'addressId',
-            references: {
-                model: 'Address',
-                key: 'id'
-            }
-        },
-
         orderStatus: {
             type: DataTypes.STRING(30),
             field: 'order_status',
-            },
+        },
         total: {
             type: DataTypes.INTEGER(15),
             allowNull: false,
@@ -48,10 +39,13 @@ module.exports = function (sequelize, DataTypes) {
         tableName: 'orders',
     });
 
-  Order.associate = (models) => {
+    const Order = sequelize.define(alias, collumns, config);
+
+    Order.associate = (models) => {
         Order.hasMany(models.Order_Item);
-        Order.belongsTo(models.User, {foreignKey: 'user_id'});
-        Order.belongsTo(models.Address, {foreignKey: 'address_id'});
+        Order.belongsTo(models.User, {
+            foreignKey: 'user_id'
+        });
     };
 
     return Order;

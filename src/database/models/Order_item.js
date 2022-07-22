@@ -1,29 +1,26 @@
 module.exports = function (sequelize, DataTypes) {
+    const alias = "Order_item";
 
-    const Order_item = sequelize.define('order_items', {
+    const collumns = sequelize.define('order_items', {
         id: {
             type: DataTypes.INTEGER(11),
             primaryKey: true,
             autoIncrement: true,
         },
 
-        name: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-        },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER(11),
             allowNull: true,
             field: 'user_id',
         },
 
-        orderId: {
+        order_id: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
             field: 'order_id',
         },
 
-        productId: {
+        product_id: {
             type: DataTypes.INTEGER(11),
             allowNull: true,
             field: 'product_id',
@@ -54,7 +51,9 @@ module.exports = function (sequelize, DataTypes) {
     }, {
         timestamps: false,
         tableName: 'order_items',
-    }),
+    });
+
+    const Order_item = sequelize.define(alias, collumns, config);
 
     Order_item.associate = (models) => {
         Order_item.belongsTo(models.Order);

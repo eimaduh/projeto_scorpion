@@ -1,6 +1,7 @@
-
 module.exports = (sequelize, DataTypes) => {
-    const Product = sequelize.define('products', {
+    const alias = "Products";
+
+    const collumns = sequelize.define('products', {
         id: {
             type: DataTypes.INTEGER(11),
             primaryKey: true,
@@ -33,20 +34,15 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: new Date(),
             field: 'updated_at'
         },
-    }, {tableName: 'products'});
+    }, {
+        tableName: 'products'
+    });
 
+    const Product = sequelize.define(alias, collumns, config);
 
     Product.associate = (models) => {
-        Product.hasMany(models.ProductImage, {as: 'images'});
-        Product.belongsToMany(models.Category, {
-            through: models.Product_category,
-            foreignKey: 'productId',
-            otherKey: 'categoryId',
-        });
-        Product.belongsToMany(models.Brand, {
-            through: models.Product_brand,
-            foreignKey: 'productId',
-            otherKey: 'brandId'
+        Product.hasMany(models.Order, {
+            as: "orders",
         });
 
     };
