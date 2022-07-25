@@ -18,13 +18,15 @@ routes.get('/login', loginRouter)
 routes.get('/login/register', loginRouter);
 
 routes.get('/users', usersRouter)
+routes.post('/users', usersRouter)
 routes.get('/users/data', usersRouter)
 routes.get('/users/credits', usersRouter)
 routes.get('/users/address', usersRouter)
 routes.get('/users/address/edit', usersRouter)
+routes.get('/users/requests', usersRouter)
 
 routes.get('/categoria', categoriaRouter)
-
+routes.get('/categoria/admin', categoriaRouter)
 routes.get('/detalhe', detailsRouter)
 
 module.exports = routes

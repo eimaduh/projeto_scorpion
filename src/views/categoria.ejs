@@ -1,25 +1,27 @@
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/categoria.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <title>Scorpion Tabacaria</title>
+   <%- include('./partials/head')%>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/categoria.css">
+   <link rel="stylesheet" href="/css/header.css">
+   <link rel="stylesheet" href="/css/footer.css">
+   <title>Scorpion Tabacaria</title>
 </head>
+
 <body>
 
+
+   <%- include('partials/header-navbar') %>
+
+
+      <a class="home" href="/">HOME</a>
+
+      <h1>Listagem dos Produtos</h1>
     
-      <%- include('partials/header-navbar') %>
-    
-
-    <a class="home" href="/">HOME</a>
-
-    <h1>Listagem dos Produtos</h1>
-
-        
      <div class="container-categoria">
 
          <div class="descricao">
@@ -133,15 +135,11 @@
          
       </div>
 
-    
 
-   
+
       <%- include('partials/footer') %>
-   
 
 
 </body>
 
 </html>
-
-
