@@ -45,10 +45,15 @@ h1 {
     padding-top: 50px;
 }
 
-.rigth a {
-    text-decoration: none;
-    color: red;
-    margin-top: 50px;
+.rigth button {
+    cursor: pointer;
+    background-color: rgb(27, 204, 27);
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
 .rigth {

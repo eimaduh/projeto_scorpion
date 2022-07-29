@@ -50,7 +50,11 @@ a img {
 
  @media (max-width:820px) {
     a img {
-        width: 10%;
+        width: 12%;
+    }
+
+    .imagem-finalizacao {
+        width: 30%;
     }
 
     .container-info img {
@@ -69,6 +73,7 @@ a img {
     }
 
     .informacao {
-        margin-top: 10px;
+        margin-top: 50px;
+        line-height: 30px;
     }
 }
