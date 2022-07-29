@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
     const alias = "Users";
 
-    const collumns = {
+    const columns = {
         id: {
             type: DataTypes.Integer(11),
             primaryKey: true,
@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         type: {
-            type: dataTypes.ENUM,
+            type:  DataTypes.ENUM,
             values: ["user", "admin"],
             allowNull: false,
             defaultValue: "user"
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
     };
 
-    const User = sequelize.define(alias, collumns, config);
+    const User = sequelize.define(alias, columns, config);
 
     User.associate = (models) => {
         User.hasOne(models.Adress, {

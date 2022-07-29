@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const alias = "Address";
 
-  const collumns = sequelize.define('Address', {
+  const columns =  {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -38,11 +38,13 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-  }, {
-    tablename: 'address'
-  });
+  };
+  const config = {
+    tableName: "addresses",
+    timestamps: false,
+};
 
-  const Address = sequelize.define(alias, collumns, config);
+  const Address = sequelize.define(alias, columns, config);
 
   Address.associate = (models) => {
     Address.belongsTo(models.User, {

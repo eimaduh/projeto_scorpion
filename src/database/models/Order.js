@@ -1,16 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
     const alias = "Orders";
 
-    const collumns = sequelize.define('orders', {
+    const columns =  {
 
         id: {
-            type: INTEGER(11),
+            type: DataTypes.INTEGER(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
         },
         user_id: {
-            type: INTEGER(11),
+            type: DataTypes.INTEGER(11),
             allowNull: true,
             field: 'userId',
         },
@@ -23,23 +23,24 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
         },
         createdAt: {
-            type: DATE,
+            type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
             field: 'created_at'
         },
         updatedAt: {
-            type: DATE,
+            type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
             field: 'updated_at'
         },
-    }, {
+    };
+    const config = {
         timestamps: false,
         tableName: 'orders',
-    });
+    };
 
-    const Order = sequelize.define(alias, collumns, config);
+    const Order = sequelize.define(alias, columns, config);
 
     Order.associate = (models) => {
         Order.hasMany(models.Order_Item);

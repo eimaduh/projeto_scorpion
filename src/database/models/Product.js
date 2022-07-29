@@ -1,44 +1,63 @@
 module.exports = (sequelize, DataTypes) => {
     const alias = "Products";
 
-    const collumns = sequelize.define('products', {
+    const columns =  {
         id: {
             type: DataTypes.INTEGER(11),
             primaryKey: true,
             autoIncrement: true,
         },
         name: {
-            type: STRING(50),
+            type:  DataTypes.STRING(50),
             allowNull: false,
         },
         description: {
-            type: TEXT,
+            type:  DataTypes.TEXT,
         },
         price: {
-            type: DECIMAL(20, 2),
+            type: DataTypes.DECIMAL(20, 2),
             allowNull: false,
         },
         stock: {
-            type: INTEGER(11),
+            type:  DataTypes.INTEGER(11),
             allowNull: false,
         },
+        sale: {
+            type:  DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        image_path: {
+            type:  DataTypes.STRING,
+            allowNull: false,
+        },
+        brand: {
+            type:  DataTypes.STRING,
+            allowNull: false,
+        },
+        category: {
+            type:  DataTypes.STRING,
+            allowNull: false,
+        },
+
         createdAt: {
-            type: DATE,
+            type:  DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
             field: 'created_at'
         },
         updatedAt: {
-            type: DATE,
+            type:  DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
             field: 'updated_at'
         },
-    }, {
-        tableName: 'products'
-    });
+    };
+    const config = {
+        tableName: 'products',
+        timestamps: false,  
+    };
 
-    const Product = sequelize.define(alias, collumns, config);
+    const Product = sequelize.define(alias, columns, config);
 
     Product.associate = (models) => {
         Product.hasMany(models.Order, {

@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     const alias = "Order_item";
 
-    const collumns = sequelize.define('order_items', {
+    const columns = {
         id: {
             type: DataTypes.INTEGER(11),
             primaryKey: true,
@@ -48,12 +48,13 @@ module.exports = function (sequelize, DataTypes) {
             defaultValue: new Date(),
             field: 'updated_at'
         },
-    }, {
-        timestamps: false,
-        tableName: 'order_items',
-    });
+    }; 
+        const config = {
+            tableName: 'order_items',
+            timestamps: false,  
+    };
 
-    const Order_item = sequelize.define(alias, collumns, config);
+    const Order_item = sequelize.define(alias, columns, config);
 
     Order_item.associate = (models) => {
         Order_item.belongsTo(models.Order);
