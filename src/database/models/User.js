@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
 
     const columns = {
         id: {
-            type: DataTypes.Integer(11),
+            type: DataTypes.INTEGER(11),
             primaryKey: true,
             allowNull: false,
             autoIncrement: true,
@@ -62,13 +62,10 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(alias, columns, config);
 
     User.associate = (models) => {
-        User.hasOne(models.Adress, {
-                as: "addresses",
-            }),
-            User.hasMany(models.Order, {
-                as: "orders",
-            });
-    }
+        User.hasOne(models.Address, { as: "addresses", foreignKey: "address_id"}),
+            User.hasMany(models.Orders, {as: "orders", foreignKey: "order_id"});
+            
+    };
 
 
 

@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const alias = "Address";
 
-  const columns =  {
+  const columns = {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -42,15 +42,12 @@ module.exports = (sequelize, DataTypes) => {
   const config = {
     tableName: "addresses",
     timestamps: false,
-};
+  };
 
   const Address = sequelize.define(alias, columns, config);
 
   Address.associate = (models) => {
-    Address.belongsTo(models.User, {
-      constraint: true,
-      foreignKey: 'id'
-    })
+    Address.belongsTo(models.Users, {as: 'Users', foreignKey: 'user_id'})
   };
 
   return Address;

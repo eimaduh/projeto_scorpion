@@ -1,9 +1,9 @@
-const { Products}  = require("../database/models/Product");
+const database  = require("../database/models");
 
 const categoriaController = {
     getCategoryPage: (req, res) => {
-        Products.findAll().then( products => {
-            res.render('categoria', { products})
+        database.Products.findAll().then( products => {
+            res.render('categoria', { products })
           })
     },
     getCategoryAdminPage: (req, res) => {
@@ -21,7 +21,7 @@ const categoriaController = {
             category
         } = req.body;
 
-        Products.create({
+        database.Products.create({
                 name,
                 description,
                 specification,
@@ -39,7 +39,7 @@ const categoriaController = {
     edit: (req, res) => {
         const productId = req.params.id;
 
-        Products.findByPk(productId)
+        database.Products.findByPk(productId)
             .then(product => {
                 res.render('productEdit', {
                     product
@@ -60,7 +60,7 @@ const categoriaController = {
             category
         } = req.body;
 
-        Products.update({
+        database.Products.update({
                 name,
                 description,
                 specification,
