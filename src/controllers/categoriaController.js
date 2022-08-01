@@ -1,13 +1,24 @@
-const database  = require("../database/models");
+const database = require("../database/models");
+const path = require("path");
 
 const categoriaController = {
     getCategoryPage: (req, res) => {
-        database.Products.findAll().then( products => {
-            res.render('categoria', { products })
-          })
+        database.Products.findAll().then(products => {
+            res.render('categoria', {
+                products
+            })
+        })
     },
     getCategoryAdminPage: (req, res) => {
         res.render('produtosAdmin')
+    },
+    detail: (req, res) => {
+        database.Products.findByPk(req.params.id)
+            .then(product => {
+                res.render('details', {
+                    product
+                });
+            });
     },
     create: (req, res) => {
         const {
@@ -75,7 +86,7 @@ const categoriaController = {
                 }
             })
             .then(() => {
-                return res.redirect('/product')
+                return res.redirect('/categoria/admin')
             })
             .catch(error => res.send(error))
 
