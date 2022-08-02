@@ -7,7 +7,7 @@
 
   <article class="container-products_admin">
     <h1>Cadastrar produto</h1>
-    <form class="form-edit" action="/src/views/produtosAdmin.ejs" method="POST">
+    <form class="form-edit" action="/categoria/admin/create" method="POST">
       <div class="test">
         <label for="name">Nome</label>
         <input type="text" name="name" size="100" placeholder="Nome do produto" required>
@@ -38,23 +38,23 @@
       <div class="brand-category">
 
         <label for="Sale">Em promoção</label>
-        <select id="brand" required>
+        <select id="sale" required>
           <option selected disabled value="">Selecione</option>
-          <option value="Sim">Sim</option>
-          <option value="Não">Não</option>
+          <option value="S">Sim</option>
+          <option value="N">Não</option>
         </select>
 
         <label for="brand">Marca</label>
         <select id="brand" required>
           <option selected disabled value="">Selecione</option>
-          <option value=""></option>
+          <option value="teste">teste</option>
         </select>
 
 
         <label for="category">Categoria</label>
         <select id="category" required>
           <option selected disabled value="">Selecione</option>
-          <option value=""></option>
+          <option value="teste">teste</option>
         </select>
 
       </div>

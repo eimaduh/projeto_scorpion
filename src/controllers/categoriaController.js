@@ -3,34 +3,27 @@ const path = require("path");
 
 const categoriaController = {
     getCategoryPage: (req, res) => {
-        database.Products.findAll().then(products => {
-            res.render('categoria', {
-                products
+        database.Products.findAll()
+            .then(products => {
+                res.render('categoria', {
+                    products
+                })
             })
-        })
+
+    },
+    getById: (req, res) => {
+        database.Products.findByPk(req.params.id)
+            .then(products => {
+                res.render('details', {
+                    products
+                })
+            })
     },
     getCategoryAdminPage: (req, res) => {
         res.render('produtosAdmin')
     },
-    detail: (req, res) => {
-        database.Products.findByPk(req.params.id)
-            .then(product => {
-                res.render('details', {
-                    product
-                });
-            });
-    },
     create: (req, res) => {
-        const {
-            name,
-            description,
-            specification,
-            price,
-            stock,
-            sale,
-            brand,
-            category
-        } = req.body;
+        const { name, description, specification, price, stock, sale, brand, category} = req.body;
 
         database.Products.create({
                 name,
@@ -60,16 +53,7 @@ const categoriaController = {
     },
     update: (req, res) => {
         const productId = req.params.id;
-        const {
-            name,
-            description,
-            specification,
-            price,
-            stock,
-            sale,
-            brand,
-            category
-        } = req.body;
+        const { name, description, specification, price, stock, sale, brand, category} = req.body;
 
         database.Products.update({
                 name,
@@ -91,6 +75,18 @@ const categoriaController = {
             .catch(error => res.send(error))
 
     },
+    delete: (req, res) => {
+        database.Products.destroy(
+            {
+                where: {id: req.params.id}
+            }
+            .then(() => {
+                return res.redirect('/categoria/admin')
+            })
+            .catch(error => res.send(error))
+
+        )
+    }
 }
 
 

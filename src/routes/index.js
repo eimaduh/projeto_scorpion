@@ -34,7 +34,7 @@ routes.get('/categoria/:id', categoriaRouter);
 
 routes.put('/categoria/admin/update/:id', categoriaRouter);
 
-// routes.delete('/categoria/admin/delete/:id', categoriaRouter);
+routes.delete('/categoria/admin/delete/:id', categoriaRouter);
 
 routes.get('/detalhe', detailsRouter)
 
