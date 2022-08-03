@@ -1,6 +1,7 @@
 const database = require("../database/models");
 const path = require("path");
 
+
 const categoriaController = {
     getCategoryPage: (req, res) => {
         database.Products.findAll()
@@ -24,6 +25,7 @@ const categoriaController = {
     },
     create: (req, res) => {
         const { name, description, specification, price, stock, sale, brand, category} = req.body;
+        const {path} = req.file;
 
         database.Products.create({
                 name,
@@ -31,7 +33,8 @@ const categoriaController = {
                 specification,
                 price,
                 stock,
-                sale,
+                sale: Number(sale),
+                image_path: path,
                 brand,
                 category
             })

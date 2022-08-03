@@ -1,12 +1,13 @@
 const express = require('express');
 const categoriaRouter = express.Router()
 const categoriaController = require('../controllers/categoriaController')
+const multerConfig = require('../utils/multerConfig')
 
 categoriaRouter.get('/categoria', categoriaController.getCategoryPage)
 categoriaRouter.get('/categoria/admin', categoriaController.getCategoryAdminPage)
 
 
-categoriaRouter.post('/categoria/admin/create', categoriaController.create)
+categoriaRouter.post('/categoria/admin/create', multerConfig.single('file'), categoriaController.create)
 
 categoriaRouter.get('/categoria/:id', categoriaController.getById);
 
