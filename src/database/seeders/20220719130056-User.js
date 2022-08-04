@@ -39,6 +39,18 @@ module.exports = {
           id_photo: '',
           type: "admin",
         },
+        {
+          name: 'Fernando',
+          surname: 'Uncle',
+          email: 'fernando@scorpion.com',
+          birth_date: 'date',
+          password: 'fernando123',
+          cpf: 12345678910,
+          phone_number: 11947888889,
+          avatar_path: '',
+          id_photo: '',
+          type: "admin",
+        },
 
 
       ], {});
