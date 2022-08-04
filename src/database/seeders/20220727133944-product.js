@@ -6,7 +6,7 @@ module.exports = {
     await queryInterface.bulkInsert('Products', 
     [{
         name: 'Mangueira antiChamas',
-        description: 'Manguira bacaninha lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam',
+        description: 'Mangueira bacaninha lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam',
         specification: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam et justify methodOverride',
         price: 36.0,
         stock: 20,

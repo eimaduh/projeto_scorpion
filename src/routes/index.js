@@ -27,6 +27,7 @@ routes.get('/users/requests', usersRouter)
 
 routes.get('/categoria', categoriaRouter)
 routes.get('/categoria/admin', categoriaRouter)
+routes.get('/categoria/admin/sucesso', categoriaRouter)
 routes.post('/categoria/admin/create', categoriaRouter)
 
 

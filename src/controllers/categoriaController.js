@@ -23,6 +23,9 @@ const categoriaController = {
     getCategoryAdminPage: (req, res) => {
         res.render('produtosAdmin')
     },
+    getSuccessPage: (req, res) => {
+        res.render('successPage')
+    },
     create: (req, res) => {
         const { name, description, specification, price, stock, sale, brand, category} = req.body;
         const {path} = req.file;
@@ -39,7 +42,7 @@ const categoriaController = {
                 category
             })
             .then(() => {
-                return res.redirect('/categoria/admin')
+                return res.redirect('/categoria/admin/sucesso');
             })
             .catch(error => res.send(error))
     },

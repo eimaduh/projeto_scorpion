@@ -10,6 +10,7 @@ categoriaRouter.get('/categoria/admin', categoriaController.getCategoryAdminPage
 categoriaRouter.post('/categoria/admin/create', multerConfig.single('file'), categoriaController.create)
 
 categoriaRouter.get('/categoria/:id', categoriaController.getById);
+categoriaRouter.get('/categoria/admin/sucesso', categoriaController.getSuccessPage);
 
 categoriaRouter.put('/categoria/admin/update/:id', categoriaController.update);
 
