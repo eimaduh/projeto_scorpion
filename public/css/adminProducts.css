@@ -170,6 +170,13 @@ textarea {
   padding: 10px;
   font-size: 1.2rem;
 }
+
+#category, #brand {
+  width: 10vw;
+  min-height: 7vh;
+  padding: 10px;
+  font-size: 1.2rem;
+}
 .register-admin {
   display: flex;
   align-items: center;

@@ -6,35 +6,34 @@
   <%- include('partials/header-navbar') %>
   <main>
     <article class="container-products_admin">
-      <h1>Cadastrar produto</h1>
-      <form class="form-edit" action="/categoria/admin/create" method="POST" enctype="multipart/form-data">
+      <h1>Editando produto: <%= product.name %></h1>
+      <form class="form-edit" action="/categoria/admin/update<%= product.id %>" method="POST" enctype="multipart/form-data">
         <div class="name-product">
           <label for="name">Nome</label>
-          <input type="text" name="name" size="100" placeholder="Nome do produto" required>
+          <input type="text" name="name" size="100" value="<%= product.name %>" required>
         </div>
         <div class="describe">
           <label for="description">Descrição</label>
-          <textarea name="description" id="description" placeholder="Descrição do produto" maxlength="250"></textarea>
+          <textarea name="description" id="description"><%= product.description %></textarea>
         </div>
         <div class="specification">
           <label for="specification">Especificação</label>
-          <textarea name="specification" id="specification" placeholder="Especificação do produto" maxlength="500"
-            required></textarea>
+          <textarea name="specification" id="specification" required><%= product.specification %></textarea>
         </div>
 
         <label class="picture">
-          <input type="file" name="file" accept="image/*" id="image-input">
+          <input type="file" name="file" accept="image/*" id="image-input" value="<%= product.image_path %>">
           <span class="picture-product">Escolha uma imagem</span>
         </label>
 
         <div class="price-stock">
           <div class="price-one">
             <label for="price" class="price">Preço</label>
-            <input id="price" type="number" name="price" placeholder="ex. 7,00" required>
+            <input id="price" type="number" name="price" value="<%= product.price %>" required>
           </div>
           <div class="stock-one">
             <label for="stock" class="stock">Estoque</label>
-            <input id="stock" type="number" name="stock" placeholder="quantidade" required>
+            <input id="stock" type="number" name="stock" value="<%= product.stock %>" required>
           </div>
         </div>
 
@@ -53,16 +52,16 @@
           </div>
 
           <label for="brand">Marca</label>
-          <input type="text" name="brand" id="brand" size="100" placeholder="Marca" required>
+          <input type="text" name="brand" id="brand" size="100" value="<%= product.brand %>" required>
 
 
           <label for="category">Categoria</label>
-          <input type="text" name="category" id="category" size="100" placeholder="Categoria" required>
+          <input type="text" name="category" id="category" size="100" value="<%= product.category %>" required>
           
 
         </div>
         <div class="register-admin">
-          <button class="submit-admin" type="submit">Cadastrar produto</button>
+          <button class="submit-admin" type="submit">Salvar edição</button>
         </div>
 
       </form>

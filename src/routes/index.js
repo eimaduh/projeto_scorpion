@@ -1,7 +1,7 @@
 const express = require('express');
 const carrinhoRouter = require('./carrinho');
 const categoriaRouter = require('./categoria');
-const detailsRouter = require('./details');
+// const detailsRouter = require('./details');
 const finalizacaoRouter = require('./finalizacao');
 const homeRouter = require('./home');
 const loginRouter = require('./login');
@@ -29,14 +29,16 @@ routes.get('/categoria', categoriaRouter)
 routes.get('/categoria/admin', categoriaRouter)
 routes.get('/categoria/admin/sucesso', categoriaRouter)
 routes.post('/categoria/admin/create', categoriaRouter)
-
+routes.get('/categoria/admin/create', categoriaRouter)
 
 routes.get('/categoria/:id', categoriaRouter);
 
+routes.get('/categoria/admin/editar/:id', categoriaRouter);
 routes.put('/categoria/admin/update/:id', categoriaRouter);
 
+routes.get('/categoria/admin/delete/:id', categoriaRouter);
 routes.delete('/categoria/admin/delete/:id', categoriaRouter);
 
-routes.get('/detalhe', detailsRouter)
+routes.get('/detalhe/:id', categoriaRouter);
 
 module.exports = routes
