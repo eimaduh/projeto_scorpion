@@ -16,16 +16,19 @@
           <label for="description">Descrição</label>
           <textarea name="description" id="description" placeholder="Descrição do produto" maxlength="250"></textarea>
         </div>
-        <div class="specification">
+        <div class="specificate">
           <label for="specification">Especificação</label>
           <textarea name="specification" id="specification" placeholder="Especificação do produto" maxlength="500"
             required></textarea>
         </div>
 
-        <label class="picture">
-          <input type="file" name="file" accept="image/*" id="image-input">
+        <label class="picture" for="file" tabIndex="0">
           <span class="picture-product">Escolha uma imagem</span>
+          <input type="file" name="file" accept="image/*" id="file">
         </label>
+
+
+
 
         <div class="price-stock">
           <div class="price-one">
@@ -42,14 +45,14 @@
 
           <div class="sale">
             <div class="discount-yes">
-            <p>Desconto</p>
-            <input type="radio" id="sale" name="sale" value="1">
-            <label for="sale">Sim</label>
-          </div>
-          <div class="discount-no">
-            <input type="radio" id="sale" name="sale" value="0" checked>
-            <label for="sale">Não</label>
-          </div>
+              <p>Desconto</p>
+              <input type="radio" id="sale" name="sale" value="1">
+              <label for="sale">Sim</label>
+            </div>
+            <div class="discount-no">
+              <input type="radio" id="sale" name="sale" value="0" checked>
+              <label for="sale">Não</label>
+            </div>
           </div>
 
           <label for="brand">Marca</label>
@@ -58,7 +61,7 @@
 
           <label for="category">Categoria</label>
           <input type="text" name="category" id="category" size="100" placeholder="Categoria" required>
-          
+
 
         </div>
         <div class="register-admin">

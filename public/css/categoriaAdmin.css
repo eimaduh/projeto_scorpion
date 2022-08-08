@@ -70,6 +70,10 @@ h1 {
     margin: 5px;
     color: #000;
 }
+.describe img {
+    width: 50%;
+    border-radius: 10px;
+}
 
 .btn {
     width: 50%;

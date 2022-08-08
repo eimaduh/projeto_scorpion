@@ -55,7 +55,7 @@ label {
 }
 
 .describe,
-.specification {
+.specificate {
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -81,12 +81,12 @@ label {
 
 .picture {
   width: 60%;
-  min-height: 30vh;
+  min-height: 8vh;
   background: #ddd;
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: #aaa;
   border: 2px dashed currentcolor;
   border-radius: 5px;
@@ -96,8 +96,15 @@ label {
   overflow: hidden;
 }
 
-#image-input {
-  display: none;
+span {
+  color: #000;
+  margin: 10px;
+
+}
+
+#file {
+ display: none;
+
 }
 
 .picture:hover {
@@ -117,7 +124,7 @@ label {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.picture__img {
+.picture-img {
   max-width: 100%;
 }
 
