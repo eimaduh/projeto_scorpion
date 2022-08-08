@@ -4,22 +4,22 @@
 <body>
 
   <%- include('partials/header-navbar') %>
-<main>
+  <main>
     <article class="success">
-        <h1>Tem certeza que deseja deletar o produto:</h1>
-        <h2> <%= products.name %>?</h2>
-       
-            <form action="/categoria/admin/delete/<%= products.id %>?_method=PUT" method="POST">
-                
-                 <button class="btn-delete" type="submit">Apagar produto</button>
-                
-                <a class="btn-back" href="/categoria/admin">Listar Produtos</a>
-    
-            </form>
-        
-    
+      <h1>Tem certeza que deseja deletar o produto:</h1>
+      <h2> <%= products.name %>?</h2>
+
+      <form action="/categoria/admin/delete/<%= products.id %>?_method=PUT" method="POST">
+
+        <button class="btn-delete" type="submit">Apagar produto</button>
+
+        <a class="btn-back" href="/categoria/admin">Listar Produtos</a>
+
+      </form>
+
+
     </article>
-</main>
+  </main>
   <%- include('partials/footer') %>
 
 </body>

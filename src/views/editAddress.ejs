@@ -1,54 +1,55 @@
 <%- include('./partials/head')%>
 <link rel="stylesheet" href="/css/address.css">
+
 <body>
-    <%- include('partials/header-navbar') %>
-    <main>
-        <%- include('partials/userAccount') %>
-                        <h2>Endereços Cadastrados</h2>
-                        <div class="line"></div>
-                        </div>
-                    </div>
-                    <fieldset>
-                        <legend>Editar endereço</legend>
-                    
-                    
-                    <form class="form-user" action="/user" method="POST">
-                        <div> 
-                          <label for="name">Rua</label>
-                          <input class="input-user" type="text" id="name" name="name" />
-                        </div>
-                
-                        <div>
-                          <label for="number">Nº</label>
-                          <input class="input-user" type="number" id="number" name="number" />
-                        </div>
-                
-                        <div>
-                          <label for="text">Bairro</label>
-                          <input class="input-user" type="text" id="text" name="text" />
-                        </div>
-                        <div>
-                            <label for="cep">CEP</label>
-                            <input class="input-user" type="number" id="number" name="number" />
-                          </div>
-                          <div>
-                            <label for="tel">Cidade</label>
-                            <input class="input-user" type="tel" id="tel" name="tel" />
-                          </div>
-                          <div> 
-                            <label for="name">Estado</label>
-                            <input class="input-user" type="text" id="name" name="name" />
-                          </div>
-                          <button class="btn-edit" type="submit">Salvar</button>
-                      </form>
-                
-                    </fieldset>
-                    
-                    
-                </article>
-        </section>
-    </main>
-    <%- include('partials/footer') %>
+  <%- include('partials/header-navbar') %>
+  <main>
+    <%- include('partials/userAccount') %>
+    <h2>Endereços Cadastrados</h2>
+    <div class="line"></div>
+    </div>
+    </div>
+    <fieldset>
+      <legend>Editar endereço</legend>
+
+
+      <form class="form-user" action="/user" method="POST">
+        <div>
+          <label for="name">Rua</label>
+          <input class="input-user" type="text" id="name" name="name" />
+        </div>
+
+        <div>
+          <label for="number">Nº</label>
+          <input class="input-user" type="number" id="number" name="number" />
+        </div>
+
+        <div>
+          <label for="text">Bairro</label>
+          <input class="input-user" type="text" id="text" name="text" />
+        </div>
+        <div>
+          <label for="cep">CEP</label>
+          <input class="input-user" type="number" id="number" name="number" />
+        </div>
+        <div>
+          <label for="tel">Cidade</label>
+          <input class="input-user" type="tel" id="tel" name="tel" />
+        </div>
+        <div>
+          <label for="name">Estado</label>
+          <input class="input-user" type="text" id="name" name="name" />
+        </div>
+        <button class="btn-edit" type="submit">Salvar</button>
+      </form>
+
+    </fieldset>
+
+
+    </article>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
 </body>
 
 </html>

@@ -46,9 +46,7 @@ const categoriaController = {
             brand,
             category
         } = req.body;
-        const {
-            path
-        } = req.file;
+        const {path} = req.file;
 
         database.Products.create({
                 name,
