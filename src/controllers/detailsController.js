@@ -1,7 +1,7 @@
-const detailsController = {
-    getDetailsPage: (req, res) => {
-        res.render('details')
-    }
-}
+// const detailsController = {
+//     getDetailsPage: (req, res) => {
+//         res.render('details')
+//     }
+// }
 
-module.exports = detailsController
+// module.exports = detailsController

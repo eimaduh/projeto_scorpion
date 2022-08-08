@@ -1,7 +1,7 @@
-const express = require('express');
-const detailsRouter = express.Router()
-const detailsController = require('../controllers/detailsController')
+// const express = require('express');
+// const detailsRouter = express.Router()
+// const detailsController = require('../controllers/detailsController')
 
-detailsRouter.get('/detalhe', detailsController.getDetailsPage)
+// detailsRouter.get('/detalhe', detailsController.getDetailsPage)
 
-module.exports = detailsRouter
+// module.exports = detailsRouter

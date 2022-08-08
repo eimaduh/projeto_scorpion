@@ -1,0 +1,46 @@
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/categoriaAdmin.css">
+<body>
+
+
+   <%- include('partials/header-navbar') %>
+
+
+  
+
+   <h1>Produtos</h1>
+   <div class="btn">
+<a href="/categoria/admin/create"><button id="btn-add">Cadastrar novo produto</button></a>
+</div>
+   <article class="container-categoryAdmin">
+      <% products.map((product) => { %>
+      <div class="describe">
+
+         <div class="edit-categoryAdmin">
+            <a href="/categoria/admin/editar/<%= product.id%>">
+                <i class="fa-solid fa-pen-to-square fa-xl"></i>
+            </a>
+            <a href="/categoria/admin/delete/<%= product.id%>">
+                <i class="fa-solid fa-trash-can fa-xl"></i>
+            </a>
+         </div>
+
+         <img src="/imagesPath/<%= product.image_path%>" alt="imagem do produto">
+
+         <h4><%= product.name %></h4>
+
+         <p>R$<%= product.price %></p>
+
+         <a href="/detalhe/<%=product.id %>">Detalhe do produto</a>
+
+      </div>
+      <% }) %>
+
+   </div>
+   </article>
+  
+   <%- include('partials/footer') %>
+
+</body>
+
+</html>

@@ -18,126 +18,37 @@
    <%- include('partials/header-navbar') %>
 
 
-      <a class="home" href="/">HOME</a>
+   <a class="home" href="/">HOME</a>
 
-      <h1>Listagem dos Produtos</h1>
-    
-     <div class="container-categoria">
+   <h1>Listagem dos Produtos</h1>
 
-         <div class="descricao">
+   <div class="container-categoria">
+      <% products.map((product) => { %>
+      <div class="descricao">
 
-            <div class="img-carrinho">
-               <a href="">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
-
-            <img src="/img/mangueira.jpeg" alt="">
-
-            <h4><%= products.name %></h4>
-
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
+         <div class="img-carrinho">
+            <a href="">
+               <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
+            </a>
 
          </div>
 
-         <div class="descricao">
+         <img src="/imagesPath/<%= product.image_path%>" alt="imagem do produto">
 
-            <div class="img-carrinho">
-               <a href="/carrinho">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
+         <h4><%= product.name %></h4>
 
-            <img src="/img/mangueira.jpeg" alt="">
+         <p>R$<%= product.price %></p>
 
-            <h4><Título do produto></h4>
+         <a href="/detalhe/<%=product.id %>">Detalhe do produto</a>
 
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
-
-         </div>
-
-         <div class="descricao">
-
-            <div class="img-carrinho">
-               <a href="/carrinho">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
-
-            <img src="/img/mangueira.jpeg" alt="">
-
-            <h4>Título do produto</h4>
-
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
-
-         </div>
-
-         <div class="descricao">
-
-            <div class="img-carrinho">
-               <a href="/carrinho">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
-
-            <img src="/img/mangueira.jpeg" alt="">
-
-            <h4>Título do produto</h4>
-
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
-
-         </div>
-
-         <div class="descricao">
-
-            <div class="img-carrinho">
-               <a href="/carrinho">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
-
-            <img src="/img/mangueira.jpeg" alt="">
-
-            <h4>Título do produto</h4>
-
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
-
-         </div>
-
-         <div class="descricao">
-
-            <div class="img-carrinho">
-               <a href="/carrinho">
-                  <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
-               </a>
-            </div>
-
-            <img src="/img/mangueira.jpeg" alt="">
-
-            <h4>Título do produto</h4>
-
-            <p>R$ 00,00</p>
-
-            <a href="/detalhe">Detalhe do produto</a>
-
-         </div>
-
-         
       </div>
+      <% }) %>
+
+   </div>
 
 
 
-      <%- include('partials/footer') %>
+   <%- include('partials/footer') %>
 
 
 </body>

@@ -21,14 +21,34 @@ const categoriaController = {
             })
     },
     getCategoryAdminPage: (req, res) => {
-        res.render('produtosAdmin')
+        database.Products.findAll()
+            .then(products => {
+                res.render('categoriaAdmin', {
+                    products
+                })
+            })
+
     },
     getSuccessPage: (req, res) => {
         res.render('successPage')
     },
+    add: (req, res) => {
+        res.render('produtosAdmin')
+    },
     create: (req, res) => {
-        const { name, description, specification, price, stock, sale, brand, category} = req.body;
-        const {path} = req.file;
+        const {
+            name,
+            description,
+            specification,
+            price,
+            stock,
+            sale,
+            brand,
+            category
+        } = req.body;
+        const {
+            path
+        } = req.file;
 
         database.Products.create({
                 name,
@@ -59,7 +79,19 @@ const categoriaController = {
     },
     update: (req, res) => {
         const productId = req.params.id;
-        const { name, description, specification, price, stock, sale, brand, category} = req.body;
+        const {
+            name,
+            description,
+            specification,
+            price,
+            stock,
+            sale,
+            brand,
+            category
+        } = req.body;
+        const {
+            path
+        } = req.file;
 
         database.Products.update({
                 name,
@@ -67,7 +99,8 @@ const categoriaController = {
                 specification,
                 price,
                 stock,
-                sale,
+                sale: Number(sale),
+                image_path: path,
                 brand,
                 category
             }, {
@@ -81,17 +114,27 @@ const categoriaController = {
             .catch(error => res.send(error))
 
     },
-    delete: (req, res) => {
-        database.Products.destroy(
-            {
-                where: {id: req.params.id}
-            }
+    delete: (req,res)=> {
+        database.Products.findByPk(req.params.id)
+        .then(products => {
+            res.render('productDelete', {
+                products
+            })
+        })
+    },
+    destroy: (req, res) => {
+        database.Products.destroy({
+                where: {
+                    id: req.params.id
+                },
+                force: true
+            })
             .then(() => {
                 return res.redirect('/categoria/admin')
             })
             .catch(error => res.send(error))
 
-        )
+
     }
 }
 
