@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         birth_date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false
         },
         password: {
@@ -31,11 +31,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         cpf: {
-            type: DataTypes.INTEGER(11),
+            type: DataTypes.STRING(20),
             allowNull: false,
         },
         phone_number: {
-            type: DataTypes.INTEGER(20),
+            type: DataTypes.STRING(20),
             allowNull: false,
         },
         avatar_path: {

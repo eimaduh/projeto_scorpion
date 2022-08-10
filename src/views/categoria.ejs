@@ -18,7 +18,7 @@
    <%- include('partials/header-navbar') %>
 
 
-   <a class="home" href="/">HOME</a>
+   <a class="home" href="/"><i class="fa-solid fa-arrow-left fa-sm"></i>HOME</a>
 
    <h1>Listagem dos Produtos</h1>
 
@@ -33,7 +33,7 @@
 
          </div>
 
-         <img src="<%= product.image_path%>" alt="imagem do produto">
+         <img class="productImage" src="<%= product.image_path%>" alt="imagem do produto">
 
          <h4><%= product.name %></h4>
 

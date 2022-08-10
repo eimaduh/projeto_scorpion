@@ -1,3 +1,4 @@
+const database = require("../database/models");
 
 const usersController = {
     getUsersPage: (req, res) => {
