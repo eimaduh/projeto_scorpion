@@ -6,6 +6,7 @@ const finalizacaoRouter = require('./finalizacao');
 const homeRouter = require('./home');
 const loginRouter = require('./login');
 const usersRouter = require('./painelUsuario');
+const registerRouter = require('./register');
 const routes = express.Router();
 
 routes.get('/', homeRouter);
@@ -15,7 +16,8 @@ routes.get('/carrinho', carrinhoRouter);
 routes.get('/finalizacao', finalizacaoRouter);
 
 routes.get('/login', loginRouter)
-routes.get('/login/register', loginRouter);
+routes.get('/login/register', registerRouter);
+routes.post('/login', loginRouter)
 
 routes.get('/users', usersRouter)
 routes.post('/users', usersRouter)

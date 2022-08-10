@@ -1,38 +1,38 @@
 <%- include('./partials/head')%>
-<link rel="stylesheet" href="/css/login.css">
+ <link rel="stylesheet" href="/css/login.css">
 
-<body>
-    <%- include('partials/header-navbar') %>
+ <body>
+  <%- include('partials/header-navbar') %>
 
-    <h1>Acesse sua conta ou cadastre-se</h1>
+   <h1>Acesse sua conta ou cadastre-se</h1>
 
-    <div class="container-login">
+   <div class="container-login">
 
 
-        <div class="left">
-            <form action="">
-                <button class="ornament-button" type="button">Já sou cliente!</button><br><br>
+    <div class="left">
+     <form action="/login" method="post">
+      <button class="ornament-button" type="button">Já sou cliente!</button><br><br>
 
-                <label for="email">E-mail</label><br>
-                <input type="email" name="email" required><br>
+      <label for="email">E-mail</label><br>
+      <input type="email" name="email" required><br>
 
-                <label for="senha">Senha</label><br>
-                <input type="password" name="senha" required><br>
+      <label for="password">Senha</label><br>
+      <input type="password" name="password" required><br>
 
-                <a class="esqueceu-senha" href="">Esqueceu sua senha?</a>
+      <a class="esqueceu-senha" href="">Esqueceu sua senha?</a>
 
-                <p class="center">ou</p>
+      <p class="center">ou</p>
 
-                <a class="cadastro" href="/login/register">Crie uma conta!</a>
+      <a class="cadastro" href="/login/register">Crie uma conta!</a>
 
-                <div class="center">
-                    <button class="real-button" type="submit">ENTRAR</button>
-                </div>
-            </form>
-        </div>
-
+      <div class="center">
+       <button class="real-button" type="submit">ENTRAR</button>
+      </div>
+     </form>
     </div>
-    <%- include('partials/footer') %>
-</body>
 
-</html>
+   </div>
+   <%- include('partials/footer') %>
+ </body>
+
+ </html>
