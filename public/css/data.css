@@ -10,114 +10,27 @@ html, body {
   font-size: 62.5%;
 }
 
-
-.form-user {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin: 10px;
-    justify-content: space-between;
-    gap: 10px;
-    background-color: #fff;
-    flex-wrap: wrap;
-    align-items: flex-start;
-   
-}
-
-
-input {
-        width: 300px;
-        height: 30px;
-        display: flex; 
-        flex-direction: column;
-        border: none;
-        border-bottom: 2px solid #8b8484;
-
-    
-}
-
-
-.form-data {
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-
-}
-
 .data-container {
-  width: 100%;
-  height: 80%;
-  margin: 10px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-fieldset {
-    border-radius: 10px;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 80%;
     margin: 10px;
-    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
-    background-color: #fff;
-    border: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-legend {
-    margin-left: 10px;
-    font-size: 2.4rem;
-    font-weight: 600;
-    border: none;
-}
-
-
-@media (max-width: 1000px) {
-  .user-credits {
-      background-color:   #f9f9f9;
-
-
-      justify-content: space-between;
-  }
-  .form-user {
     padding: 10px;
-    gap: 0;
-    margin: 5px;
-  }
-  input {
-    width: 120%;
-  }
-  .data-container {
-    height: 100%;
-    margin: 5px;
-    padding: 5px;
-   
-  }
-  fieldset {
-    margin: 5px;
-  }
-  
-}
 
+  }
 
-@media (max-width: 560px) {
-  .data-container {
-    height: 100%;
+  .dataUser {
+    width: 50%;
+    min-height: 45vh;
+    display: flex;
     flex-direction: column;
+    gap: 1rem;
+    padding: 4rem;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.12);
+    
   }
-  fieldset {
-    width: 100%;
-  }
-  input {
-    width: 150%;
-  }
-  .user-credits-container {
-    width: 100%;
+
+  .row {
+    display: flex;
     flex-direction: row;
+    align-items: center;
   }
- 
-}

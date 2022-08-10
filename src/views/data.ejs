@@ -11,47 +11,26 @@
     </div>
     </div>
     <section class="data-container">
-      <fieldset>
-        <legend>Dados pessoais</legend>
-
-
-        <form class="form-user" action="/user" method="POST">
-          <div>
-
-            <label for="name">Nome completo</label>
-            <input class="input-user" type="text" id="name" name="name" />
-          </div>
-          <div>
-            <label for="number">Nascimento</label>
-            <input class="input-user" type="number" id="number" name="number" />
-          </div>
-          <div>
-            <label for="number">CPF</label>
-            <input class="input-user" type="number" id="number" name="number" />
-          </div>
-
-        </form>
-        <i class="fa-solid fa-pen-to-square"></i>
-      </fieldset>
-      <fieldset>
-        <legend>Dados de contato</legend>
-        <form class="form-user">
-          <div>
-            <label for="email">Email</label>
-            <input class="input-user" type="email" id="email" name="email" />
-          </div>
-          <div>
-            <label for="tel">Celular</label>
-            <input class="input-user" type="tel" id="tel" name="tel" />
-          </div>
-          <div>
-            <label for="tel">Telefone residencial</label>
-            <input class="input-user" type="tel" id="tel" name="tel" />
-          </div>
-        </form>
-        <i class="fa-solid fa-pen-to-square"></i>
-      </fieldset>
-
+     <div class="dataUser">
+      <div class="row">
+    <h3>Nome:</h3> <p><%= users.name %></p>
+  </div>
+  <div class="row">
+    <h3>Sobrenome: </h3><p><%= users.surname %></p>
+  </div>
+  <div class="row">
+    <h3>email: </h3><p><%= users.email %></p>
+  </div>
+  <div class="row">
+    <h3>Data de nascimento: </h3><p><%= users.birth_date %></p>
+  </div>
+  <div class="row">
+    <h3>CPF: </h3><p><%= users.cpf %></p>
+  </div>
+  <div class="row">
+    <h3>Telefone:</h3> <p><%= users.phone_number %></p>
+  </div>
+    
     </section>
 
     </article>

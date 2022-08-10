@@ -5,10 +5,18 @@ const usersController = {
         res.render('usersPanel')
     },
     getUsersData: (req, res) => {
-        res.render('data')
+        
+        database.Users.findOne(req.params.id)
+   .then(users => {
+    res.render('data', {
+     users
+    })
+   })
     },
     getUsersAddress: (req, res) => {
-        res.render('address')
+     
+            res.render('address');
+     
     },
     editAddress: (req, res) => {
         res.render('editAddress')
