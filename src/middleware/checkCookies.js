@@ -1,4 +1,5 @@
-const users = getInfoDatabase('users')
+const database = require("../database/models");
+const path = require("path");
 
 function checkCookies(req, res, next) {
   const username = req.cookies.user || req.session.username;
