@@ -23,14 +23,21 @@
 
             
             <div class="descricao-produto">
+                        <div class="information">
+                        <p>Produto</p>
                         <img src="/img/mangueira.jpeg" alt="imagem">
-                            
-                        <p>Descrição do produto</p>
+                    </div>
+                        
                         
                     <div class="test">
-                        <label for="quantidade"></label>
-                        <input type="number" name="quantidade" min="1">
-                        <img class="lixeira" src="/img/trash-icon.png" alt="lixo">
+                       
+                        <div class="infosProduto">
+                            <b>Quantidade:</b>
+                            <button type="button" class="btn-secondary"> - </button>
+                            <input id="display" type="text" name="display" value="0"></input>
+                            <button type="button" class="btn-primary"> + </button> 
+                        </div>
+                        <i class="fa-solid fa-trash-can fa-2xl"></i>
                      </div>   
                     
             </div>
