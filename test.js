@@ -1,3 +1,3 @@
 const bcrypt = require('bcrypt')
 
-console.log(bcrypt.hashSync('claudio123', 10))
+console.log(bcrypt.hashSync('fernando123', 10))

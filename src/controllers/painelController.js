@@ -4,14 +4,7 @@ const usersController = {
     getUsersPage: (req, res) => {
         res.render('usersPanel')
     },
-    getUsersData: async (req, res) => {
-        const user = await database.Users.findAll()
-        const enderecos = await database.Enderecos.findAll()
-
-        res.render('asdasda', {
-            user,
-            enderecos
-        })
+    getUsersData: (req, res) => {
 
         database.Users.findOne({
             where: {
