@@ -4,19 +4,30 @@ const usersController = {
     getUsersPage: (req, res) => {
         res.render('usersPanel')
     },
-    getUsersData: (req, res) => {
-        
-        database.Users.findOne(req.params.id)
-   .then(users => {
-    res.render('data', {
-     users
-    })
-   })
+    getUsersData: async (req, res) => {
+        const user = await database.Users.findAll()
+        const enderecos = await database.Enderecos.findAll()
+
+        res.render('asdasda', {
+            user,
+            enderecos
+        })
+
+        database.Users.findOne({
+            where: {
+                email: req.session.usuarioLogado
+            }
+        })
+            .then(users => {
+                res.render('data', {
+                    users
+                })
+            })
     },
     getUsersAddress: (req, res) => {
-     
-            res.render('address');
-     
+
+        res.render('address');
+
     },
     editAddress: (req, res) => {
         res.render('editAddress')
