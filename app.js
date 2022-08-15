@@ -13,7 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cookieParser());
-app.use(sessionParser({ secret: '_Scorpion@Tabacaria_', resave: false, saveUninitialized: false }));
+app.use(sessionParser({ 
+    secret: '_Scorpion@Tabacaria_', 
+    resave: true, 
+    saveUninitialized: true 
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
