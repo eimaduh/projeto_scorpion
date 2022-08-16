@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 
 const registerController = {
     getRegistrationPage: (req, res) => {
-        database.Users.findAll()
+        database.Register.findAll()
         res.render('register')
     },
     create: (req, res) => {
@@ -16,7 +16,7 @@ const registerController = {
 
         const passwordHash = bcrypt.hashSync(password, 10);
       
-        database.Users.create({
+        database.Register.create({
          name,
          email,
          password : passwordHash,
