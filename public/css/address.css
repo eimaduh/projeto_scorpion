@@ -67,6 +67,10 @@ legend {
     border: none;
 }
 
+.links a {
+  font-size: 1.8rem;
+}
+
 .btn-edit {
     width: 150px;
     height: 50px;

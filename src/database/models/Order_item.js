@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
         order_id: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
-            field: 'order_id',
+            field: 'id',
         },
 
         product_id: {
@@ -57,7 +57,7 @@ module.exports = function (sequelize, DataTypes) {
     const Order_item = sequelize.define(alias, columns, config);
 
     Order_item.associate = (models) => {
-        Order_item.belongsTo(models.Orders, {as: 'Orders', foreignKey: 'order_id'});
+        Order_item.belongsTo(models.Orders, {as: 'Orders', foreignKey: 'id'});
         Order_item.belongsTo(models.Products, {as: 'Products', foreignKey: 'product_id'});
     };
 

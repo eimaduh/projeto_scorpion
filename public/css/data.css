@@ -29,6 +29,10 @@ html, body {
     
   }
 
+  .links a {
+    font-size: 1.8rem;
+  }
+
   .row {
     display: flex;
     flex-direction: row;
