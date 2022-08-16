@@ -1,5 +1,5 @@
 const database = require("../database/models");
-const {Address} = require("../database/models");
+// const {Address} = require("../database/models");
 const {
     Users
 } = require("../database/models");
@@ -24,9 +24,8 @@ const usersController = {
                 })
             })
     },
-    getUsersAddress: async (req, res) => {
-        try {
-            const request = await Address.findAll({
+    getUsersAddress: (req, res) => { 
+        database.Address.findAll({
                 where: {
                     id: req.session.usuarioLogado
                 },
@@ -35,14 +34,12 @@ const usersController = {
                     as: 'Users'
                 },
             })
-            return res.render('address', {
-                Address
-            
+            .then(address => {
+                res.render('address', {
+                    address
+                })
             })
-        } catch (err) {
-            console.log(err)
-        };
-        res.render('address');
+            ;
 
     },
     editAddress: (req, res) => {
