@@ -26,7 +26,7 @@ const usersController = {
     },
     getUsersAddress: async (req, res) => {
         try {
-            const request = await Address.findAll({
+            const address = await Address.findAll({
                 where: {
                     id: req.session.usuarioLogado
                 },
@@ -36,13 +36,12 @@ const usersController = {
                 },
             })
             return res.render('address', {
-                Address
+                address 
             
             })
         } catch (err) {
             console.log(err)
         };
-        res.render('address');
 
     },
     editAddress: (req, res) => {

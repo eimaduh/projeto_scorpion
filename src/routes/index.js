@@ -19,6 +19,7 @@ routes.get('/finalizacao', auth, finalizacaoRouter);
 routes.get('/login', loginRouter)   
 routes.get('/login/register', registerRouter);
 routes.post('/login', loginRouter)
+routes.post('/login/register', registerRouter);
 
 routes.get('/users', auth, usersRouter)
 routes.post('/users', usersRouter)
