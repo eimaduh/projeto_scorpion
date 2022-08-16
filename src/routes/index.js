@@ -6,26 +6,29 @@ const finalizacaoRouter = require('./finalizacao');
 const homeRouter = require('./home');
 const loginRouter = require('./login');
 const usersRouter = require('./painelUsuario');
+const registerRouter = require('./register');
 const routes = express.Router();
+const auth = require('../middleware/autenticacao');
 
 routes.get('/', homeRouter);
 
-routes.get('/carrinho', carrinhoRouter);
+routes.get('/carrinho', auth, carrinhoRouter);
 
-routes.get('/finalizacao', finalizacaoRouter);
+routes.get('/finalizacao', auth, finalizacaoRouter);
 
-routes.get('/login', loginRouter)
-routes.get('/login/register', loginRouter);
+routes.get('/login', loginRouter)   
+routes.get('/login/register', registerRouter);
+routes.post('/login', loginRouter)
 
-routes.get('/users', usersRouter)
+routes.get('/users', auth, usersRouter)
 routes.post('/users', usersRouter)
 routes.get('/users/data', usersRouter)
 routes.get('/users/credits', usersRouter)
-routes.get('/users/address', usersRouter)
+routes.get('/users/address', auth, usersRouter)
 routes.get('/users/address/edit', usersRouter)
-routes.get('/users/requests', usersRouter)
+routes.get('/users/requests',auth, usersRouter)
 
-routes.get('/categoria', categoriaRouter)
+routes.get('/categoria', auth, categoriaRouter)
 routes.get('/categoria/admin', categoriaRouter)
 routes.get('/categoria/admin/sucesso', categoriaRouter)
 routes.post('/categoria/admin/create', categoriaRouter)

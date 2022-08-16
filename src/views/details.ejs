@@ -16,14 +16,16 @@
 
         <div class="left">
             <h3>Descrição</h3> <br>
-            <p><%= products.description %></p>
+            <p><%= products.description %></p><br>
+            <h3>Especificação</h3><br>
+            <p><%= products.specification %></p><br>
             <h3>Marca</h3>
             <p><%= products.brand %></p>
 
         </div>
 
         <div class="rigth">
-            <img src="/imagesPath/<%= products.image_path %>" alt="Produto">
+            <img src="<%= products.image_path %>" alt="Produto">
 
             <p>Preço: R$ <%= products.price %></p>
             <br>

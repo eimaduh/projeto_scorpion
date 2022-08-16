@@ -6,11 +6,11 @@ module.exports = {
     await queryInterface.bulkInsert('Products', 
     [{
         name: 'MANGUEIRA JOY STICK',
-        description: 'As mangueiras Joy Stick são compostas por um corpo em silicone, uma piteira e uma contra piteira em alumínio e anodizadas. A mangueira Joy é lavável e de fácil higienização, assim você pode sentir o sabor mais presente em sua sessão. Indicamos higienizar após o uso',
+        description: 'As mangueiras Joy Stick são compostas por um corpo em silicone, uma piteira e uma contra piteira em alumínio e anodizadas. A mangueira Joy é lavável e de fácil higienização, assim você pode sentir o sabor mais presente em sua sessão.',
         specification: 'Material da Mangueira:	Silicone - Lavavel:	Sim - Material da Piteira:	Aluminio',
         price: 25.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/1659627567935.webp',
         brand: 'Joy',
         category: 'Mangueira'
@@ -22,7 +22,7 @@ module.exports = {
         specification: 'Acendimento:	Medio - Duração:	Alta - Formato:	Hexagonal - Material:	Fibra de Coco - Quantidade:	1 kg',
         price: 25.90,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/1659896224353.webp',
         brand: 'Hexagonal',
         category: 'Carvão'
@@ -34,7 +34,7 @@ module.exports = {
         specification: 'Material:	Alumínio - Tamanho: Médio',
         price: 19.90,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/1659648109925.jpg',
         brand: 'Joy',
         category: 'Prato'
@@ -42,11 +42,11 @@ module.exports = {
       },
       {
         name: 'QUEIMADOR PRO HOOKAH OLD CLASSICO',
-        description: 'O Queimador Pro Hookah Old Classico é o rosh perfeito para sua sessão de narguile. Com seu pino central grande e espaçado proporciona suavidade, conforto durante o seu preparo e degustação, seu material proporciona um ótimo aquecimento.',
+        description: 'O Queimador Pro Hookah Old Classico é o rosh perfeito para sua sessão de narguile. Com seu pino central grande e espaçado proporciona suavidade, conforto durante o seu preparo e degustação.',
         specification: 'Tipo de cuba: Fundo - Modelo: Phunnel - Material:	Barro - Tamanho:	Grande - Capacidade: 20gr',
         price: 35.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/Queimador-Pro-Hookah.webp', 
         brand: 'Pro Hookah',
         category: 'Queimador'
@@ -54,11 +54,11 @@ module.exports = {
       },
       {
         name: 'BASE NINJA PEQUENA GENIE LUMINOUS TRANSPARENTE E ILUMINAÇÃO AZUL',
-        description: 'A Base Ninja Pequena Genie Luminous Transparente é produzida em vidro com design clássicos das bases para narguiles pequenos. Com ótimo custo benefíco a Base Ninja Pequena Genie Luminous possui o acabamento que proporciona brilhar no escuro.',
+        description: 'A Base Ninja Pequena Genie Luminous Transparente é produzida em vidro com design clássicos das bases para narguiles pequenos. Possui o acabamento que proporciona brilhar no escuro.',
         specification: 'Material:	Vidro - Tamanho: Pequeno - Borracha inclusa: Não',
         price: 30.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/Base-Ninja-Pequena.webp',
         brand: 'Ninja',
         category: 'Base'
@@ -66,11 +66,11 @@ module.exports = {
       },
       {
         name: 'CARVÃO START NOW HEXAGONAL 1KG',
-        description: 'O carvão Start Now é natural, feito 100% das fibras da casca do coco. Segue os padrões de qualidade imposto pela marca. Com formato hexagonal, os carvões se estabilizam no queimador, evitando que eles rolem durante a sessão.',
+        description: 'O carvão Start Now é natural, feito 100% das fibras da casca do coco. Com formato hexagonal, os carvões se estabilizam no queimador, evitando que eles rolem durante a sessão.',
         specification: 'Acendimento:	Fácil - Duração:	Alta - Formato:	Hexagonal - Material:	Fibra de Coco - Quantidade:	1 kg',
         price: 35.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/Carvao-Start-Now.webp',
         brand: 'Hexagonal',
         category: 'Carvão'
@@ -78,11 +78,11 @@ module.exports = {
       },
       {
         name: 'NARGUILE COMPLETO PEQUENO JOY SPLASH',
-        description: 'Os Narguiles Joy Pequeno Splash foram desenvolvidos para oferecer maior qualidade, por ser todo em alumínio. O Narguile Joy Pequeno Splash é completo, com prato e base na cor de seu corpo. ',
+        description: 'Os Narguiles Joy Pequeno Splash foram desenvolvidos para oferecer maior qualidade, por ser todo em alumínio. O Narguile Joy Pequeno Splash é completo, com prato e base. ',
         specification: 'Tamanho: Pequeno - Material: Alumínio - Base: Incluso - Material da base: Vidro - Material da mangueira: Plástico',
         price: 100.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/Narguile-Completo-Pequeno.webp',
         brand: 'Joy',
         category: 'Narguile'
@@ -90,11 +90,11 @@ module.exports = {
       },
       {
         name: 'NARGUILE JOY MEDIO LUMINI MAXX',
-        description: 'Os narguiles Joy Médio Lumini Maxx foram desenvolvidos para oferecer maior qualidade, por ser todo em alumínio. O Joy Lumini é completo, com prato e base na cor de seu corpo.',
+        description: 'Os narguiles Joy Médio Lumini Maxx foram desenvolvidos para oferecer maior qualidade, por ser todo em alumínio. O Joy Lumini é completo, com prato e base.',
         specification: 'Tamanho: Médio - Material: Alumínio - Base: Incluso - Material da base: Vidro - Material da mangueira: Plástico',
         price: 450.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/Narguile-Joy-Medio.webp',
         brand: 'Joy',
         category: 'Narguile'
@@ -106,7 +106,7 @@ module.exports = {
         specification: 'Material:	Vidro - Tamanho: Grande - Borracha inclusa: Não',
         price: 100.00,
         stock: 20,
-        sale: 'N',
+        sale: false,
         image_path: '/imagesPath/24196.webp',
         brand: 'Joy',
         category: 'Base'

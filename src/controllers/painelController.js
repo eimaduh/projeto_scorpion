@@ -1,18 +1,49 @@
+const database = require("../database/models");
+const {Address} = require("../database/models");
+const {
+    Users
+} = require("../database/models");
+const {
+    Orders
+} = require("../database/models")
 
 const usersController = {
     getUsersPage: (req, res) => {
         res.render('usersPanel')
     },
-    usersStore: (req, res) => {
-        const { name, surname, email, birth_date, password, cpf } = req.body;
-        const user = User.create({ name, surname, email, birth_date, password, cpf });
-        return res.json(user);
-    },
     getUsersData: (req, res) => {
-        res.render('data')
+
+        database.Users.findOne({
+                where: {
+                    email: req.session.usuarioLogado
+                }
+            })
+            .then(users => {
+                res.render('data', {
+                    users
+                })
+            })
     },
-    getUsersAddress: (req, res) => {
-        res.render('address')
+    getUsersAddress: async (req, res) => {
+        try {
+            const request = await Address.findAll({
+                where: {
+                    id: req.session.usuarioLogado
+                },
+                include: {
+                    model: Users,
+                    as: 'Users'
+                },
+            })
+            return res.render('address', {
+                Address
+            
+            })
+        } catch (err) {
+            console.log(err)
+        };
+        res.render('address');
+
     },
     editAddress: (req, res) => {
         res.render('editAddress')
@@ -20,8 +51,23 @@ const usersController = {
     usersCredits: (req, res) => {
         res.render('usersCredits')
     },
-    usersRequests: (req, res) => {
-        res.render('usersRequests')
+    usersRequests: async (req, res) => {
+        try {
+            const request = await Orders.findAll({
+                where: {
+                    id: req.session.usuarioLogado
+                },
+                include: {
+                    model: Users,
+                    as: 'Users'
+                },
+            })
+            return res.render('usersRequests', {
+                request
+            })
+        } catch (err) {
+            console.log(err)
+        };
     }
 }
 

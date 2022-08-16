@@ -3,6 +3,7 @@ const loginRouter = express.Router()
 const loginController = require('../controllers/loginController')
 
 loginRouter.get('/login', loginController.getLoginPage)
-loginRouter.get('/login/register', loginController.getRegistrationPage)
+loginRouter.post('/login', loginController.loginUser)
+
 
 module.exports = loginRouter

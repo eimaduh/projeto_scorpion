@@ -18,8 +18,6 @@
    <%- include('partials/header-navbar') %>
 
 
-   <a class="home" href="/">HOME</a>
-
    <h1>Listagem dos Produtos</h1>
 
    <div class="container-categoria">
@@ -33,7 +31,7 @@
 
          </div>
 
-         <img src="/imagesPath/<%= product.image_path%>" alt="imagem do produto">
+         <img class="productImage" src="<%= product.image_path%>" alt="imagem do produto">
 
          <h4><%= product.name %></h4>
 
@@ -41,6 +39,7 @@
 
          <a href="/detalhe/<%=product.id %>">Detalhe do produto</a>
 
+        <a href="/carrinho"> <button class="btn-addCart">  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> ADICIONAR AO CARRINHO</button></a>
       </div>
       <% }) %>
 

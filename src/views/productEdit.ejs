@@ -7,7 +7,8 @@
   <main>
     <article class="container-products_admin">
       <h1>Editando produto: <%= product.name %></h1>
-      <form class="form-edit" action="/categoria/admin/update<%= product.id %>" method="POST" enctype="multipart/form-data">
+      <form class="form-edit" action="/categoria/admin/update<%= product.id %>" method="POST"
+        enctype="multipart/form-data">
         <div class="name-product">
           <label for="name">Nome</label>
           <input type="text" name="name" size="100" value="<%= product.name %>" required>
@@ -41,14 +42,14 @@
 
           <div class="sale">
             <div class="discount-yes">
-            <p>Desconto</p>
-            <input type="radio" id="sale" name="sale" value="1">
-            <label for="sale">Sim</label>
-          </div>
-          <div class="discount-no">
-            <input type="radio" id="sale" name="sale" value="0" checked>
-            <label for="sale">Não</label>
-          </div>
+              <p>Desconto</p>
+              <input type="radio" id="sale" name="sale" value="1">
+              <label for="sale">Sim</label>
+            </div>
+            <div class="discount-no">
+              <input type="radio" id="sale" name="sale" value="0" checked>
+              <label for="sale">Não</label>
+            </div>
           </div>
 
           <label for="brand">Marca</label>
@@ -57,7 +58,7 @@
 
           <label for="category">Categoria</label>
           <input type="text" name="category" id="category" size="100" value="<%= product.category %>" required>
-          
+
 
         </div>
         <div class="register-admin">

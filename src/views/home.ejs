@@ -30,88 +30,17 @@
       <div class="swiper produto">
         <div class="swiper-wrapper">
           <div class="swiper-slide produtinho-wrapper">
-
-            <div class="produtinho">
-              <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Pegador-carvao</strong></p>
-              <br />
+            <% products.map((product)=> { %>
+              <img class="productImage" src="<%= product.image_path%>" alt="imagem do produto">
+              <h4>
+                <%= product.name %>
+              </h4>
+              <p>R$<%= product.price %>
+              </p>
               <div class="botao">
                 <p> Compre Aqui</p>
               </div>
-            </div>
-
-
-            <div class="produtinho">
-              <img src="/img/forninho-narguile.jpg" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Forninho</strong></p>
-              <br />
-              <div class="botao">
-                <p> Compre Aqui</p>
-              </div>
-            </div>
-
-            <div class="produtinho">
-              <img src="/img/rosh.jfif" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Rosh</strong></p>
-              <br />
-              <div class="botao">
-                <p> Compre Aqui</p>
-              </div>
-            </div>
-
-            <div class="produtinho">
-              <img src="/img/zomo-gum.jfif" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Essecia Zomo Gum </strong></p>
-              <br />
-              <div class="botao">
-                <p> Compre Aqui</p>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-slide produtinho-wrapper">
-            <div class="produtinho">
-              <img src="img/carvao-fumax.jpg" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Carvão Fumax</strong></p>
-              <br />
-              <div class="botao">
-                <p> Compre Aqui</p>
-              </div>
-            </div>
-
-            <div class="produtinho">
-              <img src="/img/pegador-carvao.jfif" alt=" vitrine-produtos">
-              <h1>R$ 97484,00</h1>
-              <br />
-              <p>Até -20% de desconto</p>
-              <br />
-              <p><strong>Pegador-carvao</strong></p>
-              <br />
-              <div class="botao">
-                <p> Compre Aqui</p>
-              </div>
-            </div>
-
+              <% }) %>
           </div>
         </div>
         <!-- If we need pagination -->
@@ -201,7 +130,6 @@
 
       <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       <script>
-
         var banner = new Swiper(".banner-swipe", {
           spaceBetween: 30,
           centeredSlides: true,

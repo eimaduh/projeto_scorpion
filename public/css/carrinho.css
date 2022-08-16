@@ -91,13 +91,27 @@ nav h3 {
     border-radius: 10px;
 
     display: flex;
+    flex-direction: row;
+   
     justify-content: space-between;
 }
 
-.descricao-produto img {
-    width: 20%;
-    border-radius: 10px;
+.information {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
+
+.information img {
+    width: 10vw;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+
 
 .test input {
     width: 100%;
@@ -106,17 +120,42 @@ nav h3 {
     border-style: ridge;
 }
 
-.descricao-produto .lixeira {
-    width: 20px;
+.test i {
+    width: 2rem;
     height: 20px;
-    margin-top: 50px;
     cursor: pointer;
 }
 
-.descricao-produto .test {
-    width: 10%;
+.infosProduto {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.infosProduto input {
+    width: 4vw;
+    
+    text-align: center;
+}
+
+.infosProduto button {
+    width: 2vw;
+    
+}
+
+.test {
+    width: 35vw;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin: 5px;
 }
 
 .resumo {

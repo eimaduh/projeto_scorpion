@@ -14,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.TEXT,
         },
+        specification: {
+            type: DataTypes.TEXT,
+        },
         price: {
             type: DataTypes.DECIMAL(20, 2),
             allowNull: false,
@@ -60,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
     const Product = sequelize.define(alias, columns, config);
 
     Product.associate = (models) => {
-        Product.hasMany(models.Orders, { as: "orders", foreignKey: "order_id" });
+        Product.hasMany(models.Orders, { as: "orders", foreignKey: "id" });
 
     };
     return Product;

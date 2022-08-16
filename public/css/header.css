@@ -43,7 +43,8 @@ header img {
 
 .inputs span {
   cursor: pointer;
-}
+  
+} 
 
 header .links-acessaveis .links {
   display: flex;
@@ -51,12 +52,13 @@ header .links-acessaveis .links {
   justify-content: center;
   width: 10vw;
   border-right: 1px solid rgb(0, 0, 0);
-
+  line-height: 23px;
 }
 
-header .links-acessaveis .links a {
+.links a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  
 }
 
 header .links-acessaveis {
@@ -78,4 +80,16 @@ header .links-acessaveis .cart {
 
 header .links-acessaveis .cart a {
   color: white;
+}
+
+header .button-none {
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+header .center {
+  display: flex;
+  align-items: center;
 }
