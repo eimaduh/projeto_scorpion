@@ -75,6 +75,9 @@ legend {
     border: none;
 }
 
+.links a {
+  font-size: 1.8rem;
+}
 
 @media (max-width: 1000px) {
   .user-credits {

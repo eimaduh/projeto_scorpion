@@ -43,7 +43,8 @@ header img {
 
 .inputs span {
   cursor: pointer;
-}
+  
+} 
 
 header .links-acessaveis .links {
   display: flex;
@@ -54,9 +55,10 @@ header .links-acessaveis .links {
   line-height: 23px;
 }
 
-header .links-acessaveis .links a {
+.links a {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  
 }
 
 header .links-acessaveis {

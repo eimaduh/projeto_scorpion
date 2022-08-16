@@ -10,6 +10,10 @@ html, body {
   font-size: 62.5%;
 }
 
+.links a {
+  font-size: 1.8rem;
+}
+
 .requests-container {
   width: 100%;
 }
