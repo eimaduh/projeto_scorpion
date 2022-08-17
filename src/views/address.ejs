@@ -9,12 +9,16 @@
                         </div>
                     </div>                    
                     <!-- <div class="address-user"> -->
-                      
-                        <div class="address-one">
-                            <a href="/users/address/edit"><i class="fa-solid fa-pen-to-square"></i></a>
-                            <h5> </h5>
-                        </div>
                         
+                        <div class="address-one">
+                            <% address.map((add) => { %>
+                            <a href="/users/address/edit/"><i class="fa-solid fa-pen-to-square"></i></a>
+                           
+                            <h4><%= add.street %></h4>
+                            <h5><%= add.number %></h5>
+                            <h5><%= add.city %></h5>
+                        </div>
+                      <% }) %>
                         <!-- </div> -->
                     </div>
                 </article>

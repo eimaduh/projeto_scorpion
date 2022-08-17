@@ -7,7 +7,7 @@ function cookie(req, res, next) {
   let userIsLoggedBySession = req.session.user
 
   if (Boolean(cookies) || Boolean(userIsLoggedBySession)) {
-    const userFound = users.find(user => user.email === cookies)
+    const userFound = users.find(user => user.email === cookies  || user.id === cookies)
     userIsLoggedBySession = userFound
     req.user = userIsLoggedBySession
   }

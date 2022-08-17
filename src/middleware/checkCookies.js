@@ -1,15 +1,11 @@
-const database = require("../database/models");
-const path = require("path");
-
-function checkCookies(req, res, next) {
-  const username = req.cookies.user || req.session.username;
-
-  if (Boolean(username)) {
-    const userFound = users.find(user => user.username === username)
-    req.user = userFound
+const verifyIfUserIsLoggedIn = (req, res, next) => {
+  if (!req.cookies.user) {
+    return res.redirect('/login');
   }
 
-  return next()
+  req.user = JSON.parse(req.cookies.user);
+  next();
+
 }
 
-module.exports = checkCookies
+module.exports = verifyIfUserIsLoggedIn
