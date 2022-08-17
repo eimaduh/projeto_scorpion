@@ -5,6 +5,7 @@ const categoriaRouter = require('./categoria');
 const finalizacaoRouter = require('./finalizacao');
 const homeRouter = require('./home');
 const loginRouter = require('./login');
+const logoutRouter = require('./logout');
 const usersRouter = require('./painelUsuario');
 const registerRouter = require('./register');
 const routes = express.Router();
@@ -20,6 +21,7 @@ routes.get('/login', loginRouter)
 routes.get('/login/register', registerRouter);
 routes.post('/login', loginRouter)
 routes.post('/login/register', registerRouter);
+routes.get('/logout', logoutRouter)
 
 routes.get('/users', auth, usersRouter)
 routes.post('/users', usersRouter)
