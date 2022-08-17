@@ -5,40 +5,48 @@
    <nav>
        <a class="link-img" href="/"><img src="/img/arrow-white.png" alt="seta"></a>
        <h1>Meu carrinho</h1>
-       <h3>Itens( )</h3>
+       <h3 id="itens">Itens( )</h3>
     </nav>
     
 <div class="container">
 
         <div class="left"> 
            <section class="CEP">
-                <form action="">
+                <form>
                     <label for="CEP">CEP:</label>
-                    <input type="text" name="cep" id="cep" >
-                    <button class="ok" type="submit">OK</button>
+                    <input type="text" name="cep" id="cep-serach">
+                    <button class="ok" type="submit" id="cep-ok" >OK</button>
                 </form>
                 <br>
-                <p>Valor do frete: R$ 00,00 </p>
+                <p id="frete-value">Valor do frete R$</p>
             </section>
 
             
             <div class="descricao-produto">
-                        <div class="information">
-                        <p>Produto</p>
-                        <img src="/img/mangueira.jpeg" alt="imagem">
-                    </div>
-                        
-                        
-                    <div class="test">
-                       
-                        <div class="infosProduto">
-                            <b>Quantidade:</b>
-                            <button type="button" class="btn-secondary"> - </button>
-                            <input id="display" type="text" name="display" value="0"></input>
-                            <button type="button" class="btn-primary"> + </button> 
+                        <div class="img-produto">
+                            <img src="/img/mangueira.jpeg" alt="imagem">
                         </div>
-                        <i class="fa-solid fa-trash-can fa-2xl"></i>
-                     </div>   
+                            
+                        <div class="nome-preco-produto">
+                            <p>Nome do produto</p><br>
+                            <p>Valor do produto</p>
+                        </div>
+                        
+                <div class="test">
+
+                    <div> <p>Quantidade:</p> </div>
+
+                    <div class="infosProduto" id="infosProduto">
+                        <button type="button" class="btn-secondary" id="decrement"> - </button>
+                        <input id="display" type="text" name="display" value="0"></input>
+                        <button type="button" class="btn-primary" id="increment"> + </button> 
+                    </div>
+
+                    <div class="flex-end">
+                        <img class="lixeira" src="/img/trash-icon.png" alt="lixo">
+                    </div>
+
+                </div>
                     
             </div>
         </div>
@@ -76,6 +84,8 @@
             <footer>
                 SCORPION TABACARIA
             </footer>
+
+            <script type="text/javascript" src="/scripts/carrinho.js"></script>
     
 </body>
 </html>
