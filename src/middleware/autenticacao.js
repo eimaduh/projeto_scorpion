@@ -3,8 +3,7 @@ function auth(req, res, next) {
     return next()
   } else {
     // return res.redirect('/login');
-    return res.send('Você não está logado no sistema')
-  }
+    return res.render('errorLogin')
 }
-
+}
 module.exports = auth
