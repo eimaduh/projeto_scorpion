@@ -29,9 +29,11 @@
 
       <div class="swiper produto">
         <div class="swiper-wrapper">
+          
           <div class="swiper-slide produtinho-wrapper">
+            <% products.map((product)=> { %>
             <div class="produtinho">
-              <% products.map((product)=> { %>
+              
                 <img class="productImage" src="<%= product.image_path%>" alt="imagem do produto">
                 <h4>
                   <%= product.name %>
@@ -39,12 +41,15 @@
                 <p>R$<%= product.price %>
                 </p>
                 <div class="botao">
-                  <p> Compre Aqui</p>
+                  <a href="/detalhe/<%=product.id %>"><p> Compre Aqui</p></a>
                 </div>
-                <% }) %>
+                
             </div>
+            <% }) %>
           </div>
+          
         </div>
+        
         <!-- If we need pagination -->
         <!-- <div class="swiper-pagination"></div> -->
 
