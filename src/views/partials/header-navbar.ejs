@@ -1,26 +1,31 @@
  <link rel="stylesheet" href="/css/header.css">
 <header>
 
-  <div class="logo">
-   <a href="/"> <img src="/img/logotipo3-removebg.png" alt=""></a>
-  </div>
-
-  <div class="inputs">
-    <form class="center" id="form-home">
-      <input type="text" name="search" placeholder="Busque seus produtos aqui...">
-      <span class='bx bx-search'><button type="submit" id="button-pesquisa"></button></span>
-    </form>
-  </div>
-
-  <div class="links-acessaveis">
-    <div class="links">
-      <span><a href="/login"><i class='bx bx-user'></i> Login</a></span>
-      <span><a href="/users"><i class='bx bxs-badge-check'></i> Minha conta</a></span>
-      <span><a href="/categoria"><i class="fa-solid fa-store"></i>Produtos</a></span>
+    <div class="logo">
+      <img src="/img/logotipo3-removebg.png" alt="">
     </div>
 
-    <div class="cart">
-      <span><a href="/carrinho"><i class='bx bx-cart'></i></a></span>
+    <div class="inputs">
+      <form class="center" id="form">
+        <input id="input-pesquisa" type="text" name="search" placeholder="Busque seus produtos aqui...">
+        <span class='bx bx-search' id="button-pesquisa"><button type="submit" ></button></span>
+      </form>
     </div>
-  </div>
+
+    <div class="links-acessaveis">
+
+      <div class="links">
+        <span><a href="/login"><i class='bx bx-user'></i> Login</a></span>
+        <span> <a href="/users"><i class='bx bxs-badge-check'></i> Minha conta</a></span>
+        <span><a href="/categoria"><i class="fa-solid fa-store"></i>Produtos</a></span>
+      </div>
+
+      <div class="cart">
+        <span><a href="/carrinho"><i class='bx bx-cart'></i></a></span>
+      </div>
+
+    </div>
+
 </header>
+
+<script type="text/javascript" src="/scripts/inputPesquisa.js"></script>
