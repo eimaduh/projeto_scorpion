@@ -3,55 +3,45 @@ module.exports = (sequelize, DataTypes) => {
 
     const columns = {
         id: {
-            type: DataTypes.INTEGER(11),
-            primaryKey: true,
             allowNull: false,
             autoIncrement: true,
+            primaryKey: true,
+            type: DataTypes.INTEGER
         },
-        name: {
-            type: DataTypes.STRING(255),
+        first_name: {
+            type: DataTypes.STRING(50),
             allowNull: false,
-
         },
-        surname: {
-            type: DataTypes.STRING(45),
+        last_name: {
+            type: DataTypes.STRING(50),
             allowNull: false,
-
         },
         email: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        birth_date: {
-            type: DataTypes.DATEONLY,
-            allowNull: false
+            type: DataTypes.STRING(50),
+            unique: true,
+            allowNull: false,
         },
         password: {
-            type: DataTypes.STRING(45),
-            allowNull: false
-        },
-        cpf: {
-            type: DataTypes.STRING(20),
+            type: DataTypes.STRING(50),
             allowNull: false,
-        },
-        phone_number: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
-        },
-        avatar_path: {
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        id_photo: {
-            type: DataTypes.STRING(100),
-            allowNull: false
         },
         type: {
-            type:  DataTypes.ENUM,
-            values: ["user", "admin"],
-            allowNull: false,
-            defaultValue: "user"
+          type: DataTypes.ENUM,
+          values: ['user', 'admin'],
+          allowNull: false,
+          defaultValue: 'user'
+  
         },
+        created_at: {
+            allowNull: false,
+            type: DataTypes.DATE,
+            defaultValue: new Date(),
+        },
+        updated_at: {
+            allowNull: false,
+            type: DataTypes.DATE,
+            defaultValue: new Date(),
+        }
 
     };
     const config = {
@@ -62,8 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(alias, columns, config);
 
     User.associate = (models) => {
-        User.hasOne(models.Address, { as: "addresses", foreignKey: "id"}),
             User.hasMany(models.Orders, {as: "orders", foreignKey: "id"});
+            User.hasOne(models.Address, {as: "Addresses", foreignKey: "id"});
             
     };
 

@@ -8,18 +8,13 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    user_id: {
+    
+    userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
-        model: 'users',
-        key: 'id'
-      },
-      onUpdate: 'CASCADE',
-      onDelete: 'CASCADE',
     },
-    street: {
-      type: DataTypes.STRING(1000),
+       street: {
+      type: DataTypes.STRING(100),
       allowNull: false
     },
     number: {
@@ -30,12 +25,12 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(45),
       allowNull: false
     },
-    zipcode: {
-      type: DataTypes.INTEGER(10),
-      allowNull: false
-    },
     city: {
       type: DataTypes.STRING(45),
+      allowNull: false
+    },
+    zipcode: {
+      type: DataTypes.STRING(10),
       allowNull: false
     },
   };
@@ -47,7 +42,7 @@ module.exports = (sequelize, DataTypes) => {
   const Address = sequelize.define(alias, columns, config);
 
   Address.associate = (models) => {
-    Address.belongsTo(models.Users, {as: 'Users', foreignKey: 'user_id'})
+    Address.belongsTo(models.Users, {onDelete: 'cascade', onUpdate: 'cascade', as: 'Users', foreignKey: 'userId'})
   };
 
   return Address;

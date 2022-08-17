@@ -12,10 +12,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         description: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING(500),
+
         },
         specification: {
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING(200),
         },
         price: {
             type: DataTypes.DECIMAL(20, 2),
@@ -34,11 +35,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         brand: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false,
         },
         category: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false,
         },
 

@@ -3,12 +3,13 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
      await queryInterface.bulkInsert('Addresses', [{
-     user_id: 3,
+     userId: 3,
      street: "Rua Um",
      number: 415,
      district: "Bom Retiro",
-     zipcode: 8692001,
-     city: "São Paulo"
+     city: "São Paulo",
+     zipcode: 8692001
+
     }], {});
   
   },

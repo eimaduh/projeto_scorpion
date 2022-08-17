@@ -9,10 +9,18 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
             autoIncrement: true,
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER(11),
             allowNull: true,
-            field: 'user_id',
+            field: 'userId',
+        },
+        addressId: {
+            type: DataTypes.INTEGER,
+            field: 'addressId',
+            references: {
+                model: 'Addresses',
+                key: 'id'
+            }
         },
         orderStatus: {
             type: DataTypes.STRING(30),
@@ -22,17 +30,15 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER(15),
             allowNull: false,
         },
-        createdAt: {
+        created_at: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
-            field: 'created_at'
         },
-        updatedAt: {
+        updated_at: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
-            field: 'updated_at'
         },
     };
     const config = {
@@ -43,8 +49,9 @@ module.exports = function (sequelize, DataTypes) {
     const Order = sequelize.define(alias, columns, config);
 
     Order.associate = (models) => {
-        Order.hasMany(models.Order_item, {as: 'Order_Item', foreignKey: 'order_item_id'});
-        Order.belongsTo(models.Users, {as: 'Users', foreignKey: 'user_id'});
+        Order.hasMany(models.OrderItem, {as: 'OrderItems', foreignKey: 'orderItemId'});
+        Order.belongsTo(models.Users, {as: 'Users', foreignKey: 'userId'});
+        Order.belongsTo(models.Address, {as: 'Addresses', foreignKey: 'addressId'});
 
     };
 

@@ -12,12 +12,13 @@ const loginController = {
       where: { email },
     }).then(user => {
       if (!user) {
-        alert("Este Usuário não existe burro!")
+        alert("Este Usuário não existe!")
         return res.redirect("/login")
       }
 
       if (bcrypt.compareSync(password, user.password)) {
-        req.session.usuarioLogado = user.email
+        req.session.usuarioLogado = user.email, user.id, user.name
+        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email, type: user.type }));
         return res.redirect("/users")
       }
 

@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    const alias = "Order_item";
+    const alias = "OrderItem";
 
     const columns = {
         id: {
@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
         order_id: {
             type: DataTypes.INTEGER(11),
             allowNull: false,
-            field: 'id',
+            field: 'orderId',
         },
 
         product_id: {
@@ -40,17 +40,15 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
-            field: 'created_at'
         },
         updatedAt: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: new Date(),
-            field: 'updated_at'
         },
     }; 
         const config = {
-            tableName: 'order_items',
+            tableName: 'orderItem',
             timestamps: false,  
     };
 
@@ -58,7 +56,7 @@ module.exports = function (sequelize, DataTypes) {
 
     Order_item.associate = (models) => {
         Order_item.belongsTo(models.Orders, {as: 'Orders', foreignKey: 'id'});
-        Order_item.belongsTo(models.Products, {as: 'Products', foreignKey: 'product_id'});
+        Order_item.belongsTo(models.Products, {as: 'Products', foreignKey: 'productId'});
     };
 
 
