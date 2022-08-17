@@ -86,76 +86,71 @@ nav h3 {
     background-color: white;
     margin: 40px;
     padding: 10px;
-    /* border-style: ridge; */
     box-shadow: 1px 1px 8px 4px rgba(0, 0, 0, 0.12);
     border-radius: 10px;
-
     display: flex;
-    flex-direction: row;
-   
     justify-content: space-between;
 }
-
-.information {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
+.img-produto{
+    width: 30%;
 }
 
-.information img {
-    width: 10vw;
+.img-produto img {
+    width: 100%;
     border-radius: 10px;
-    margin: 0.5rem;
 }
 
-
+.nome-preco-produto {
+    width: 30%;
+    margin-top: 10px;
+}
 
 .test input {
     width: 100%;
     height: 30px;
     border-radius: 5px;
     border-style: ridge;
+    display: flex;
 }
 
-.test i {
-    width: 2rem;
-    height: 20px;
-    cursor: pointer;
+ .test {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .infosProduto {
-    width: 100%;
+    margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 5px;
-    margin: 5px;
-    padding: 5px;
-
 }
 
-.infosProduto input {
-    width: 4vw;
-    
-    text-align: center;
+.btn-secondary {
+    width: 18px;
+    height: 18px;
+    border-style: solid;
+    border-radius: 5px;
 }
 
-.infosProduto button {
-    width: 2vw;
-    
+.btn-primary {
+    width: 18px;
+    height: 18px;
+    border-style: solid;
+    border-radius: 5px;
 }
 
-.test {
-    width: 35vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    margin: 5px;
+#display {
+    width: 35px;
+    border-style: solid;
+}
+
+.descricao-produto .lixeira {
+    width: 20px;
+    height: 20px;
+    margin-top: 50px;
+    cursor: pointer;
 }
 
 .resumo {
@@ -225,5 +220,4 @@ footer {
     justify-content: center;
     align-items: center;
 }
-
 
