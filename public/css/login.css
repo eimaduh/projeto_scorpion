@@ -112,3 +112,8 @@ button a {
     display: flex;
     justify-content: center;
 }
+
+.erro {
+    color: red;
+    text-align: center;
+}
