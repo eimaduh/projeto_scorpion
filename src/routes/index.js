@@ -25,7 +25,15 @@ routes.get('/logout', logoutRouter)
 
 routes.get('/users', auth, usersRouter)
 routes.post('/users', usersRouter)
-routes.get('/users/data', usersRouter)
+
+routes.get('/users/data', auth, usersRouter)
+routes.get('/users/data/create', auth, usersRouter)
+routes.post('/users/data/create', auth, usersRouter)
+routes.get('/users/data/delete/:id', auth, usersRouter)
+routes.delete('/users/data/delete/:id', auth, usersRouter)
+routes.get('/users/data/edit/:id', auth, usersRouter)
+routes.put('/users/data/update/:id', auth, usersRouter)
+
 routes.get('/users/credits', usersRouter)
 routes.get('/users/address', auth, usersRouter)
 routes.get('/users/address/create', auth, usersRouter)

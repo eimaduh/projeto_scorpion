@@ -8,23 +8,23 @@
         <%- include('partials/userAccount') %>
         <article class="container-products_admin">
             <h1>Editando dados</h1>
-            <form class="form-edit" action="/users/data<%= dat.id %>" method="POST" enctype="multipart/form-data">
+            <form class="form-edit" action="/users/data<%= data.id %>?_method=PUT" method="POST">
                 <div class="cpfUser">
                     <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" size="100" value="<%= dat.cpf %>" required>
+                    <input type="text" name="cpf" size="100" value="<%= data.cpf %>" required>
                 </div>
 
                 <div class="userPhone">
                     <label for="phone">Telefone</label>
-                    <input type="text" name="phone" size="100" value="<%= dat.phone_number %>" required>
+                    <input type="text" name="phone" size="100" value="<%= data.phone_number %>" required>
                 </div>
 
                 <label class="imageUser">
-                    <input type="file" name="file" accept="image/*" id="image-input" value="<%= dat.avatar_path %>">
+                    <input type="file" name="file" accept="image/*" id="image-input" value="<%= data.avatar_path %>">
                 </label>
 
                 <label for="idImage" class="documentUser">
-                    <input type="file" name="idImage" accept="image/*" id="imageId" value="<%= dat.id_photo %>">
+                    <input type="file" name="idImage" accept="image/*" id="imageId" value="<%= data.id_photo %>">
                 </label>
 
                 <div class="save">

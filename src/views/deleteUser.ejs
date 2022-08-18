@@ -6,8 +6,8 @@
   <%- include('partials/header-navbar') %>
   <main>
     <article class="success">
-      <h1>Tem certeza que deseja deletar sua vida:</h1>
-      <h2> <%= users.first_name %>?</h2>
+      <h1>Tem certeza que deseja deletar sua conta <%= users.first_name %>?</h1>
+     
 
       <form action="/users/delete/<%= users.id %>?_method=DELETE" method="POST">
 
