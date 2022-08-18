@@ -9,6 +9,7 @@ usersRouter.get('/users', usersController.getUsersPage)
 
 usersRouter.get('/users/data', verifyIfUserIsLoggedIn, usersController.getUsersData)
 
+
 usersRouter.get('/users/address', verifyIfUserIsLoggedIn, usersController.getUsersAddress)
 usersRouter.post('/users/address/create', verifyIfUserIsLoggedIn, usersController.createAddress)
 usersRouter.get('/users/address/edit/:id', verifyIfUserIsLoggedIn, usersController.editAddress)

@@ -13,32 +13,32 @@
       <legend>Editar endereço</legend>
 
 
-      <form class="form-user" action="/user" method="POST">
+      <form class="form-user" action="/user/address/update/<%=address.id %>" method="POST">
         <div>
-          <label for="name">Rua</label>
-          <input class="input-user" type="text" id="name" name="name" />
+          <label for="street">Logradouro</label>
+          <input class="input-user" type="text" id="street" name="name" value="<%=address.street %>"/>
         </div>
 
         <div>
           <label for="number">Nº</label>
-          <input class="input-user" type="number" id="number" name="number" />
+          <input class="input-user" type="text" id="number" name="number" value="<%=address.number %>"" />
         </div>
 
         <div>
-          <label for="text">Bairro</label>
-          <input class="input-user" type="text" id="text" name="text" />
+          <label for="district">Bairro</label>
+          <input class="input-user" type="text" id="district" name="district" value="<%=address.district %>"/>
         </div>
         <div>
-          <label for="cep">CEP</label>
-          <input class="input-user" type="number" id="number" name="number" />
+          <label for="zipcode">CEP</label>
+          <input class="input-user" type="text" id="zipcode" name="zipcode" value="<%=address.zipcode %>"/>
         </div>
         <div>
-          <label for="tel">Cidade</label>
-          <input class="input-user" type="tel" id="tel" name="tel" />
+          <label for="city">Cidade</label>
+          <input class="input-user" type="text" id="city" name="city" value="<%=address.city %>"/>
         </div>
         <div>
-          <label for="name">Estado</label>
-          <input class="input-user" type="text" id="name" name="name" />
+          <label for="country">País</label>
+          <input class="input-user" type="text" id="country" name="country" value="<%=address.country %>"/>
         </div>
         <button class="btn-edit" type="submit">Salvar</button>
       </form>

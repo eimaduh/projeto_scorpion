@@ -38,8 +38,11 @@
          <p>R$<%= product.price %></p>
 
          <a href="/detalhe/<%=product.id %>">Detalhe do produto</a>
+         <form action="/carrinho" method="post">
+            <button class="btn-addCart">  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> ADICIONAR AO CARRINHO</button>
+            <input type="hidden" name = "productId" value="<%=product.id%>">
+        </form>
 
-        <a href="/carrinho"> <button class="btn-addCart">  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> ADICIONAR AO CARRINHO</button></a>
       </div>
       <% }) %>
 

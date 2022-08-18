@@ -1,30 +1,51 @@
   <%- include('./partials/head')%>
   <link rel="stylesheet" href="/css/address.css">
-<body>
-    <%- include('partials/header-navbar') %>
-    <main>
-        <%- include('partials/userAccount') %>
-                        <h2>Endereços Cadastrados</h2>
-                        <div class="line"></div>
-                        </div>
-                    </div>                    
-                    <!-- <div class="address-user"> -->
-                        
-                        <div class="address-one">
-                            <% address.map((add) => { %>
-                            <a href="/users/address/edit/"><i class="fa-solid fa-pen-to-square"></i></a>
-                           
-                            <h4><%= add.street %></h4>
-                            <h5><%= add.number %></h5>
-                            <h5><%= add.city %></h5>
-                        </div>
-                      <% }) %>
-                        <!-- </div> -->
-                    </div>
-                </article>
-        </section>
-    </main>
-    <%- include('partials/footer') %>
-</body>
 
-</html>
+  <body>
+      <%- include('partials/header-navbar') %>
+      <main>
+          <%- include('partials/userAccount') %>
+          <h2>Endereços Cadastrados</h2>
+          <div class="line"></div>
+          </div>
+          </div>
+          <!-- <div class="address-user"> -->
+
+          <div class="address-one">
+              <% address.map((add) => { %>
+              <div class="editData">
+                  <a href="/users/address/edit/<%= add.id%>"><button type="submit" class="btn btnEdit"><i
+                              class="fa-solid fa-pen-to-square fa-xl"></i>Editar endereço</button>
+                  </a>
+              </div>
+              <div class="address">
+                  <h5>Logradouro:</h5>
+                  <p><%= add.street %></p>
+              </div>
+              <div class="address">
+                  <h5>Nº:</h5>
+                  <p><%= add.number %></p>
+              </div>
+              <div class="address">
+                  <h5>Bairro:</h5>
+                  <p><%= add.district %></p>
+              </div>
+              <div class="address">
+                  <h5>Cidade:</h5>
+                  <p><%= add.city %></p>
+              </div>
+              <div class="address">
+                  <h5>CEP:</h5>
+                  <p>0<%= add.zipcode %></p>
+              </div>
+          </div>
+          <% }) %>
+          <!-- </div> -->
+          </div>
+          </article>
+          </section>
+      </main>
+      <%- include('partials/footer') %>
+  </body>
+
+  </html>

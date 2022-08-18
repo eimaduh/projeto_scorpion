@@ -1,12 +1,14 @@
 const database = require("../database/models");
-const {Address, Users, Orders } = require("../database/models");
+const {
+    Address,
+    Users,
+    Orders,
+    Data
+} = require("../database/models");
 
 
 const usersController = {
     getUsersPage: (req, res) => {
-        res.render('usersPanel')
-    },
-    getUsersData: (req, res) => {
 
         Users.findOne({
                 where: {
@@ -14,29 +16,48 @@ const usersController = {
                 }
             })
             .then(users => {
-                res.render('data', {
+                res.render('usersPanel', {
                     users
                 })
             })
     },
+    getUsersData: (req, res) => {
+        const user = req.user;
+        Data.findAll({
+            include: {
+                model: Users,
+                as: 'Users',
+            },
+            where: {
+                userId: user.id
+            }
+        }).then(data => {
+            res.status(200).render('data', {
+                data,
+                user
+            })
+        });
+    },
     getUsersAddress: (req, res) => {
         const user = req.user;
-       Address.findAll({
-                include: {
-                    model: Users,
-                    as: 'Users',
-                },
-                where: {
-                    userId: user.id
-                }
-            }).then(address => {
-                res.status(200).render('address', {
-                address, user
-            })});
-        }, 
-        
-    createAddress: (req, res) => {
+        Address.findAll({
+            include: {
+                model: Users,
+                as: 'Users',
+            },
+            where: {
+                userId: user.id
+            }
+        }).then(address => {
+            res.status(200).render('address', {
+                address,
+                user
+            })
+        });
+    },
 
+    createAddress: (req, res) => {
+        const user = req.user;
         const {
             userId,
             street,
@@ -48,7 +69,7 @@ const usersController = {
         } = req.body;
 
         Address.create({
-                userId,
+                userId: user.id,
                 street,
                 number,
                 district,
@@ -65,13 +86,14 @@ const usersController = {
 
         Address.findByPk(addressId)
             .then(address => {
-                res.render('addressEdit', {
+                res.render('editAddress', {
                     address
                 })
             })
             .catch(error => res.send(error))
     },
     updateAddress: (req, res) => {
+        const user = req.user;
         const addressId = req.params.id;
         const {
             userId,
@@ -85,7 +107,7 @@ const usersController = {
         req.file;
 
         Address.update({
-                userId,
+                userId: user.id,
                 street,
                 number,
                 zipcode,
@@ -104,24 +126,27 @@ const usersController = {
 
     },
 
+
     usersCredits: (req, res) => {
         res.render('usersCredits')
     },
     usersRequests: (req, res) => {
         const user = req.user;
-       Orders.findAll({
-                include: {
-                    model: Users,
-                    as: 'Users',
-                },
-                where: {
-                    userId: user.id
-                }
-            }).then(orders => {
-                res.status(200).render('usersRequests', {
-                orders, user
-            })});
-        }, 
+        Orders.findAll({
+            include: {
+                model: Users,
+                as: 'Users',
+            },
+            where: {
+                userId: user.id
+            }
+        }).then(orders => {
+            res.status(200).render('usersRequests', {
+                orders,
+                user
+            })
+        });
+    },
 }
 
 module.exports = usersController

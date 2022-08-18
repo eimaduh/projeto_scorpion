@@ -1,0 +1,41 @@
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/data.css">
+
+<body>
+    <%- include('partials/header-navbar') %>
+    <main>
+
+        <%- include('partials/userAccount') %>
+        <article class="container-products_admin">
+            <h1>Editando dados</h1>
+            <form class="form-edit" action="/users/data<%= dat.id %>" method="POST" enctype="multipart/form-data">
+                <div class="cpfUser">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" size="100" value="<%= dat.cpf %>" required>
+                </div>
+
+                <div class="userPhone">
+                    <label for="phone">Telefone</label>
+                    <input type="text" name="phone" size="100" value="<%= dat.phone_number %>" required>
+                </div>
+
+                <label class="imageUser">
+                    <input type="file" name="file" accept="image/*" id="image-input" value="<%= dat.avatar_path %>">
+                </label>
+
+                <label for="idImage" class="documentUser">
+                    <input type="file" name="idImage" accept="image/*" id="imageId" value="<%= dat.id_photo %>">
+                </label>
+
+                <div class="save">
+                    <button class="btnSubmit" type="submit">Salvar edição</button>
+                </div>
+            </form>
+        </article>
+        </section>
+
+    </main>
+    <%- include('partials/footer') %>
+</body>
+
+</html>

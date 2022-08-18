@@ -11,26 +11,47 @@
     </div>
     </div>
     <section class="data-container">
-     <div class="dataUser">
-      <div class="row">
-    <h3>Nome:</h3> <p><%= users.first_name %></p>
-  </div>
-  <div class="row">
-    <h3>Sobrenome: </h3><p><%= users.last_name %></p>
-  </div>
-  <div class="row">
-    <h3>email: </h3><p><%= users.email %></p>
-  </div>
-  <div class="row">
-    <h3>Data de nascimento: </h3><p><%= users.birth_date %></p>
-  </div>
-  <div class="row">
-    <h3>CPF: </h3><p><%= users.cpf %></p>
-  </div>
-  <div class="row">
-    <h3>Telefone:</h3> <p><%= users.phone_number %></p>
-  </div>
-    
+      <div class="userName">
+        <div class="row">
+         
+          <h3>Nome:</h3>
+          <p><%= user.first_name %></p>
+        </div>
+        <div class="row">
+          <h3>Sobrenome: </h3>
+          <p><%= user.last_name %></p>
+        </div>
+        <div class="row">
+          <h3>email: </h3>
+          <p><%= user.email %></p>
+        </div>
+
+      </div>
+      <% data.map((dat) => { %>
+      <div class="dataUser">
+       
+        <div class="dataPrincipal">
+          <h3>CPF: </h3>
+          <p><%= dat.cpf %></p>
+          <h3>Telefone:</h3>
+          <p><%= dat.phone_number %></p>
+        </div>
+        <div class="photos">
+          <h3>Sua foto </h3>
+          <img class="image" src="<%= dat.avatar_path %>" alt="imagem do produto">
+        </div>
+        <div class="photos">
+          <h3>Documento: </h3>
+          <img class="image" src="<%= dat.id_photo %>" alt="imagem do produto">
+        </div>
+        
+      </div>
+      <div class="editData">  
+      <a href="/users/data/edit/<%= dat.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Editar dados</button>
+      </a>
+      </div>
+
+      <% }) %>
     </section>
 
     </article>
