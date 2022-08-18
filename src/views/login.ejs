@@ -19,6 +19,12 @@
       <label for="password">Senha</label><br>
       <input type="password" name="password" required><br>
 
+      <% if(error) { %>
+        <div class="erro">
+          <p><%= error %></p>
+        </div>
+      <% } %>
+
       <a class="esqueceu-senha" href="">Esqueceu sua senha?</a>
 
       <p class="center">ou</p>
