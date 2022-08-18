@@ -25,7 +25,7 @@
       <div class="descricao">
 
          <div class="img-carrinho">
-            <a href="">
+            <a href="#" id="adicionar-carrinho">
                <img src="/img/adicionar-ao-carrinho.png" alt="adicionar ao carrinho">
             </a>
 
@@ -38,11 +38,8 @@
          <p>R$<%= product.price %></p>
 
          <a href="/detalhe/<%=product.id %>">Detalhe do produto</a>
-         <form action="/carrinho" method="post">
-            <button class="btn-addCart">  <i class="fa-solid fa-cart-plus" aria-hidden="true"></i> ADICIONAR AO CARRINHO</button>
-            <input type="hidden" name = "productId" value="<%=product.id%>">
-        </form>
 
+        
       </div>
       <% }) %>
 
