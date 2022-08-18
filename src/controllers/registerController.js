@@ -26,10 +26,28 @@ const registerController = {
                 return res.redirect('/login');
             })
             .catch(error => res.send(error))
+    },
+
+    delete: (req, res) => {
+        database.Users.findByPk(req.params.id)
+         .then(users => {
+          res.render('deleteUser', {
+           users 
+          })
+         })
+       },
+       destroy: (req, res) => {
+        database.Users.destroy({
+         where: {
+          id: req.params.id
+         },
+         force: true
+        })
+         .then(() => {
+          return res.redirect('/')
+         })
+         .catch(error => res.send(error))
     }
-
-
-
 }
 
 module.exports = registerController;

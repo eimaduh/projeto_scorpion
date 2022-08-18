@@ -1,6 +1,7 @@
 const express = require('express');
 const usersRouter = express.Router()
-const usersController = require('../controllers/painelController')
+const usersController = require('../controllers/painelController');
+const registerController = require('../controllers/registerController');
 const verifyIfUserIsLoggedIn = require('../middleware/checkCookies');
 
 
@@ -18,5 +19,7 @@ usersRouter.post('/users/credits', usersController.usersCredits)
 
 usersRouter.get('/users/requests', verifyIfUserIsLoggedIn, usersController.usersRequests)
 
+usersRouter.get('/users/delete/:id', verifyIfUserIsLoggedIn, registerController.delete);
+usersRouter.delete('/users/delete/:id', verifyIfUserIsLoggedIn, registerController.destroy);
 
 module.exports = usersRouter

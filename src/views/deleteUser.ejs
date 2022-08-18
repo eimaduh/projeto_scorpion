@@ -1,0 +1,27 @@
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/productDelete.css">
+
+<body>
+
+  <%- include('partials/header-navbar') %>
+  <main>
+    <article class="success">
+      <h1>Tem certeza que deseja deletar sua vida:</h1>
+      <h2> <%= users.first_name %>?</h2>
+
+      <form action="/users/delete/<%= users.id %>?_method=DELETE" method="POST">
+
+        <button class="btn-delete" type="submit">Apagar conta</button>
+
+        <a class="btn-back" href="/users">Voltar</a>
+
+      </form>
+
+
+    </article>
+  </main>
+  <%- include('partials/footer') %>
+
+</body>
+
+</html>

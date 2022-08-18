@@ -1,82 +1,83 @@
 <%- include('./partials/head')%>
-<link rel="stylesheet" href="/css/usersPanel.css">
+  <link rel="stylesheet" href="/css/usersPanel.css">
 
-<body>
+  <body>
     <%- include('partials/header-navbar') %>
-    <main>
+      <main>
         <section class="background">
-            <section class="account">
-                <div class="purchases">
-                    <h2>MINHA CONTA</h2>
-                </div>
-            </section>
-            <section class="user-account">
-                <div class="userData">
-                    <div class="hello">
-                        <h5>Olá, <%= users.first_name %></h5>
-                            <!-- código para identificar user -->
-                        </h5>
-                        <p>Bem vindo</p>
+          <section class="account">
+            <div class="purchases">
+              <h2>MINHA CONTA</h2>
+            </div>
+          </section>
+          <section class="user-account">
+            <div class="userData">
+              <div class="hello">
+                <h5>Olá, <%= users.first_name %>
+                </h5>
+                <!-- código para identificar user -->
+                </h5>
+                <p>Bem vindo</p>
+              </div>
+              <div class="line"></div>
+              <article class="user-panel">
+                <div>
+                  <div class="panel-data">
+                    <div class="data">
+                      <img src="/img/users.png">
                     </div>
-                    <div class="line"></div>
-                    <article class="user-panel">
-                        <div>
-                            <div class="panel-data">
-                                <div class="data">
-                                    <img src="/img/users.png">
-                                </div>
-                                <div class="my-data">
-                                    <a href="/users/data">Meus dados</a>
-                                    <h6>Dados cadastrais</h6>
-                                </div>
+                    <div class="my-data">
+                      <a href="/users/data">Meus dados</a>
+                      <h6>Dados cadastrais</h6>
+                    </div>
 
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="panel-data">
-                                <div class="data">
-                                    <img src="/img/address.png">
-                                </div>
-                                <div class="my-data">
-                                    <a href="/users/address">Endereços</a>
-                                    <h6>Endereços cadastrados</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div>
-                            <div class="panel-data">
-                                <div class="data">
-                                    <img src="/img/box.png">
-                                </div>
-                                <div class="my-data">
-                                    <a href="/users/requests">Pedidos</a>
-                                    <h6>Histórico de pedidos</h6>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div>
-                            <div class="panel-data">
-                                <div class="data">
-                                    <img src="/img/wallet.png">
-                                </div>
-                                <div class="my-data">
-                                    <a href="/users/credits">Créditos</a>
-
-                                    <h6>Meu saldo</h6>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </article>
+                  </div>
                 </div>
-            </section>
-        </section>
-    </main>
-    <%- include('partials/footer') %>
-</body>
 
-</html>
+                <div>
+                  <div class="panel-data">
+                    <div class="data">
+                      <img src="/img/address.png">
+                    </div>
+                    <div class="my-data">
+                      <a href="/users/address">Endereços</a>
+                      <h6>Endereços cadastrados</h6>
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                  <div class="panel-data">
+                    <div class="data">
+                      <img src="/img/box.png">
+                    </div>
+                    <div class="my-data">
+                      <a href="/users/requests">Pedidos</a>
+                      <h6>Histórico de pedidos</h6>
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                  <div class="panel-data">
+                    <div class="data">
+                      <img src="/img/wallet.png">
+                    </div>
+                    <div class="my-data">
+                      <a href="/users/credits">Créditos</a>
+
+                      <h6>Meu saldo</h6>
+
+                    </div>
+
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+        </section>
+      </main>
+      <%- include('partials/footer') %>
+  </body>
+
+  </html>

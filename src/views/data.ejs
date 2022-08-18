@@ -25,7 +25,8 @@
           <h3>email: </h3>
           <p><%= user.email %></p>
         </div>
-
+        <a href="/users/delete/<%= user.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Deletar Usuário</button>
+        </a>
       </div>
       <% data.map((dat) => { %>
       <div class="dataUser">
@@ -49,10 +50,12 @@
       <div class="editData">  
       <a href="/users/data/edit/<%= dat.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Editar dados</button>
       </a>
+      <a href="/users/delete/<%= users.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Deletar Usuário</button>
+      </a>
       </div>
-
       <% }) %>
     </section>
+    
 
     </article>
 

@@ -33,6 +33,8 @@ routes.post('/users/address/create', usersRouter)
 routes.get('/users/address/edit/:id', usersRouter)
 routes.put('/users/address/update/:id', usersRouter)
 routes.get('/users/requests',auth, usersRouter)
+routes.get('/users/delete/:id', usersRouter)
+routes.delete('/users/delete/:id', usersRouter)
 
 routes.get('/categoria', auth, categoriaRouter)
 routes.get('/categoria/admin', categoriaRouter)
