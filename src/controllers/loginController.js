@@ -9,25 +9,23 @@ const loginController = {
 
   loginUser: (req, res) => {
     const { email, password } = req.body
+    const error = 'Email ou senha incorreto'
     database.Users.findOne({
       where: { email },
     }).then(user => {
-      if (!user) {
-        return res.render("login", {
-          error: 'Email ou senha incorreta'
-        })
+      if(!user) {
+        return res.render("login", { error })
       }
 
-      if (bcrypt.compareSync(password, user.password)) {
-        req.session.usuarioLogado = user.email, user.id, user.name
-        res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email, type: user.type }));
-        return res.render("login", {
-          error: 'Email ou senha incorreta'
-        })
+      if(!bcrypt.compareSync(password, user.password)) {
+        return res.render("login", { error })
       }
-
+      
+      req.session.usuarioLogado = user.email, user.id, user.name
+      res.cookie('user', JSON.stringify({ id: user.id, name: user.name, email: user.email, type: user.type }));
 
       return res.redirect('/')
+
     }).catch(error => res.send(error.error))
   }
 }
