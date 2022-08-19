@@ -82,13 +82,12 @@ const usersController = {
             id_photo,
             userId
         } = req.body;
-        const { path } = req.file;
       
         Data.update({
             cpf,
             phone_number,
-            avatar_path: path,
-            id_photo: path,
+            avatar_path: req.file,
+            id_photo: req.file,
             userId: user.id,
         },{
             where: {
@@ -177,7 +176,7 @@ const usersController = {
             })
             .catch(error => res.send(error))
     },
-    updateAddress: (req, res) => {
+    updateAddress: (req, res,) => {
         const user = req.user;
         const addressId = req.params.id;
         const {

@@ -13,10 +13,10 @@
       <legend>Editar endereço</legend>
 
 
-      <form class="form-user" action="/user/address/update/<%=address.id %>" method="POST">
+      <form class="form-user" action="/user/address/update/<%=address.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         <div>
           <label for="street">Logradouro</label>
-          <input class="input-user" type="text" id="street" name="name" value="<%=address.street %>"/>
+          <input class="input-user" type="text" id="street" name="street" value="<%=address.street %>"/>
         </div>
 
         <div>

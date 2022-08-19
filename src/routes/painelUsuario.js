@@ -13,7 +13,7 @@ usersRouter.get('/users/data', verifyIfUserIsLoggedIn, usersController.getUsersD
 
 usersRouter.post('/users/data/create', verifyIfUserIsLoggedIn, multerConfig.single('file'), usersController.createData)
 usersRouter.get('/users/data/edit/:id', verifyIfUserIsLoggedIn, usersController.editData)
-usersRouter.put('/users/data/update/:id', verifyIfUserIsLoggedIn, usersController.updateData)
+usersRouter.put('/users/data/update/:id', verifyIfUserIsLoggedIn, multerConfig.single('file'), usersController.updateData)
 usersRouter.get('/users/data/delete/:id', usersController.deleteData);
 usersRouter.delete('/users/data/delete/:id', usersController.destroyData);
 

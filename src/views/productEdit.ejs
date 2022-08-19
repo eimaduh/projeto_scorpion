@@ -7,7 +7,7 @@
   <main>
     <article class="container-products_admin">
       <h1>Editando produto: <%= product.name %></h1>
-      <form class="form-edit" action="/categoria/admin/update<%= product.id %>" method="POST"
+      <form class="form-edit" action="/categoria/admin/update/<%= product.id %>?_method=PUT" method="POST"
         enctype="multipart/form-data">
         <div class="name-product">
           <label for="name">Nome</label>

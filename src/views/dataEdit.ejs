@@ -8,7 +8,7 @@
         <%- include('partials/userAccount') %>
         <article class="container-products_admin">
             <h1>Editando dados</h1>
-            <form class="form-edit" action="/users/data<%= data.id %>?_method=PUT" method="POST">
+            <form class="form-edit" action="/users/data/update/<%= data.id %>?_method=PUT" method="POST">
                 <div class="cpfUser">
                     <label for="cpf">CPF</label>
                     <input type="text" name="cpf" size="100" value="<%= data.cpf %>" required>
