@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
   display: flex;
   background-color: #edcb17;
   width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 10vw;
+  height: 150px;
 }
 
 header img {
-  width: 25vw;
+  width: 100%;
+}
+
+header .logo {
+  width: 20%;
 }
 
 .inputs {
@@ -43,7 +48,6 @@ header img {
 
 .inputs span {
   cursor: pointer;
-  
 } 
 
 header .links-acessaveis .links {
@@ -51,35 +55,19 @@ header .links-acessaveis .links {
   flex-direction: column;
   justify-content: center;
   width: 10vw;
-  border-right: 1px solid rgb(0, 0, 0);
-  line-height: 23px;
+  gap: 5px;
 }
 
 .links a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  
+  line-height: 20px;
 }
 
 header .links-acessaveis {
   display: flex;
   justify-content: space-between;
   width: 20%;
-}
-
-header .links-acessaveis .cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-  font-size: 2.5vw;
-  border-radius: 50%;
-  width: 5vw;
-  height: 5vw;
-}
-
-header .links-acessaveis .cart a {
-  color: white;
 }
 
 header .button-none {
@@ -92,4 +80,28 @@ header .button-none {
 header .center {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    height: 100px;
+  }
+
+  header img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  header .logo {
+    width: 20%;
+  }
+
+  .links-acessaveis a b{
+    display: none;
+  }
+
+  header .links-acessaveis .links {
+    display: flex;
+    flex-direction: row;
+  }
 }
