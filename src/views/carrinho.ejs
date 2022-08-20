@@ -5,7 +5,7 @@
    <nav>
        <a class="link-img" href="/"><img src="/img/arrow-white.png" alt="seta"></a>
        <h1>Meu carrinho</h1>
-       <h3 id="itens">Itens( )</h3>
+       <h3 id="outro">Itens </h3>
     </nav>
     
 <div class="container">
@@ -24,29 +24,22 @@
             
             <div class="descricao-produto">
                         <div class="img-produto">
-                            <img src="/img/mangueira.jpeg" alt="imagem">
-                        </div>
                             
+                        </div>
+                        <div id="itens"> </div>
+                        
                         <div class="nome-preco-produto">
-                            <p>Nome do produto</p><br>
-                            <p>Valor do produto</p>
+                            
+                            <div><span id="valores"></span> </div>
+                            <p></p>
                         </div>
                         
-                <div class="test">
-
-                    <div> <p>Quantidade:</p> </div>
-
-                    <div class="infosProduto" id="infosProduto">
-                        <button type="button" class="btn-secondary" id="decrement"> - </button>
-                        <input id="display" type="text" name="display" value="0"></input>
-                        <button type="button" class="btn-primary" id="increment"> + </button> 
-                    </div>
+                
 
                     <div class="flex-end">
-                        <img class="lixeira" src="/img/trash-icon.png" alt="lixo">
+                        <button type="button" onclick=" localStorage.clear(); location.reload();" style="border: none; background-color: white " > <img class="lixeira" src="/img/trash-icon.png" alt="lixo"></button> 
                     </div>
 
-                </div>
                     
             </div>
         </div>
@@ -63,10 +56,10 @@
                 </div>
 
                 <div class="resumo-info">
-                    <p>Valor dos produtos: R$00,00</p>
+                    
+                    <p id="valorTotal">Valor dos produtos: </p>
                     <p>Frete: R$00,00</p>
-                    <p>Total a prazo: R$00,00</p>
-                    <p>(Em até 12x de R$ 00,00 sem juros)</p>
+                    <p id="parcela">Em até 5x de R$ </p>
                 </div>
                 <br><br>
 
@@ -85,7 +78,39 @@
                 SCORPION TABACARIA
             </footer>
 
-            <script type="text/javascript" src="/scripts/carrinho.js"></script>
+            <!-- <script type="text/javascript" src="/scripts/carrinho.js"></script> -->
+            <script>
+                var total = 0; 
+                var i = 0;    
+                var valor = 0;
+                var tudo = 0;
+
+                for(i=1; i<=99; i++)
+                {
+                    var prod = localStorage.getItem("produto" + i + ""); 
+                    if(prod != null) 
+                    {	
+                        // exibe os dados da lista dentro da div itens
+                        document.getElementsByClassName("img-produto").innerHTML += localStorage.getItem("imagem" + i);
+                        document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                        document.getElementById("outro").innerHTML += localStorage.getItem("qtd" + i);
+                        document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                        document.getElementById("itens").innerHTML += " ";
+                        document.getElementById("valores").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                        document.getElementById("valorTotal").innerHTML += "R$: " + localStorage.getItem("valor" + i );
+                       
+                        valor = parseFloat(localStorage.getItem("valor" + i)); 
+                        total = (total + valor);
+                        tudo = (total / 5);
+                   
+                        document.getElementById("parcela").innerHTML += tudo;
+                    }
+                } 
+                
+                document.getElementById("total").innerHTML += total.toFixed(2); 
+                
+                
+               </script>
     
 </body>
 </html>

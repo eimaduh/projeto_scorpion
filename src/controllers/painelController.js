@@ -139,11 +139,12 @@ const usersController = {
             })
         });
     },
-
+    getAddressPage: (req, res) => {
+        res.render('createAddress')
+    },
     createAddress: (req, res) => {
         const user = req.user;
         const {
-            userId,
             street,
             number,
             district,

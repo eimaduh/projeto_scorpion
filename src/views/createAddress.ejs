@@ -1,0 +1,52 @@
+<%- include('./partials/head')%>
+<link rel="stylesheet" href="/css/address.css">
+
+<body>
+  <%- include('partials/header-navbar') %>
+  <main>
+    <%- include('partials/userAccount') %>
+    <h2>Endereços Cadastrados</h2>
+    <div class="line"></div>
+    </div>
+    </div>
+    <fieldset>
+      <legend>Editar endereço</legend>
+
+
+      <form class="form-user" action="/users/address/create" method="POST">
+        <div>
+          <label for="street">Logradouro</label>
+          <input  type="text" id="street" name="street"/>
+        </div>
+
+        <div>
+          <label for="number">Nº</label>
+          <input type="text" id="number" name="number" />
+        </div>
+
+        <div>
+          <label for="district">Bairro</label>
+          <input type="text" id="district" name="district"/>
+        </div>
+        <div>
+          <label for="zipcode">CEP</label>
+          <input type="text" id="zipcode" name="zipcode"/>
+        </div>
+        <div>
+          <label for="city">Cidade</label>
+          <input type="text" id="city" name="city"/>
+        </div>
+        
+        <button class="btn-edit" type="submit">Salvar</button>
+      </form>
+
+    </fieldset>
+
+
+    </article>
+    </section>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+
+</html>

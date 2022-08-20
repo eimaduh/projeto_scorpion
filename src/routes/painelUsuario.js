@@ -19,12 +19,13 @@ usersRouter.delete('/users/data/delete/:id', usersController.destroyData);
 
 
 usersRouter.get('/users/address', verifyIfUserIsLoggedIn, usersController.getUsersAddress)
+usersRouter.get('/users/address/add', verifyIfUserIsLoggedIn, usersController.getAddressPage)
 usersRouter.post('/users/address/create', verifyIfUserIsLoggedIn, usersController.createAddress)
 usersRouter.get('/users/address/edit/:id', verifyIfUserIsLoggedIn, usersController.editAddress)
 usersRouter.put('/users/address/update/:id', verifyIfUserIsLoggedIn, usersController.updateAddress)
-usersRouter.post('/users/credits', usersController.usersCredits)
+usersRouter.get('/users/credits', usersController.usersCredits)
 
-usersRouter.get('/users/requests', verifyIfUserIsLoggedIn, usersController.usersRequests)
+// usersRouter.get('/users/requests', verifyIfUserIsLoggedIn, usersController.usersRequests)
 
 usersRouter.get('/users/delete/:id', verifyIfUserIsLoggedIn, registerController.delete);
 usersRouter.delete('/users/delete/:id', verifyIfUserIsLoggedIn, registerController.destroy);

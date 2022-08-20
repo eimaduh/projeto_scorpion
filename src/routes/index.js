@@ -7,6 +7,7 @@ const homeRouter = require('./home');
 const loginRouter = require('./login');
 const logoutRouter = require('./logout');
 const usersRouter = require('./painelUsuario');
+const orderRouter = require('./order');
 const registerRouter = require('./register');
 const routes = express.Router();
 const auth = require('../middleware/autenticacao');
@@ -27,7 +28,7 @@ routes.get('/users', auth, usersRouter)
 routes.post('/users', usersRouter)
 
 routes.get('/users/data', auth, usersRouter)
-routes.get('/users/data/create', auth, usersRouter)
+routes.get('/users/data/add', auth, usersRouter)
 routes.post('/users/data/create', auth, usersRouter)
 routes.get('/users/data/delete/:id', auth, usersRouter)
 routes.delete('/users/data/delete/:id', auth, usersRouter)
@@ -36,11 +37,14 @@ routes.put('/users/data/update/:id', auth, usersRouter)
 
 routes.get('/users/credits', usersRouter)
 routes.get('/users/address', auth, usersRouter)
-routes.get('/users/address/create', auth, usersRouter)
+routes.get('/users/address/add', auth, usersRouter)
 routes.post('/users/address/create', usersRouter)
 routes.get('/users/address/edit/:id', usersRouter)
 routes.put('/users/address/update/:id', usersRouter)
-routes.get('/users/requests',auth, usersRouter)
+routes.get('/users/requests', auth, orderRouter);
+routes.get('/users/requests/details/:id', auth,  orderRouter);
+routes.post('/carrinho', auth, orderRouter);
+// routes.get('/users/requests',auth, usersRouter)
 routes.get('/users/delete/:id', usersRouter)
 routes.delete('/users/delete/:id', usersRouter)
 

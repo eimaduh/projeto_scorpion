@@ -25,6 +25,7 @@ module.exports = function (sequelize, DataTypes) {
         orderStatus: {
             type: DataTypes.STRING(30),
             field: 'order_status',
+            defaultValue: 'Separando'
         },
         total: {
             type: DataTypes.INTEGER(15),

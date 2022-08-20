@@ -20,8 +20,8 @@ html, body {
   text-align: center;
 }
 
-.links a {
-  font-size: 1.8rem;
+.links span {
+  font-size: 1.6rem;
 }
 .account {
   width: 100%;
