@@ -29,8 +29,6 @@ const orderController = {
     createOrder: (req, res) => {
         const user = req.user;
         const {
-            userId,
-            addressId,
             orderStatus,
             total,
         } = req.body;

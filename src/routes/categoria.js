@@ -4,6 +4,7 @@ const categoriaController = require('../controllers/categoriaController')
 const multerConfig = require('../utils/multerConfig')
 
 categoriaRouter.get('/categoria', categoriaController.getCategoryPage)
+categoriaRouter.get('/categoria/search', categoriaController.getSearch)
 categoriaRouter.get('/categoria/admin', categoriaController.getCategoryAdminPage)
 
 

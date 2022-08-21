@@ -49,6 +49,7 @@ routes.get('/users/delete/:id', usersRouter)
 routes.delete('/users/delete/:id', usersRouter)
 
 routes.get('/categoria', auth, categoriaRouter)
+routes.get('/categoria/search', auth, categoriaRouter)
 routes.get('/categoria/admin', categoriaRouter)
 routes.get('/categoria/admin/sucesso', categoriaRouter)
 routes.post('/categoria/admin/create', categoriaRouter)

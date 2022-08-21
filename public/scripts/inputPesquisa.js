@@ -8,8 +8,6 @@ window.addEventListener('load', function() {
 
             if(input.value == ''){
                 input.style.border = '2px solid red';
-            } else {
-                document.location.href = '/categoria'
-            }
+            } 
         });
 });
