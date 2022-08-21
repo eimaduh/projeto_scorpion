@@ -1,12 +1,12 @@
 <%- include('./partials/head')%>
-<link rel="stylesheet" href="/css/data.css">
+<link rel="stylesheet" href="/css/editData.css">
 
 <body>
     <%- include('partials/header-navbar') %>
     <main>
 
         <%- include('partials/userAccount') %>
-        <article class="container-products_admin">
+        <article class="editContainer">
             <h1>Editando dados</h1>
             <form class="form-edit" action="/users/data/update/<%= data.id %>?_method=PUT" method="POST">
                 <div class="cpfUser">

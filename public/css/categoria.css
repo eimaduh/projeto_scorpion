@@ -23,8 +23,24 @@ h1 {
     justify-content: center;
 }
 
-.img-carrinho a img {
-    width: 10%;
+.img-carrinho button {
+    background: none;
+    border: none;
+    margin: 0.5rem;
+    width: 100%;
+    
+}
+
+.img-carrinho img {
+
+    width: 12%;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.descricao input {
+    text-align: center;
+    padding: 0.2rem;
 }
 
 .container-categoria {

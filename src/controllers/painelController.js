@@ -181,7 +181,6 @@ const usersController = {
         const user = req.user;
         const addressId = req.params.id;
         const {
-            userId,
             street,
             number,
             zipcode,
@@ -189,7 +188,6 @@ const usersController = {
             city,
             country,
         } = req.body;
-        req.file;
 
         Address.update({
                 userId: user.id,

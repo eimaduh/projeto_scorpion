@@ -13,7 +13,7 @@
       <legend>Editar endereço</legend>
 
 
-      <form class="form-user" action="/user/address/update/<%=address.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+      <form class="form-user" action="/users/address/update/<%=address.id %>?_method=PUT" method="POST">
         <div>
           <label for="street">Logradouro</label>
           <input class="input-user" type="text" id="street" name="street" value="<%=address.street %>"/>
@@ -36,10 +36,7 @@
           <label for="city">Cidade</label>
           <input class="input-user" type="text" id="city" name="city" value="<%=address.city %>"/>
         </div>
-        <div>
-          <label for="country">País</label>
-          <input class="input-user" type="text" id="country" name="country" value="<%=address.country %>"/>
-        </div>
+        
         <button class="btn-edit" type="submit">Salvar</button>
       </form>
 
