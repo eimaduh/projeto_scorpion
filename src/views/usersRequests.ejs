@@ -10,11 +10,11 @@
     <div class="line"></div>
     </div>
     </div>
-    
+
     <div class="requests-container">
-     
+
       <div class="requests">
-       <% orders.map((order) => { %>
+        <% orders.map((order) => { %>
         <div class="requests-user">
           <h5>Pedido nº <%= order.id %></h5>
 
@@ -22,9 +22,11 @@
         </div>
       </div>
       <div class="requests-status">
-        <h5>Status <h6><%= order.orderStatus%></h6></h5>
+        <h5>Status <h6><%= order.orderStatus%></h6>
+        </h5>
         <br />
-        <h5>Total: <h6>R$ <%= order.total%>,00</h6></h5>
+        <h5>Total: <h6>R$ <%= order.total%>,00</h6>
+        </h5>
       </div>
       <% }) %>
     </div>

@@ -1,6 +1,12 @@
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
-const {Address, Users, Orders, OrderItems, Products } = require("../database/models");
+const {
+    Address,
+    Users,
+    Orders,
+    OrderItems,
+    Products
+} = require("../database/models");
 
 const orderController = {
     getAll: (req, res) => {
@@ -9,16 +15,15 @@ const orderController = {
         Orders.findAll({
             attributes: {
                 exclude: ['createdAt', 'updatedAt']
-            }, include: [
-                {
-                  model: Users,
-                  as: 'Users',
-                  where: {
+            },
+            include: [{
+                model: Users,
+                as: 'Users',
+                where: {
                     id: user.id
                 }
-                },
-            ],
-           
+            }, ],
+
         }).then((orders) => {
             res.status(200).render('usersRequests', {
                 orders,
@@ -44,8 +49,9 @@ const orderController = {
     },
 
 
- createOrderItem: (req, res) => {
-    
- }}
+    createOrderItem: (req, res) => {
+
+    }
+}
 
 module.exports = orderController;

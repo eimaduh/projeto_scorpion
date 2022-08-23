@@ -1,112 +1,102 @@
 <%- include('./partials/head')%>
-    <link rel="stylesheet" href="/css/carrinho.css">
+<link rel="stylesheet" href="/css/carrinho.css">
+
 <body>
     <%- include('./partials/head')%>
-   <nav>
-       <a class="link-img" href="/categoria"><img src="/img/arrow-white.png" alt="seta"></a>
-       <h1>Meu carrinho</h1>
-       <h3 id="outro">Itens </h3>
+    <nav>
+        <a class="link-img" href="/categoria"><img src="/img/arrow-white.png" alt="seta"></a>
+        <h1>Meu carrinho</h1>
+        <h3 id="outro">Itens </h3>
     </nav>
-    
-<div class="container">
 
-        <div class="left"> 
-           <section class="CEP">
+    <div class="container">
+
+        <div class="left">
+            <section class="CEP">
                 <form>
                     <label for="CEP">CEP:</label>
                     <input type="text" name="cep" id="cep-serach">
-                    <button class="ok" type="submit" id="cep-ok" >OK</button>
+                    <button class="ok" type="submit" id="cep-ok">OK</button>
                 </form>
                 <br>
                 <p id="frete-value">Valor do frete R$</p>
             </section>
 
-            
+
             <div class="descricao-produto">
-                        <div class="img-produto">
-                            <img src="" alt="" class="image">
-                        </div>
-                        <div id="itens"> </div>
-                        
-                        <div class="nome-preco-produto">
-                            
-                            <div><span id="valores"></span> </div>
-                            <p></p>
-                        </div>
-                
-                    <div class="flex-end">
-                        <button type="button" onclick=" localStorage.clear(); location.reload();" style="border: none; background-color: white " > <img class="lixeira" src="/img/trash-icon.png" alt="lixo"></button> 
-                    </div>                  
+                <div class="img-produto">
+                    <img src="" alt="" class="image">
+                </div>
+                <div id="itens"> </div>
+
+                <div class="nome-preco-produto">
+
+                    <div><span id="valores"></span> </div>
+                    <p></p>
+                </div>
+
+                <div class="flex-end">
+                    <button type="button" onclick=" localStorage.clear(); location.reload();"
+                        style="border: none; background-color: white "> <img class="lixeira" src="/img/trash-icon.png"
+                            alt="lixo"></button>
+                </div>
             </div>
         </div>
-              
-     <div class="right">
+
+        <div class="right">
             <section class="resumo">
-                
+
                 <div class="img-resumo">
                     <img src="/img/resume-icon.png" alt="resumo">
                     <h2>RESUMO</h2>
                 </div>
 
-                <div class="resumo-info">                   
+                <div class="resumo-info">
                     <p id="valorTotal">Valor dos produtos: </p>
                     <p id="frete">Frete: R$00,00</p>
                     <p id="parcela">Em até 5x de R$ </p>
                 </div>
                 <br><br>
 
-            <a href="/finalizacao"><button class="botao-pagamento">Ir para o pagamento</button></a> 
-               <br><br>
-            <a href="/categoria"><button class="continuar-compra">Continuar Comprando</button></a>
-                        
-        </section>   
-     </div>
-</div>
-            <footer>
-                SCORPION TABACARIA
-            </footer>
+                <a href="/finalizacao"><button class="botao-pagamento">Ir para o pagamento</button></a>
+                <br><br>
+                <a href="/categoria"><button class="continuar-compra">Continuar Comprando</button></a>
 
-            <script type="text/javascript" src="/scripts/carrinho.js"></script>
-            <script>
-                var total = 0; 
-                var i = 0;    
-                var valor = 0;
-                var tudo = 0;
+            </section>
+        </div>
+    </div>
+    <footer>
+        SCORPION TABACARIA
+    </footer>
 
-                for(i=1; i<=99; i++)
-                {
-                    var prod = localStorage.getItem("produto" + i + ""); 
-                    if(prod != null) 
-                    {	
-                        // exibe os dados da lista dentro da div itens
-                        
-                        document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
-                        document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
-                        document.getElementById("itens").innerHTML += " ";
-                        document.getElementById("valores").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
-                        document.getElementById("valorTotal").innerHTML += "R$: " + localStorage.getItem("valor" + i );
-                       
-                        valor = parseFloat(localStorage.getItem("valor" + i)); 
-                        total = (total + valor);
-                        tudo = (total / 5);
-                   
-                        document.getElementById("parcela").innerHTML += tudo;
-                    }
-                }                 
-                document.getElementById("total").innerHTML += total.toFixed(2); 
-                                
-               </script>
-    
+    <script type="text/javascript" src="/scripts/carrinho.js"></script>
+    <script>
+        var total = 0;
+        var i = 0;
+        var valor = 0;
+        var tudo = 0;
+
+        for (i = 1; i <= 99; i++) {
+            var prod = localStorage.getItem("produto" + i + "");
+            if (prod != null) {
+                // exibe os dados da lista dentro da div itens
+
+                document.getElementById("itens").innerHTML += localStorage.getItem("qtd" + i) + " x ";
+                document.getElementById("itens").innerHTML += localStorage.getItem("produto" + i);
+                document.getElementById("itens").innerHTML += " ";
+                document.getElementById("valores").innerHTML += "R$: " + localStorage.getItem("valor" + i) + "<hr>";
+                document.getElementById("valorTotal").innerHTML += "R$: " + localStorage.getItem("valor" + i);
+
+                valor = parseFloat(localStorage.getItem("valor" + i));
+                total = (total + valor);
+                tudo = (total / 5);
+
+                document.getElementById("parcela").innerHTML += tudo;
+            }
+        }
+        document.getElementById("total").innerHTML += total.toFixed(2);
+    </script>
+
 </body>
+
 </html>
-    
-    
-    
-    
-    
-    
-    
-
-    
-        
-

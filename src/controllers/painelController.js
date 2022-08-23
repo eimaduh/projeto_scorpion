@@ -47,32 +47,34 @@ const usersController = {
             id_photo,
             userId
         } = req.body;
-        const { path } = req.file;
-      
+        const {
+            path
+        } = req.file;
+
         Data.create({
-            cpf,
-            phone_number,
-            avatar_path: path,
-            id_photo: path,
-            userId: user.id
-        })
-         .then(() => {
-          return res.redirect('/users/data');
-         })
-         .catch(error => res.send(error))
-       },
-       editData: (req, res) => {
+                cpf,
+                phone_number,
+                avatar_path: path,
+                id_photo: path,
+                userId: user.id
+            })
+            .then(() => {
+                return res.redirect('/users/data');
+            })
+            .catch(error => res.send(error))
+    },
+    editData: (req, res) => {
         const dataId = req.params.id;
-      
+
         Data.findByPk(dataId)
-         .then(data => {
-          res.render('dataEdit', {
-           data
-          })
-         })
-         .catch(error => res.send(error))
-       },
-       updateData: (req, res) => {
+            .then(data => {
+                res.render('dataEdit', {
+                    data
+                })
+            })
+            .catch(error => res.send(error))
+    },
+    updateData: (req, res) => {
         const dataId = req.params.id;
         const user = req.user;
         const {
@@ -82,46 +84,46 @@ const usersController = {
             id_photo,
             userId
         } = req.body;
-      
+
         Data.update({
-            cpf,
-            phone_number,
-            avatar_path: req.file,
-            id_photo: req.file,
-            userId: user.id,
-        },{
-            where: {
-                id: dataId,
-            }
-        })
-         .then(() => {
-          return res.redirect('/users/data')
-         })
-         .catch(error => console.log(error))
-      
-       },
-       deleteData: (req, res) => {
+                cpf,
+                phone_number,
+                avatar_path: req.file,
+                id_photo: req.file,
+                userId: user.id,
+            }, {
+                where: {
+                    id: dataId,
+                }
+            })
+            .then(() => {
+                return res.redirect('/users/data')
+            })
+            .catch(error => console.log(error))
+
+    },
+    deleteData: (req, res) => {
         database.Data.findByPk(req.params.id)
-         .then(data => {
-          res.render('dataDelete', {
-           data 
-          })
-         })
-       },
-       destroyData: (req, res) => {
+            .then(data => {
+                res.render('dataDelete', {
+                    data
+                })
+            })
+    },
+    destroyData: (req, res) => {
         database.Data.destroy({
-         where: {
-          id: req.params.id
-         },
-         force: true
-        })
-         .then(() => {
-          return res.redirect('/users')
-         })
-         .catch(error => res.send(error))
-      
-      
-       },
+                where: {
+                    id: req.params.id
+                },
+                force: true
+            })
+            .then(() => {
+                return res.redirect('/users')
+            })
+            .catch(error => res.send(error))
+
+
+    },
     getUsersAddress: (req, res) => {
         const user = req.user;
         Address.findAll({
@@ -177,7 +179,7 @@ const usersController = {
             })
             .catch(error => res.send(error))
     },
-    updateAddress: (req, res,) => {
+    updateAddress: (req, res, ) => {
         const user = req.user;
         const addressId = req.params.id;
         const {

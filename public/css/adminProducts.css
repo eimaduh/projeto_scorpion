@@ -35,7 +35,7 @@ form {
   margin: 10px;
 }
 
-form {
+.container-products_admin form {
   width: 80%;
   min-height: 100vh;
   margin: 20px;
@@ -92,7 +92,7 @@ label {
   overflow: hidden;
 }
 
-span {
+.container-products_admin span {
   color: #000;
   margin: 10px;
 

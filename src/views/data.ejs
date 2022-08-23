@@ -13,7 +13,7 @@
     <section class="data-container">
       <div class="userName">
         <div class="row">
-         
+
           <h3>Nome:</h3>
           <p><%= user.first_name %></p>
         </div>
@@ -25,12 +25,13 @@
           <h3>email: </h3>
           <p><%= user.email %></p>
         </div>
-        <a href="/users/delete/<%= user.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Deletar Usuário</button>
+        <a href="/users/delete/<%= user.id%>"><button type="submit" class="btn btnEdit"><i
+              class="fa-solid fa-pen-to-square fa-xl"></i>Deletar Usuário</button>
         </a>
       </div>
       <% data.map((dat) => { %>
       <div class="dataUser">
-       
+
         <div class="dataPrincipal">
           <h3>CPF: </h3>
           <p><%= dat.cpf %></p>
@@ -45,15 +46,16 @@
           <h3>Documento: </h3>
           <img class="image" src="<%= dat.id_photo %>" alt="imagem do produto">
         </div>
-        
+
       </div>
-      <div class="editData">  
-      <a href="/users/data/edit/<%= dat.id%>"><button type="submit" class="btn btnEdit"><i class="fa-solid fa-pen-to-square fa-xl"></i>Editar dados</button>
-      </a>  
+      <div class="editData">
+        <a href="/users/data/edit/<%= dat.id%>"><button type="submit" class="btn btnEdit"><i
+              class="fa-solid fa-pen-to-square fa-xl"></i>Editar dados</button>
+        </a>
       </div>
       <% }) %>
     </section>
-    
+
 
     </article>
 

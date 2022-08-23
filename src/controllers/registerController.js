@@ -17,11 +17,11 @@ const registerController = {
         const passwordHash = bcrypt.hashSync(password, 10);
 
         database.Users.create({
-            first_name,
-            last_name,
-            email,
-            password: passwordHash,
-        })
+                first_name,
+                last_name,
+                email,
+                password: passwordHash,
+            })
             .then(() => {
                 return res.redirect('/login');
             })
@@ -30,23 +30,23 @@ const registerController = {
 
     delete: (req, res) => {
         database.Users.findByPk(req.params.id)
-         .then(users => {
-          res.render('deleteUser', {
-           users 
-          })
-         })
-       },
-       destroy: (req, res) => {
+            .then(users => {
+                res.render('deleteUser', {
+                    users
+                })
+            })
+    },
+    destroy: (req, res) => {
         database.Users.destroy({
-         where: {
-          id: req.params.id
-         },
-         force: true
-        })
-         .then(() => {
-          return res.redirect('/')
-         })
-         .catch(error => res.send(error))
+                where: {
+                    id: req.params.id
+                },
+                force: true
+            })
+            .then(() => {
+                return res.redirect('/')
+            })
+            .catch(error => res.send(error))
     }
 }
 
